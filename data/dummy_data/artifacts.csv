@@ -1,0 +1,11 @@
+artifact_id,name,type,site_id,material_id,period_id,description
+A1,Bronze Idol,Sculpture,S1,M1,P2,Bronze idol discovered near temple ruins in Hampi
+A2,Stone Inscription,Inscription,S2,M2,P1,Ancient stone inscription found in Badami caves
+A3,Clay Pottery,Pottery,S3,M3,P1,Decorated clay pottery fragments from Pattadakal site
+A4,Temple Sculpture,Sculpture,S1,M2,P2,Stone sculpture fragment from Hampi temple complex
+A5,Iron Tool,Tool,S2,M5,P1,Ancient iron tool discovered in Badami excavation
+A6,Gold Ornament,Jewelry,S4,M4,P3,Gold ornament excavated near Ajanta cave settlement
+A7,Stone Pillar Fragment,Architecture,S3,M2,P2,Fragment of carved stone pillar from Pattadakal
+A8,Clay Figurine,Figurine,S4,M3,P3,Small clay figurine discovered near Ajanta caves
+A9,Bronze Coin,Currency,S5,M1,P1,Bronze coin discovered during Ellora excavation
+A10,Stone Tablet,Inscription,S5,M2,P1,Stone tablet containing ancient inscription near Ellora

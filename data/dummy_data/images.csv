@@ -1,0 +1,11 @@
+image_id,artifact_id,file_path,description
+IMG1,A1,data/images/dummy/bronze_idol.jpg,Bronze idol artifact image
+IMG2,A2,data/images/dummy/stone_inscription.jpg,Stone inscription artifact image
+IMG3,A3,data/images/dummy/clay_pottery.jpg,Clay pottery artifact image
+IMG4,A4,data/images/dummy/temple_sculpture.jpg,Temple sculpture fragment
+IMG5,A5,data/images/dummy/iron_tool.jpg,Ancient iron tool
+IMG6,A6,data/images/dummy/gold_ornament.jpg,Gold ornament artifact
+IMG7,A7,data/images/dummy/pillar_fragment.jpg,Stone pillar fragment
+IMG8,A8,data/images/dummy/clay_figurine.jpg,Clay figurine artifact
+IMG9,A9,data/images/dummy/bronze_coin.jpg,Bronze coin artifact
+IMG10,A10,data/images/dummy/stone_tablet.jpg,Stone tablet artifact
