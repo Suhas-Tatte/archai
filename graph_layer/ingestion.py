@@ -1,9 +1,13 @@
 import csv
 from graph_layer import GraphService
+from dotenv import load_dotenv
+import os
 
-URI = "bolt://localhost:7687"
-USERNAME = "neo4j"
-PASSWORD = "neo4jadmin"
+load_dotenv()
+
+URI = os.getenv("NEO4J_URI")
+USERNAME = os.getenv("NEO4J_USERNAME")
+PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 DATA_PATH = "data/dummy_data/"
 
@@ -14,9 +18,11 @@ def load_sites():
 		reader = csv.DictReader(f)
 		for row in reader:
 			query = """
-			MERGE (s:Site {site_id: $site_id})
+			MERGE (s:Site {id: $site_id})
 			SET s.name = $name,
 				s.region = $region,
+				s.period = $period,
+				s.description = $description,
 				s.latitude = toFloat($latitude),
 				s.longitude = toFloat($longitude)
 			"""
@@ -27,18 +33,23 @@ def load_materials():
 		reader = csv.DictReader(f)
 		for row in reader:
 			query = """
-			MERGE (m:Material {material_id: $material_id})
+			MERGE (m:Material {id: $material_id})
 			SET m.name = $name
 			"""
 			graph.run_query(query, row)
 
-def load_periods():
-	with open(DATA_PATH + "periods.csv") as f:
+def load_structures():
+	with open(DATA_PATH + "structures.csv") as f:
 		reader = csv.DictReader(f)
 		for row in reader:
 			query = """
-			MERGE (p:Period {period_id: $period_id})
-			SET p.name = $name
+			MERGE (st:Structure {id: $structure_id})
+			SET st.name = $name,
+				st.type = $type,
+				st.description = $description
+			WITH st
+			MATCH (s:Site {id: $site_id})
+			MERGE (s)-[:HAS_STRUCTURE]->(st)
 			"""
 			graph.run_query(query, row)
 
@@ -47,19 +58,16 @@ def load_artifacts():
 		reader = csv.DictReader(f)
 		for row in reader:
 			query = """
-			MERGE (a:Artifact {artifact_id: $artifact_id})
+			MERGE (a:Artifact {id: $artifact_id})
 			SET a.name = $name,
 				a.type = $type,
 				a.description = $description
 			WITH a
-			MATCH (s:Site {site_id: $site_id})
-			MERGE (a)-[:FOUND_AT]->(s)
+			MATCH (st:Structure {id: $structure_id})
+			MERGE (st)-[:HAS_ARTIFACT]->(a)
 			WITH a
-			MATCH (m:Material {material_id: $material_id})
+			MATCH (m:Material {id: $material_id})
 			MERGE (a)-[:MADE_OF]->(m)
-			WITH a
-			MATCH (p:Period {period_id: $period_id})
-			MERGE (a)-[:FROM_PERIOD]->(p)
 			"""
 			graph.run_query(query, row)
 
@@ -68,14 +76,15 @@ def load_images():
 		reader = csv.DictReader(f)
 		for row in reader:
 			query = """
-			MERGE (img:Image {image_id: $image_id})
-			SET img.file_path = $file_path,
+			MERGE (img:Image {id: $image_id})
+			SET img.path = $file_path,
 				img.description = $description
 			WITH img
-			MATCH (a:Artifact {artifact_id: $artifact_id})
+			MATCH (a:Artifact {id: $artifact_id})
 			MERGE (a)-[:HAS_IMAGE]->(img)
 			"""
 			graph.run_query(query, row)
+
 
 if __name__ == "__main__":
 	print("Loading sites...")
@@ -84,8 +93,8 @@ if __name__ == "__main__":
 	print("Loading materials...")
 	load_materials()
 	
-	print("Loading periods...")
-	load_periods()
+	print("Loading structures...")
+	load_structures()
 	
 	print("Loading artifacts...")
 	load_artifacts()

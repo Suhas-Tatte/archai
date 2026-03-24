@@ -1,6 +1,56 @@
-site_id,name,region,latitude,longitude
-S1,Hampi,Karnataka,15.3350,76.4600
-S2,Badami,Karnataka,15.9149,75.6762
-S3,Pattadakal,Karnataka,15.9483,75.8169
-S4,Ajanta,Maharashtra,20.5519,75.7033
-S5,Ellora,Maharashtra,20.0268,75.1790
+site_id,name,region,period,description,latitude,longitude
+S001,Hampi,Karnataka,Ancient,UNESCO World Heritage Site in Karnataka,15.335,76.46
+S002,Badami,Karnataka,Medieval,UNESCO World Heritage Site in Karnataka,15.9149,75.6762
+S003,Pattadakal,Karnataka,Early Historic,UNESCO World Heritage Site in Karnataka,15.9483,75.8169
+S004,Ajanta,Maharashtra,Medieval,UNESCO World Heritage Site in Maharashtra,20.5519,75.7033
+S005,Ellora,Maharashtra,Medieval,UNESCO World Heritage Site in Aurangabad,20.0268,75.179
+S301,Adalaj Stepwell,Adalaj,Sultanate Period,Intricately carved stepwell,23.1645,72.581
+S302,Rani ki Vav,Patan,Solenki Dynasty,UNESCO stepwell,23.8588,72.1011
+S303,Sun Temple Modhera,Modhera,Solenki Dynasty,Sun temple complex,23.599,72.1336
+S304,Champaner-Pavagadh Archaeological Park,Panchmahal,Medieval Period,UNESCO heritage complex,22.485,73.536
+S305,Lothal,Ahmedabad District,Indus Valley,Harappan port city,22.5223,72.2496
+S306,Dholavira,Kutch,Indus Valley,Harappan urban settlement,23.8865,70.2167
+S307,Sidi Saiyyed Mosque,Ahmedabad,Sultanate Period,Stone lattice mosque,23.0268,72.58
+S308,Jama Masjid Ahmedabad,Ahmedabad,Sultanate Period,Grand mosque,23.0242,72.5855
+S309,Rani Rupmati Mosque,Ahmedabad,Sultanate Period,Indo-Islamic mosque,23.022,72.5714
+S310,Sarkhej Roza,Ahmedabad,Sultanate Period,Tomb complex,22.9915,72.5
+S311,Dada Harir Stepwell,Ahmedabad,Sultanate Period,Spiral stepwell,23.046,72.612
+S312,Bhadra Fort,Ahmedabad,Sultanate Period,Historic fort,23.026,72.5805
+S313,Uparkot Fort,Junagadh,Ancient Period,Fort with caves,21.5222,70.4579
+S314,Girnar Temples,Junagadh,Ancient Period,Temple cluster,21.522,70.529
+S315,Somnath Temple,Somnath,Ancient Period,Shiva temple,20.888,70.401
+S316,Kirti Toran,Vadnagar,Solenki Dynasty,Victory arch,23.7833,72.6333
+S317,Rudra Mahalaya,Siddhpur,Solenki Dynasty,Temple ruins,23.9167,72.3833
+S318,Hatkeshwar Temple,Vadnagar,Medieval Period,Historic temple,23.783,72.632
+S319,Shamlaji Temple,Aravalli,Medieval Period,Vishnu temple,23.545,73.35
+S320,Taranga Jain Temple,Mehsana,Solanki Period,Jain temple complex,23.73,72.74
+S321,Lakshmi Vilas Palace,Vadodara,Modern Period,Royal palace,22.305,73.1926
+S322,Nilkanth Dham,Poicha,Modern Period,Swaminarayan temple,21.881,73.352
+S323,Kankaria Lake,Ahmedabad,Medieval Period,Artificial lake,23.006,72.6
+S324,Teen Darwaza,Ahmedabad,Sultanate Period,Historic gateway,23.0255,72.582
+S325,Sabarmati Ashram,Ahmedabad,Modern Period,Gandhi residence,23.06,72.58
+S326,Akshardham Temple,Gandhinagar,Modern Period,Swaminarayan complex,23.2156,72.6369
+S327,Laxmi Vilas Palace Museum,Vadodara,Modern Period,Heritage museum,22.3055,73.1928
+S328,Dakor Temple,Dakor,Medieval Period,Krishna temple,22.75,73.15
+S329,Pavagadh Temple,Pavagadh,Ancient Period,Kali temple,22.48,73.53
+S330,Bharuch Fort,Bharuch,Medieval Period,River fort,21.705,72.995
+S331,Surat Castle,Surat,Medieval Period,Portuguese-era fort,21.1702,72.8311
+S332,Dutch Cemetery,Surat,Colonial Period,European tombs,21.2,72.82
+S333,Gopi Talav,Surat,Medieval Period,Historic lake,21.18,72.83
+S334,Navlakha Temple,Ghumli,Ancient Period,Temple ruins,21.9,69.67
+S335,Prabhas Patan,Somnath,Ancient Period,Pilgrimage site,20.89,70.4
+S336,Bhalka Tirth,Somnath,Ancient Period,Krishna site,20.9,70.38
+S337,Junagadh Ashokan Edicts,Junagadh,Mauryan Period,Rock inscriptions,21.53,70.46
+S338,Kaba Gandhi No Delo,Rajkot,Modern Period,Gandhi childhood home,22.3,70.8
+S339,Watson Museum,Rajkot,Modern Period,Regional museum,22.3005,70.802
+S340,Porbandar Sudama Temple,Porbandar,Medieval Period,Krishna temple,21.64,69.61
+S341,Kirti Mandir,Porbandar,Modern Period,Gandhi birthplace,21.6405,69.608
+S342,Marine National Park,Jamnagar,Modern Period,Marine reserve,22.58,69.6
+S343,Bala Hanuman Temple,Jamnagar,Modern Period,Continuous chanting temple,22.47,70.06
+S344,Khijadiya Bird Sanctuary,Jamnagar,Modern Period,Ecological site,22.52,70.08
+S345,Rajpipla Palace,Narmada,Modern Period,Royal palace,21.87,73.5
+S346,Statue of Unity,Kevadia,Modern Period,Sardar Patel statue,21.838,73.7191
+S347,Saputara Hill Station,Dang,Modern Period,Hill retreat,20.58,73.75
+S348,Gira Falls,Dang,Modern Period,Waterfall site,20.6,73.7
+S349,Polo Forest,Sabarkantha,Medieval Period,Temple ruins forest,23.3,73
+S350,Zarwani Waterfall,Narmada,Modern Period,Waterfall,21.85,73.6
