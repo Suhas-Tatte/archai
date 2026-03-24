@@ -8,9 +8,9 @@ Implemented components:
 
 • Neo4j graph database integration  
 • Python GraphService for executing Cypher queries  
-• CSV dataset schema (Sites, Artifacts, Materials, Periods, Images)  
+• CSV dataset schema (Sites, Structures, Artifacts, Materials, Images)  
 • Automated ingestion pipeline to load datasets into Neo4j  
-• Dummy dataset for testing
+• Static dataset for testing
 
 The system currently loads archaeological data from CSV files and builds a knowledge graph in Neo4j.
 
@@ -32,6 +32,9 @@ archai
 ├── scripts/
 │   └── test_graph_service.py
 │
+├── run.sh # Linux/Mac setup script
+├── run.bat # Windows setup script
+├── .env.example
 ├── requirements.txt
 └── README.md
 ```
@@ -41,31 +44,31 @@ archai
 
 Nodes:
 - Site
+- Structure
 - Artifact
 - Material
-- Period
 - Image
 
 Relationships:
 
-(Site)-[:CONTAINS]->(Artifact)  
+(Site)-[:HAS_STRUCTURE]->(Structure)  
+(Structure)-[:HAS_ARTIFACT]->(Artifact)  
 (Artifact)-[:MADE_OF]->(Material)  
-(Artifact)-[:BELONGS_TO]->(Period)  
 (Artifact)-[:HAS_IMAGE]->(Image)
 
 ---
 
-## Running the Project
+## Setup Instructions
 
 ### 1. Clone repository
-
+```
 git clone https://github.com/Suhas-Tatte/archai.git  
 cd Archai
-
+```
 ---
 
 ### 2. Install Neo4j
-Linux (Ubuntu)
+## Linux (Ubuntu)
 ```
 sudo apt update
 sudo apt install neo4j
@@ -81,50 +84,84 @@ Open Neo4j browser:
 http://localhost:7474
 
 Default login:
-
+```
 username: neo4j
-
 password: neo4j
+```
 
 (Change password when prompted)
 
-Windows
+## Windows
 
-Download Neo4j Desktop:
+- Install Neo4j Desktop: https://neo4j.com/download/
+- Create and start a local DBMS
 
-https://neo4j.com/download/
+Open Neo4j Browser: http://localhost:7474
 
-Install and create a local DBMS.
-
-Start the database and open:
-
-http://localhost:7474
-
-Login using:
-
+Default credentials:
+```
 username: neo4j
-
 password: neo4j
+```
+
+(Change password when prompted)
 
 ---
 
-### 3. Setup Python Environment
+### 3. Configure Environment Variables
 
-Linux
+Create a `.env` file in the root directory:
+
 ```
-python3 -m venv venv  
-source venv/bin/activate  
-pip install -r requirements.txt
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=your_password_here
 ```
-Windows
+
+---
+
+### Quick Start (Recommended)
+
+## Linux / Mac
+
+```chmod +x run.sh
+./run.sh
 ```
-python -m venv venv  
-venv\Scripts\activate  
-pip install -r requirements.txt
+
+## Windows
+
+```run.bat ```
+
+---
+
+# Manual Setup (Alternative)
+
+### 1.Create Virtual Environment
+
+## Linux / Mac
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## Windows
+
+```
+python -m venv venv
+venv\Scripts\activate
 ```
 ---
 
-### 4. Load Dataset into Neo4j
+---
+
+### 2. Install Dependencies
+```
+pip install -r requirements.txt
+```
+
+---
+
+### 3. Load Dataset into Neo4j
 
 Run:
 ```
@@ -134,14 +171,14 @@ Expected output:
 
 Loading sites...  
 Loading materials...  
-Loading periods...  
+Loading structures...  
 Loading artifacts...  
 Loading images...  
 Data successfully loaded into Neo4j!
 
 ---
 
-### 5. Verify Graph
+### Verify Graph
 
 In Neo4j browser run:
 
@@ -155,9 +192,36 @@ You should see nodes and relationships for:
 - Periods
 - Images
 
+Example query: 
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st)-[:HAS_ARTIFACT]->(a) 
+RETURN s.name, st.name, a.name LIMIT 10;
+
 ---
 
-## Notes for Team
+## Important Notes
 
-The backend graph infrastructure is ready.  
-Future modules (LLM queries, visualization, maps) should interact with the database through `GraphService`.
+- Ensure Neo4j is running before ingestion
+- Ensure `.env` credentials match your local Neo4j setup
+- To reset database before reloading:
+```
+MATCH (n) DETACH DELETE n;
+```
+-The backend graph infrastructure is ready.  
+-Future modules (LLM queries, visualization, maps) should interact with the database through `GraphService`.
+
+---
+
+## Team Instructions
+
+1. Clone repository
+2. Install Neo4j and start database
+3. Create .env file
+4. Run ``` run.sh ``` (Linux) or ``` run.bat ``` (Windows)
+
+The system will automatically:
+
+- Set up environment
+- Install dependencies
+- Load dataset into Neo4j
+
+---
