@@ -20,9 +20,9 @@ def load_sites():
 			query = """
 			MERGE (s:Site {id: $site_id})
 			SET s.name = $name,
-				s.region = $region,
-				s.period = $period,
-				s.description = $description,
+				s.address = $address,
+				s.district = $district,
+				s.state = $state,
 				s.latitude = toFloat($latitude),
 				s.longitude = toFloat($longitude)
 			"""
@@ -65,6 +65,9 @@ def load_artifacts():
 			WITH a
 			MATCH (st:Structure {id: $structure_id})
 			MERGE (st)-[:HAS_ARTIFACT]->(a)
+			WITH a
+			MATCH (s:Site {id: $site_id})
+			MERGE (s)-[:HAS_ARTIFACT]->(a)
 			WITH a
 			MATCH (m:Material {id: $material_id})
 			MERGE (a)-[:MADE_OF]->(m)
