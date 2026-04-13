@@ -1,0 +1,447 @@
+structure_id,name,type,site_id,description
+ST101,Amritavarshini Vav,Stepwell,S101,Historic stepwell located in Panchkuva
+ST102,Dutch Tomb,Tomb,S102,Historic tomb near Kankaria Lake in Ahmedabad
+ST103,Khan Talav,Water Structure,S103,Historic water outlet structure in Dholka
+ST104,Ancient Masjid,Mosque,S104,Historic mosque located in Isanpur
+ST105,Ancient Step Well,Stepwell,S105,Ancient stepwell located in Kathwada
+ST106,Timbo,Archaeological Mound,S106,Archaeological mound located in Babra
+ST107,Adnath Temple,Temple,S107,Historic temple located in Adpokar
+ST109,Ganganath Mahadev Temple,Temple,S109,Null
+ST110,Ancient Shiv Temple,Temple,S110,Null
+ST111,Kumbheshwar Mahadev,Temple,S111,Null
+ST112,Temple No.1 Near Kantivas,Temple,S112,Null
+ST113,Temple No.2,Temple,S113,Null
+ST114,Temple No.3,Temple,S114,Null
+ST115,Temple No.4,Temple,S115,Null
+ST116,Temple No.5,Temple,S116,Null
+ST117,Temple No.6,Temple,S117,Null
+ST118,Temple No.1 (near Mahudi),Temple,S118,Null
+ST119,Temple No.2,Temple,S119,Null
+ST120,Temple No.3,Temple,S120,Null
+ST121,Temple No.4,Temple,S121,Null
+ST122,Stepwell,Temple,S122,Null
+ST123,Ancient Temple,Temple,S123,Null
+ST124,Muleshwar Mahadev Temple,Temple,S124,Null
+ST125,Muleshwar Mahadev Temple,Temple,S125,Null
+ST126,Mithi Vav,Stepwell,S126,Null
+ST127,Zaloragadh Timbo,Mound,S127,Null
+ST128,Kadia Dungar Caves,Cave,S128,Null
+ST129,Haripiya Timbo,Mound,S129,Null
+ST130,Ganga Chhatri,Monument,S130,Null
+ST132,Bhavnath Temple,Temple,S132,Null
+ST133,Firangi Deval,Temple,S133,Null
+ST134,Gopnath Temple,Temple,S134,Null
+ST135,Brahma Kund,Water Tank,S135,Null
+ST136,Saat Sheri (Satsheri),Monument,S136,Null
+ST137,Minara,Tower,S137,Null
+ST138,Ancient Temple,Temple,S138,Null
+ST139,Kund & Toran,Monument,S139,Null
+ST140,Vav (Step Well),Stepwell,S140,Null
+ST141,Vori Vav,Stepwell,S141,Null
+ST142,Mota Todavali Vav,Stepwell,S142,Null
+ST143,Vav (Step Well),Stepwell,S143,Null
+ST144,Bhadrakali Mata Stepwell,Stepwell,S144,Null
+ST145,Bhadeshwar Temple,Temple,S145,Null
+ST146,MacMurdo's Bungalow,Building,S146,Null
+ST147,Shail Gufa (Cave) No.1,Cave,S147,Null
+ST148,Shail Gufa No.2,Cave,S148,Null
+ST149,Pureshwar Temple,Temple,S149,Null
+ST150,Vadimedi (Shaiv Math),Math(monastic structure),S150,Null
+ST151,Gates of Kanthkot,Fort Gate,S151,Null
+ST152,Jain Temple,Temple,S152,Null
+ST153,Surya Temple,Temple,S153,Null
+ST154,Shiva Temple,Temple,S154,Null
+ST155,Ram Kund,Water Structure,S155,Null
+ST156,Old Temple,Temple,S156,Null
+ST157,Eye No Dero Shiva Temple,Temple,S157,Null
+ST158,Shai Gufa / Siyot Caves,Caves,S158,Null
+ST159,Mound of Pabumath,Archaeological Mound,S159,Null
+ST160,Mound of Shobharel,Archaeological Mound,S160,Null
+ST161,Padharghadh,Fort / Settlement Ruins,S161,Null
+ST162,Lakhpat Fort,Fort,S162,Null
+ST163,Bhuvadeshwar Mahadev Temple,Temple,S163,Null
+ST164,Gurdwara,Temple,S164,Null
+ST165,Kirti Stambh (Deva Manek Stambh),Monument / Pillar,S165,Null
+ST166,Ancient Temple,Temple,S166,Null
+ST167,Shai Gufa of Alech (Patan/Khapra Kodia),Cave Complex,S167,Null
+ST168,Mound (Amra),Archaeological Mound,S168,Null
+ST169,Shiv Temple (Khimeshwar Mahadev),Temple,S169,Null
+ST170,Kotho (Bhujio) Rampart,Fortification,S170,Null
+ST171,Khambhalia Gate,Gate,S171,Null
+ST172,Juma Masjid(nscription),Inscription,S172,Null
+ST173,Nagnath Temple,Temple,S173,Null
+ST174,Lakhota Tower,Tower / Fort,S174,Null
+ST175,Mound (Narmana),Archaeological Mound,S175,Null
+ST176,Mound (Bed),Archaeological Mound,S176,Null
+ST177,Mound (Moda),Archaeological Mound,S177,Null
+ST178,Mound (Lakhabaval),Archaeological Mound,S178,Null
+ST179,Mound (Vasai),Archaeological Mound,S179,Null
+ST181,Kotho,Fortification,S181,Null
+ST182,Kalika Mata Temple,Temple,S182,Null
+ST183,Stone Memorial of Bhuchar Mori Deri & Battlefield,Memorial,S183,Null
+ST184,Forts Nr. Kileshwar,Fort,S184,Null
+ST185,Ganesh Temple,Temple,S185,Null
+ST186,Navlakha Temple,Temple,S186,Null
+ST187,Ancient Temple on the Bank of Chelsar Talav,Temple,S187,Null
+ST188,Rampol Gates,Gate,S188,Null
+ST189,Vikiya Vav,Stepwell,S189,Null
+ST190,Son Kansari,Monument,S190,Null
+ST191,Five Temples,Temple,S191,Null
+ST192,Bhimeshwar Mahadev Temples,Temple,S192,Null
+ST193,Two Bhavaneshwar Temples,Temple,S193,Null
+ST194,Fort,Fort,S194,Null
+ST195,Stepwell,Stepwell,S195,Null
+ST196,Dhingeshwar Mahadev Temple & Shail Gufao,Temple,S196,Null
+ST197,Panoti Temple,Temple,S197,Null
+ST198,Shani Vav,Stepwell,S198,Null
+ST199,Mound (Modpar),Archaeological Mound,S199,Null
+ST200,Temple & Two Inscriptions (Ajara Parshwanath),Temple+Inscription,S200,Null
+ST201,Seven Basins of Hot Water (Kunds),Water Tank,S201,Null
+ST203,Bhimchas,Monument,S203,Null
+ST204,Gupta Prayag,Monument,S204,Null
+ST205,Gupta Prayag Kund,Water Tank,S205,Null
+ST206,Jumma Masjid,Mosque,S206,Null
+ST207,Minaravali Masjid,Mosque,S207,Null
+ST208,Vejal Kotho,Fortification,S208,Null
+ST209,Shah Kotho,Fortification,S209,Null
+ST210,Sana Caves,Cave,S210,Null
+ST211,Two Stone Inscriptions on Jumma Masjid,Inscription,S211,Null
+ST212,Two Idols of Kshetrapal At Vav (Pujari Vav),Monument(idols),S212,Null
+ST213,Adi Kadi Vav,Stepwell,S213,Null
+ST214,Jumma Masjid & Cannon (Neelam And Kadanal),Monument,S214,Null
+ST215,Navghan Kuvo (Well),Water Structure,S215,Null
+ST217,Laskari Vav,Stepwell,S217,Null
+ST219,Damodar Kund,Water Tank,S219,Null
+ST220,Datar no Chilo,Monument,S220,Null
+ST221,Boria Buddhistic Monument Lakhamedi & Vadi-Lakhamedi,Monument,S221,Null
+ST222,Dhori (Peer) Makbaro,Monument,S222,Null
+ST223,Narsinh Maheta No Choro,Monument,S223,Null
+ST224,Makbara of Babi raja Before Nawab Mahotabkhanji,Tomb(Maqbara),S224,Null
+ST225,Makbara of Najubibi with Bara Saiyed (Najibai Maqbara),Tomb(Maqbara),S225,Null
+ST226,Pancheshwar Caves,Cave,S226,Null
+ST227,Mahabat Maqbara complex,Tomb(Maqbara),S227,Null
+ST228,Matri Mata temple,Temple,S228,Null
+ST230,Kalika Mata,Temple,S230,Null
+ST231,Guru Dattatraya Shrine,Temple,S231,Null
+ST232,Gorakh Mountain Top (Tuk),Religious Platform,S232,Null
+ST233,Gaumukhi,Water Structure,S233,Null
+ST234,Bhim Kund,Water Tank (Kund),S234,Null
+ST235,Bhairav Jep (Hill Outcrop),Hill / Outcrop,S235,Null
+ST237,Hanuman Dhara,Water Structure,S237,Null
+ST238,Hathi Pagla(Gajapad Kund),Water Tank (Kund),S238,Null
+ST239,Bhimdeval Sun Temple,Temple,S239,Null
+ST240,Buddhist Stupa - Vajir Panat No Kotho,Stupa,S240,Null
+ST241,Vishnu Temple,Temple,S241,Null
+ST242,Surya Mandir No.1,Temple,S242,Null
+ST243,Surya Mandir No.2,Temple,S243,Null
+ST244,Khimeshwar Mahadev Temple,Temple,S244,Null
+ST245,Chadeshwar Mahadev Temple,Temple,S245,Null
+ST246,Dhigeshwar Mahadev Temple,Temple,S246,Null
+ST247,House of Smt. Kasturba Gandhi,House,S247,Null
+ST248,Sartanji no Choro,Pavilion,S248,Null
+ST249,Surya Mandir,Temple,S249,Null
+ST250,Jaleshwar Mahadev Temple,Temple,S250,Null
+ST251,Five Temples,Temple,S251,Null
+ST252,Nandeshwar Mahadev,Temple,S252,Null
+ST253,Chamunda Mata Temple,Temple,S253,Null
+ST254,Seven Temples / Saat Mandiro,Temple Complex,S254,Null
+ST255,Ancient Temple,Temple,S255,Null
+ST256,Ancient Temple,Temple,S256,Null
+ST257,Panchayatan Mandir,Temple,S257,Null
+ST258,Vav,Stepwell,S258,Null
+ST261,Jhadeshwar Mahadev Temple,Temple,S261,Null
+ST262,Bileshwar Mahadev Temple,Temple,S262,Null
+ST263,Jambuvanti Caves,Cave,S263,Null
+ST266,Ra'Khengar Palace,Palace,S266,Null
+ST268,Surya Kund,Water Tank (Kund),S268,Null
+ST269,Ra Khengar Vav,Stepwell,S269,Null
+ST270,Caves of Hothal Padmini,Cave Complex,S270,Null
+ST271,Ancient Temples (Omnath Mahadev temple),Temple Complex,S271,Null
+ST272,Makbaro of Hajarat Shah,Tomb,S272,Null
+ST272,Tomb of Malik Ayaz,Tomb,S272,Null
+ST273,Kalikamata Temple,Temple,S273,Null
+ST274,Bilingual Stone Inscription at Gayatri Temple,Inscription at temple,S274,Null
+ST275,Prachi Kund,Water Tank (Kund),S275,Null
+ST276,Mool Prachi,Water Structure,S276,Null
+ST277,Stone Inscription at Jumma Masjid (H.S.732),Inscription at Mosque,S277,Null
+ST278,Gorakhnath Mahadev,Temple,S278,Null
+ST279,Jain Temple,Temple,S279,Null
+ST280,Talav,Water Tank,S280,Null
+ST281,Mound of Nagara,Archaeological Mound,S281,Null
+ST282,Nek Mahommad Masjid,Mosque,S282,Null
+ST283,Ancient Caves,Cave,S283,Null
+ST284,Ancient Jain Temple,Temple,S284,Null
+ST286,Maipuri Masjid,Mosque,S286,Null
+ST287,Mangaroli Shah Makbara,Tomb,S287,Null
+ST287,Shah Makbara,Tomb,S287,Null
+ST288,Stone Inscription at Mussafar Masjid,Inscription at Mosque,S288,Null
+ST291,Rudreshwar,Temple,S291,Null
+ST292,Veneshwar Mahadev Temple,Temple,S292,Null
+ST293,Veraval Gate,Gate,S293,Null
+ST295,Surya Mandir (Sun Temple),Temple,S295,Null
+ST296,Mound of Sav,Archaeological Mound,S296,Null
+ST297,Jumma Masjid,Mosque,S297,Null
+ST298,Stone Inscription at Harshadmata Temple,Inscription at temple,S298,Null
+ST299,Bauddha Gufa (Caves) of Mandore,Buddhist Cave,S299,Null
+ST300,Chyavan Kund,Water Tank (Kund),S300,Null
+ST301,Navdurga Temple,Temple,S301,Null
+ST302,Chaumukhi Vav,Stepwell (Vav),S302,Null
+ST303,Temple Near Talav,Temple,S303,Null
+ST304,Tarnetar Temple,Temple,S304,Null
+ST305,Munibaba Temple (Munim deval),Temple,S305,Null
+ST306,Panchayatan Temple,Temple,S306,Null
+ST307,Caves,Cave Structure,S307,Null
+ST308,Jeen Darwajo,Gate,S308,Null
+ST309,Dink Darwajo,Gate,S309,Null
+ST310,South Gates (Dakhkhani Darwaja),Gate,S310,Null
+ST311,West Gates,Gate,S311,Null
+ST312,Madapol Gates,Gate,S312,Null
+ST313,Rajeshwari Gates,Gate,S313,Null
+ST314,Sarovar,Water Body Structure,S314,Null
+ST315,Jeenand Kund (Two),Water Tank (Kund),S315,Null
+ST316,Remains of Ancient Gates,Gate Ruins,S316,Null
+ST317,Matri Vav,Stepwell (Vav),S317,Null
+ST318,Chandrisar Talav,Water Tank,S318,Null
+ST319,Ancient Vav,Stepwell (Vav),S319,Null
+ST320,Gramdevi Temple,Temple,S320,Null
+ST321,Gangavo Kund,Water Tank (Kund),S321,Null
+ST322,Manava Mama Temple,Temple,S322,Null
+ST323,Rataba alias Rajbai Vav,Stepwell (Vav),S323,Null
+ST324,Ganga Vav,Stepwell (Vav),S324,Null
+ST325,Madhavav,Stepwell (Vav),S325,Null
+ST326,Vav,Stepwell (Vav),S326,Null
+ST327,Sundari Bhavani Temple,Temple,S327,Null
+ST329,Ancient Vav at Sharneshwar Temple,Stepwell (Vav),S329,Null
+ST330,Tom Coryat Makbaro (Thomas Coryat's Tomb),Tomb,S330,Null
+ST331,Radhakrishna Temple,Temple,S331,Null
+ST332,Ancient Vav/Stepwell,Stepwell,S332,Null
+ST333,Arjun Chori (Shiva Temple),Temple,S333,Null
+ST334,Kund (Hidimba Kund),Water Tank (Kund),S334,Null
+ST335,Temple with Three Entrances (Hidimba Temple),Temple,S335,Null
+ST336,Ancient Temple (Ghummatvalu Mandir),Temple,S336,Null
+ST337,Bhim Chori (Shiva Temple),Temple,S337,Null
+ST338,Vahu Ni Vav,Stepwell (Vav),S338,Null
+ST339,Shikar Madhi,Pavilion/Structure,S339,Null
+ST340,Temple with stone Inscription (Kaleshwari Mata Temple),Temple,S340,Null
+ST341,Sasu Ni Vav,Stepwell (Vav),S341,Null
+ST342,Ancient temple no.1,Temple,S342,Null
+ST343,Ancient temple no.2,Temple,S343,Null
+ST344,Ancient temple no.3,Temple,S344,Null
+ST345,Gebanshah Vav with Steps,Stepwell (Vav),S345,Null
+ST346,Vanzari Vav,Stepwell (Vav),S346,Null
+ST347,Group of temples,Temple Group,S347,Null
+ST348,Pavagadh Killa,Fort,S348,Null
+ST349,Machi Killa,Fort,S349,Null
+ST350,Bavaman Killa,Fort Strucuture,S350,Null
+ST351,Khuneshwar Killa,Fort Strucuture,S351,Null
+ST352,Killa at Shikar Bari and Ulan Julan ki Chowki,Fort Strucuture,S352,Null
+ST353,Malik Nagar ni Haveli,Haveli,S353,Null
+ST354,Gadi Kundal Darwaza,Gate,S354,Null
+ST355,Jai Singh no Mahal,Palace,S355,Palace structure
+ST356,Senapati Ni Kothi,Residential Building,S356,Commander's residence
+ST357,Pavilion on Medhi Talav,Pavilion,S357,Pavilion near Medhi Talav
+ST358,Masjid in Front of Machi Haveli,Mosque,S358,Mosque structure
+ST359,Maratha no Mahal,Palace,S359,Null
+ST360,Rani no Mahal,Palace,S360,Null
+ST361,Bandh,Dam / Water Structure,S361,Null
+ST362,Lila Gumbaj Pase ni Kothi,Residential Building,S362,Null
+ST363,Bhangelu Deru,Shrine,S363,Null
+ST364,Chhatris Thambla Nu Bhoyneru,Pavilion / Memorial Structure,S364,Null
+ST365,Zare-e-Zamin,Subterranean Structure,S365,Null
+ST366,Pavilion South of Jami Masjid,Pavilion,S366,Null
+ST367,Iteri Masjid and Building near to it,Mosque Complex,S367,Null
+ST368,Sainiki Masjid,Mosque,S368,Null
+ST369,Vandra Masjid,Mosque,S369,Null
+ST370,Maqbara Mandvi,Tomb (Maqbara),S370,Null
+ST371,Maqbara Near Kamani Masjid,Tomb (Maqbara),S371,Null
+ST372,Underground Water Channel from Bandh to Kasbin Talao,Water Channel,S372,Null
+ST373,Underground Water Channel from Navlakhi Talav to Jamuna Kund,Water Channel,S373,Null
+ST374,Stone Bridge,Bridge,S374,Null
+ST375,Barrack on Sariya Vakhariya,Barrack,S375,Null
+ST376,Malik Sandal Ni Vav,Stepwell (Vav),S376,Null
+ST377,Sindh Mata Ni Vav,Stepwell (Vav),S377,Null
+ST378,Chandralekha (Surajkala) Vav,Stepwell (Vav),S378,Null
+ST379,Amther Mata Temple & Small Temples,Temple Complex,S379,Null
+ST380,Vav,Stepwell (Vav),S380,Null
+ST381,Hawa Mahal,Palace Structure,S381,Null
+ST382,Khan Sarovar,Water Tank (Sarovar),S382,Null
+ST383,Shakti Kund,Water Tank (Kund),S383,Null
+ST384,Amba Mata Temple,Temple,S384,Null
+ST385,Shitala Mata Temple,Temple,S385,Null
+ST386,Nagfani Mata Mandir (with idol),Temple,S386,Null
+ST387,Shitala Mata Temple,Temple,S387,Null
+ST388,Vav,Stepwell (Vav),S388,Null
+ST389,Fatipal Gates,Gate,S389,Null
+ST390,Chhindia Gates,Gate,S390,Null
+ST391,Bagwada Gates,Gate,S391,Null
+ST392,Agara Gates,Gate,S392,Null
+ST393,Tripolia Gate (Tran Darwaja),Gate,S393,Null
+ST394,Rajgadhi Timbo,Archaeological Mound,S394,Null
+ST395,Shail Gufo (Khambhalida Caves),Rock-cut Caves,S395,Null
+ST396,Minadevi Vav,Stepwell (Vav),S396,Null
+ST399,Caves,Rock-cut Caves,S399,Null
+ST400,Vav (Gelmata Vav),Stepwell (Vav),S400,Null
+ST401,Sankleshwar Mahadev,Temple,S401,Null
+ST402,Old Darbargadh,Fort/Palace,S402,Null
+ST403,Temples,Temple Group,S403,Null
+ST404,Kuber Vav,Stepwell (Vav),S404,Null
+ST405,Darbargadh No Tamrapatro,Fort/Palace,S405,Null
+ST406,Mound Dolidhar,Archaeological Mound,S406,Null
+ST408,Ancient Vav,Stepwell (Vav),S408,Null
+ST409,Jam Tower,Tower,S409,Null
+ST410,Ancient Talav,Water Tank,S410,Null
+ST411,Vidyadhar Vav,Stepwell (Vav),S411,Null
+ST412,Surya Narayan Temple,Temple,S412,Null
+ST413,Ranmukteshwar Temple,Temple,S413,Null
+ST414,Kund,Water Tank (Kund),S414,Null
+ST415,Vav,Stepwell (Vav),S415,Null
+ST416,Rannmalchoki,Structure,S416,Null
+ST417,Vav,Stepwell (Vav),S417,Null
+ST418,Ancient Temple,Temple,S418,Null
+ST419,Ancient stepwell (vav),Stepwell (Vav),S419,Null
+ST420,Kund,Water Tank,S420,Null
+ST421,Ancient Temple,Temple,S421,Null
+ST422,Mahadev Temple,Temple,S422,Null
+ST423,Shiva Temple,Temple,S423,Null
+ST424,Brahma Vav,Stepwell (Vav),S424,Null
+ST425,Temple No. 1,Temple,S425,Null
+ST426,Temple No. 2,Temple,S426,Null
+ST427,Temple No. 3,Temple,S427,Null
+ST428,Temple No. 4,Temple,S428,Null
+ST429,Temple No. 5,Temple,S429,Null
+ST430,Gopnath Mahadev Shiv Panchayatan Temple,Temple,S430,Null
+ST431,Shiva Temple,Temple,S431,Null
+ST432,Nilkanth Mahadev Temple,Temple,S432,Null
+ST433,Ruins,Ruins,S433,Null
+ST434,Mahakali Temple,Temple,S434,Null
+ST435,Mahadev Temple,Temple,S435,Null
+ST436,Hanumanji Temple,Temple,S436,Null
+ST437,Shiva Panchayatan Temple,Temple,S437,Null
+ST438,Shobhayada Shiva Temple,Temple,S438,Null
+ST439,Ancient Temple,Temple,S439,Null
+ST440,Vav,Stepwell,S440,Null
+ST441,Harishchandra ni Chori,Structure,S441,Null
+ST442,Pagathiyavali Vav (Stepwell),Stepwell,S442,Null
+ST443,Vanzari Vav,Stepwell,S443,Null
+ST444,Temple with Kund,Temple,S444,Null
+ST445,Jain Temple No.1,Temple,S445,Null
+ST446,Jain Temple No.2,Temple,S446,Null
+ST447,Jain Temple No.3,Temple,S447,Null
+ST448,Sharaneshwar Temple,Temple,S448,Null
+ST449,Shivashakti Temple,Temple,S449,Null
+ST450,Jain Temple No.1,Temple,S450,Null
+ST451,Jain Temple No.2,Temple,S451,Null
+ST452,Jain Temple No.3,Temple,S452,Null
+ST453,Jain Temple No.4,Temple,S453,Null
+ST454,Shakti Temple,Temple,S454,Null
+ST455,Shiva Temple,Temple,S455,Null
+ST456,Shiva Panchayatan Temple No.1,Temple,S456,Null
+ST457,Shiva Panchayatan Temple No.2,Temple,S457,Null
+ST458,Vav (Stepwell),Stepwell,S458,Null
+ST459,Nagrani Vav (Stepwell),Stepwell,S459,Null
+ST460,Santhaleshwar Mahadev Temple,Temple,S460,Null
+ST461,Chaumukh Mahadev Temple,Temple,S461,Null
+ST462,Neminath Jain Temple with three inscriptions,Temple,S462,Null
+ST463,Vastupal Jain Temple with six inscriptions,Temple,S463,Null
+ST464,Virji Vora ni Vav,Stepwell,S464,Null
+ST515,Achyut Bibi's Masjid & Tomb  ,Mosque-Tomb,S515,Null
+ST516,Ahmad Shah's Tomb,Tomb,S516,Null
+ST517,Ahmed Shah's Mosque ,Mosque,S517,Null
+ST518,Astodia Gate,Gate,S518,Null
+ST519,Baba Lalui's Masjid  ,Mosque,S519,Null
+ST520,Bhadra Gate beside Bhadrakali Temple ,Gate,S520,Null
+ST521,Brick Minars,Minaret,S521,Null
+ST522,Dariya Khan's Tomb ,Tomb,S522,Null
+ST523,Dariya Pur Gate,Gate,S523,Null
+ST524,Dastur Khan's Masjid ,Mosque,S524,Null
+ST525,Delhi Gate,Gate,S525,Null
+ST526,Haibatkhan's Masjid ,Mosque,S526,Null
+ST527,Inlet to Kankaria Tank ,Water inlet,S527,Null
+ST528,Jami Masjid ,Mosque,S528,Null
+ST529,Kalupur Gate,Gate,S529,Null
+ST530,Kutub Shah's Mosque,Mosque,S530,Null
+ST531,Mata Bhavani's Well ,Well,S531,Null
+ST532,Muhafiz Khan's Mosque,Mosque,S532,Null
+ST533,Nawab Sardar Khan Masjid and outer gate ,Mosque,S533,Null
+ST534,Nawab Sardar Khan's Rouza,Tomb,S534,Null
+ST535,Panch Kuva Gate,Gate ,S535,Null
+ST536,Premabhai Gate,Gate ,S536,Null
+ST537,Queen's Mosque in Sarangpur ,Mosque,S537,Null
+ST538,Raipur Gate,Gate ,S538,Null
+ST539,Rani Rupavati's Mosque,Mosque,S539,Null
+ST540,Rani Sipri's Mosque & Tomb  ,Mosque-Tomb,S540,Null
+ST541,Sarangpur Gate ,Gate ,S541,Null
+ST542,Shah Alam's Tomb with all surrounding buildings,Tomb,S542,Null
+ST543,Shah Kupa Masjid ,Mosque,S543,Null
+ST544,Sidi Bashir's Minar & Tomb (Shaking),Minaret ,S544,Null
+ST545,Sidi Saiyad's Mosque,Mosque,S545,Null
+ST546,Teen Darwaja or Tripolia Gate ,Gate ,S546,Null
+ST547,The Shahpur Kazi Mohmad Chishti's Masjid,Mosque,S547,Null
+ST548,Three gates besides Bhadrakali temple,Gate ,S548,Null
+ST549,Tomb,Tomb ,S549,Null
+ST550,Tomb of Mir Abu Turab,Tomb,S550,Null
+ST551,Tombs of Queens of Ahmed Shah,Tomb,S551,Null
+ST552,Dada Hari's Mosque & Tomb ,Mosque-Tomb,S552,Null
+ST553,Dada (Bai) Hari's Stepwell,Stepwell,S553,Null
+ST554,Malik Alam's Mosque ,Mosque,S554,Null
+ST555,Bahlol Khan Gazi's Mosque,Mosque,S555,Null
+ST556,Jami Masjid ,Mosque,S556,Null
+ST557,Khan Masjid,Mosque,S557,Null
+ST558,Malav Tank,Water Tank,S558,Null
+ST559,Ruined Building,Structure,S559,Null
+ST560 ,Jethabhai's Stepwell,Stepwell,S560 ,Null
+ST561,Small Stone Masjid (Gumle Masjid),Mosque,S561,Null
+ST562,Cazi Masjid ,Mosque,S562,Null
+ST563,Jami Masjid ,Mosque,S563,Null
+ST564,Sayyid Masjid ,Mosque,S564,Null
+ST565,Small stone Mosque (Rani Masjid) ,Mosque,S565,Null
+ST566,Bibi's Masjid ,Mosque,S566,Null
+ST567,Masjid of Ragusha Pir ,Mosque,S567,Null
+ST651,Gateway of Khan Sarover,Gateway,S651,Historic gateway
+ST652,Jami Masjid,Mosque,S652,Congregational mosque
+ST653,Ruins of Rudra Mahalaya temple,Temple,S653,Temple ruins
+ST654,Group of temples,Temple,S654,Cluster of temples
+ST655,Tomb of Sikandarsah,Tomb,S655,Tomb structure
+ST657,Dargah known as Khawaja Dana Saheb's Rouza,Dargah,S657,Religious tomb complex
+ST658,Old Dutch & Armenian Tombs & Cemeteries,Cemetery,S658,Burial complex
+ST659,Old English Tombs,Cemetery,S659,Colonial tombs
+ST660,Tomb of Khawaja Safar Sulemani,Tomb,S660,Tomb structure
+ST661,Fateh Burj,Tower,S661,Victory tower
+ST663,Hira Gate,Gate,S663,Historic fortified gate
+ST664,Mahudi (Champaneri) Gate,Gate,S664,Gate with adjoining structure
+ST665,Nandodi Gate,Gate,S665,Historic gate
+ST666,Saptamukhi Vav,Stepwell,S666,Multi-faced stepwell
+ST667,Vadodara Gate,Gate,S667,Fortified gate
+ST668,Hazira or Qutbuddin Mahmad Khan's Tomb,Tomb,S668,Tomb structure
+ST671,Gateway of Torana,Gateway,S671,Historic gateway
+ST672,Frescos on the walls of Bhau Tambekar’s Wada,Mansion,S672,Heritage residence with frescos
+ST675,Kashivisvanath Temple,Temple,S675,Temple with fresco
+ST679,Jain temples,Temple,S679,Group of Jain temples
+ST680,Talaja Caves,Cave,S680,Rock-cut caves
+ST682,Temple of Rama Laxman,Temple,S682,Hindu temple
+ST683,Gadhi fortress & temple,Fort,S683,Fortified temple complex
+ST684,Magderu Temple,Temple,S684,Temple structure
+ST685,Dwarkadhish Group of temples,Temple,S685,Temple group
+ST687,Rukmani Temple,Temple,S687,Hindu temple
+ST688,Gokeshwar Mahadev temple,Temple,S688,Shiva temple
+ST690,Durvasa Rishi's Ashram,Ashram,S690,Religious site
+ST691,Guhaditya temple,Temple,S691,Temple structure
+ST692,Junagadhi (Jain) Temple,Temple,S692,Jain temple
+ST693,Kankeshvara Mahadeva temple & shrines,Temple,S693,Shiva temple complex
+ST694,Ranchhod Rayaji Temple,Temple,S694,Temple structure
+ST695,Gop (Sun) Temple,Temple,S695,Ancient sun temple
+ST698,"Baba Pyare, Khapra Kodia caves",Cave,S698,Cave complex
+ST699,Buddhistic Cave,Cave,S699,Buddhist cave
+ST700,Jami Masjid,Mosque,S700,Mosque structure
+ST701,Rahimat Masjid (Bibi Masjid),Mosque,S701,Mosque structure
+ST702,Raveli Masjid,Mosque,S702,Mosque structure
+ST703,Tomb of Rao Lakha Chhatri,Tomb,S703,Tomb monument
+ST706,Siva temple,Temple,S706,Hindu temple
+ST708,Darbargadh,Palace,S708,Royal residence
+ST709,Old Parsvanath temple,Temple,S709,Jain temple
+ST710,House where Mahatma Gandhi was born,House,S710,Historic house
+ST711,Dhank Caves,Cave,S711,Cave complex
+ST712,Ananteshwara temple,Temple,S712,Temple structure
+ST714,Navlakha temple,Temple,S714,Historic temple
+ST716,Sun Temple,Temple,S716,Sun temple
+ST717,Rana Dev's Temple,Temple,S717,Temple structure
