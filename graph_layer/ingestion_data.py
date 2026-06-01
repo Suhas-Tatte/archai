@@ -64,10 +64,37 @@ def load_artifacts():
 				a.type = $type,
 				a.description = $description
 			WITH a
-			MATCH (s:Site {id: $site_id}) 
-			MERGE (s)-[:HAS_ARTIFACT]->(a)
+			MATCH (s:Site {id: $site_id}) 			
+			MERGE (s)-[:HAS_ARTIFACT]->(a)		
+			"""										# TEMP: using Site → Artifact because structure_id missing in dataset
+			graph.run_query(query, row)
+
+def load_images():
+	with open(DATA_PATH + "images.csv") as f:
+		reader = csv.DictReader(f)
+		for row in reader:
+			row = clean_row(row)
+			
+			query = """
+			MERGE (img:Image {id: $image_id})
+			SET img.image_path = $image_path,
+				img.image_description = $image_description
 			"""
 			graph.run_query(query, row)
+
+			if row["entity_type"] == "structure":
+				rel_query = """
+				MATCH (img:Image {id: $image_id}), (st:Structure {id: $entity_id})
+				MERGE (st)-[:HAS_IMAGE]->(img)
+				"""
+				graph.run_query(rel_query, row)
+			elif row["entity_type"] == "artifact":
+				rel_query = """
+				MATCH (img:Image {id: $image_id}), (a:Artifact {id: $entity_id})
+				MERGE (a)-[:HAS_IMAGE]->(img)
+				"""
+				graph.run_query(rel_query, row)
+
 
 if __name__ == "__main__":
 	print("Loading sites...")
@@ -80,5 +107,8 @@ if __name__ == "__main__":
 	print("Loading artifacts...")
 	load_artifacts()
 	
+	print("Loading images...")
+	load_images()
+
 	graph.close()
 	print("Data successfully loaded into Neo4j!") 
