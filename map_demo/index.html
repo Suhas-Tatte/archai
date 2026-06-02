@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archai Map Demo</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header { padding: 10px 14px; border-bottom: 1px solid #ddd; }
+    #map { height: calc(100vh - 58px); width: 100%; }
+    .hint { color: #555; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Archai Temporary Map Demo</strong>
+    <div class="hint">Showing site markers from CSV data (name, district, state, coordinates).</div>
+  </header>
+  <div id="map"></div>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script>
+    const map = L.map('map').setView([22.8, 78.9], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    fetch('/api/sites')
+      .then((r) => r.json())
+      .then((sites) => {
+        if (!Array.isArray(sites) || sites.length === 0) {
+          alert('No site data available for map markers.');
+          return;
+        }
+
+        const bounds = [];
+
+        sites.forEach((site) => {
+          if (site.latitude == null || site.longitude == null) return;
+
+          const marker = L.marker([site.latitude, site.longitude]).addTo(map);
+          marker.bindPopup(
+            `<b>${site.name || 'Unknown Site'}</b><br/>` +
+            `${site.district || ''}, ${site.state || ''}<br/>` +
+            `Lat: ${site.latitude}, Lng: ${site.longitude}`
+          );
+
+          bounds.push([site.latitude, site.longitude]);
+        });
+
+        if (bounds.length > 0) {
+          map.fitBounds(bounds, { padding: [30, 30] });
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        alert('Failed to load site data. Check terminal logs.');
+      });
+  </script>
+</body>
+</html>

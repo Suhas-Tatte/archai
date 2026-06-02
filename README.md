@@ -226,4 +226,36 @@ The system will automatically:
 
 ---
 
+## Temporary Map Feature Demo
+
+To quickly verify map functionality, a temporary webpage is available at:
+
+- `map_demo/index.html`
+- `scripts/map_demo.py`
+
+### Run the demo
+
+From the repository root:
+
+```bash
+python scripts/map_demo.py
+```
+
+Open this URL in your browser:
+
+`http://127.0.0.1:8090`
+
+### What to verify
+
+- Map loads successfully
+- Site markers appear on the map
+- Clicking a marker shows site details (name, district/state, latitude/longitude)
+
+### Notes
+
+- Data source is auto-selected from:
+  1. `data/data/sites.csv`
+  2. `data/dummy_data/sites.csv` (fallback)
+
+---
 
