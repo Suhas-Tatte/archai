@@ -68,7 +68,7 @@ ST168,Mound (Amra),Archaeological Mound,S168,Null
 ST169,Shiv Temple (Khimeshwar Mahadev),Temple,S169,Null
 ST170,Kotho (Bhujio) Rampart,Fortification,S170,Null
 ST171,Khambhalia Gate,Gate,S171,Null
-ST172,Juma Masjid(nscription),Inscription,S172,Null
+ST172,Juma Masjid(Inscription),Mosque(inscription at mosque),S172,Null
 ST173,Nagnath Temple,Temple,S173,Null
 ST174,Lakhota Tower,Tower / Fort,S174,Null
 ST175,Mound (Narmana),Archaeological Mound,S175,Null
@@ -105,7 +105,7 @@ ST207,Minaravali Masjid,Mosque,S207,Null
 ST208,Vejal Kotho,Fortification,S208,Null
 ST209,Shah Kotho,Fortification,S209,Null
 ST210,Sana Caves,Cave,S210,Null
-ST211,Two Stone Inscriptions on Jumma Masjid,Inscription,S211,Null
+ST211,Two Stone Inscriptions on Jumma Masjid,Mosque(inscription at mosque),S211,Null
 ST212,Two Idols of Kshetrapal At Vav (Pujari Vav),Monument(idols),S212,Null
 ST213,Adi Kadi Vav,Stepwell,S213,Null
 ST214,Jumma Masjid & Cannon (Neelam And Kadanal),Monument,S214,Null
@@ -163,7 +163,7 @@ ST273,Kalikamata Temple,Temple,S273,Null
 ST274,Bilingual Stone Inscription at Gayatri Temple,Inscription at temple,S274,Null
 ST275,Prachi Kund,Water Tank (Kund),S275,Null
 ST276,Mool Prachi,Water Structure,S276,Null
-ST277,Stone Inscription at Jumma Masjid (H.S.732),Inscription at Mosque,S277,Null
+ST277,Stone Inscription at Kaji Masjid - H.S.902,Inscription at Mosque,S277,Null
 ST278,Gorakhnath Mahadev,Temple,S278,Null
 ST279,Jain Temple,Temple,S279,Null
 ST280,Talav,Water Tank,S280,Null
@@ -180,7 +180,7 @@ ST292,Veneshwar Mahadev Temple,Temple,S292,Null
 ST293,Veraval Gate,Gate,S293,Null
 ST295,Surya Mandir (Sun Temple),Temple,S295,Null
 ST296,Mound of Sav,Archaeological Mound,S296,Null
-ST297,Jumma Masjid,Mosque,S297,Null
+ST297,Stone Inscription at Jumma Masjid (H.S.732),Mosque,S297,Null
 ST298,Stone Inscription at Harshadmata Temple,Inscription at temple,S298,Null
 ST299,Bauddha Gufa (Caves) of Mandore,Buddhist Cave,S299,Null
 ST300,Chyavan Kund,Water Tank (Kund),S300,Null

@@ -1,2 +1,7 @@
 neo4j==6.1.0
 python-dotenv==1.0.1
+transformers
+huggingface_hub
+#pip install -r requirements.txt
+#need to install torch also-command is =>pip install torch transformers
+#install groq too=>pip install groq

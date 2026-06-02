@@ -1,0 +1,29 @@
+
+##
+activate venv
+	# Create and activate venv
+	python -m venv venv
+	venv\Scripts\activate 
+
+Create env which should contain-
+	GROQ_API_KEY=...
+	NEO4J_URI=...
+	NEO4J_USERNAME=...
+	NEO4J_PASSWORD=...
+
+first install req
+	pip install -r requirements.txt
+	pip install torch transformers
+	pip install groq
+
+python -m graph_layer.ingestion_data   -this is for adding data in neo4j-ignore if data already in neo4j
+
+update env and check connections 
+	python for_Testing_connections/test_connection.py
+	python for_Testing_connections/test_groq.py
+
+
+
+
+
+
