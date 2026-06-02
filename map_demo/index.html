@@ -40,20 +40,30 @@
     fetch('/api/sites')
       .then((r) => r.json())
       .then((sites) => {
-        if (!Array.isArray(sites) || sites.length === 0) {
-          alert('No site data available for map markers.');
+        if (!Array.isArray(sites)) {
+          alert('Invalid site data response: expected an array of sites.');
+          return;
+        }
+
+        if (sites.length === 0) {
+          alert('No sites found in the dataset.');
           return;
         }
 
         const bounds = [];
 
         sites.forEach((site) => {
-          if (site.latitude == null || site.longitude == null) return;
+          if (
+            site.latitude === null || site.latitude === undefined ||
+            site.longitude === null || site.longitude === undefined
+          ) return;
+          const locationBits = [site.district, site.state].filter(Boolean);
+          const locationText = locationBits.length ? locationBits.join(', ') : 'Location unavailable';
 
           const marker = L.marker([site.latitude, site.longitude]).addTo(map);
           marker.bindPopup(
             `<b>${site.name || 'Unknown Site'}</b><br/>` +
-            `${site.district || ''}, ${site.state || ''}<br/>` +
+            `${locationText}<br/>` +
             `Lat: ${site.latitude}, Lng: ${site.longitude}`
           );
 
@@ -62,6 +72,8 @@
 
         if (bounds.length > 0) {
           map.fitBounds(bounds, { padding: [30, 30] });
+        } else {
+          alert('No sites with valid coordinates found.');
         }
       })
       .catch((err) => {

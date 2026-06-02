@@ -1,5 +1,7 @@
 import csv
 import json
+import logging
+import math
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -10,6 +12,8 @@ DATA_CANDIDATES = [
     REPO_ROOT / "data" / "data" / "sites.csv",
     REPO_ROOT / "data" / "dummy_data" / "sites.csv",
 ]
+logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+logger = logging.getLogger(__name__)
 
 
 class MapDemoHandler(SimpleHTTPRequestHandler):
@@ -51,7 +55,8 @@ class MapDemoHandler(SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(payload)
         except Exception as exc:
-            self.send_error(500, f"Failed loading data: {exc}")
+            logger.exception("Failed loading site data")
+            self.send_error(500, "Failed to load site data from CSV")
 
 
 def _find_sites_csv():
@@ -61,11 +66,19 @@ def _find_sites_csv():
     return None
 
 
-def _safe_float(value):
-    if value in [None, "", "null", "Null"]:
+def _parse_float_or_none(value):
+    if value is None:
         return None
+
+    raw = str(value).strip()
+    if raw == "":
+        return None
+
     try:
-        return float(value)
+        parsed = float(raw)
+        if math.isnan(parsed):
+            return None
+        return parsed
     except ValueError:
         return None
 
@@ -75,8 +88,10 @@ def _load_sites(csv_path):
     with csv_path.open("r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            latitude = _safe_float(row.get("latitude"))
-            longitude = _safe_float(row.get("longitude"))
+            latitude = _parse_float_or_none(row.get("latitude"))
+            longitude = _parse_float_or_none(row.get("longitude"))
+            if latitude is None or longitude is None:
+                continue
 
             rows.append(
                 {
