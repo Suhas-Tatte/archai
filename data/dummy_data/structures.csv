@@ -1,0 +1,67 @@
+structure_id,name,type,site_id,description
+ST001,Virupaksha Temple,Temple,S001,Main temple complex at Hampi dedicated to Lord Shiva
+ST002,Hampi Bazaar,Market,S001,Ancient marketplace area near Virupaksha Temple
+ST003,Badami Cave 1,Cave,S002,Rock-cut cave temple with Hindu carvings
+ST004,Badami Cave 2,Cave,S002,Second cave with sculptural inscriptions
+ST005,Pattadakal Temple Complex,Temple Complex,S003,UNESCO site with multiple temples
+ST006,Sangameshwara Temple,Temple,S003,Early Chalukyan temple at Pattadakal
+ST007,Ajanta Cave 1,Cave,S004,Buddhist cave with paintings and sculptures
+ST008,Ajanta Cave 2,Cave,S004,Decorated cave with murals
+ST009,Kailasa Temple,Rock-cut Temple,S005,Monolithic temple at Ellora
+ST010,Ellora Cave 10,Cave,S005,Buddhist chaitya hall
+ST301,Main Shaft,Stepwell Core,S301,Central shaft
+ST302,Pillared Pavilion,Pavilion,S301,Decorative pillars
+ST303,Main Corridor,Stepwell Corridor,S302,Descending passage
+ST304,Sculpture Panels,Wall Structure,S302,Carved niches
+ST305,Surya Kund,Water Tank,S303,Temple tank
+ST306,Temple Shrine,Temple,S303,Main sanctum
+ST307,Jami Masjid,Mosque,S304,Main mosque
+ST308,Fort Walls,Fortification,S304,Defensive walls
+ST309,Dockyard,Port Structure,S305,Ancient dock
+ST310,Granary,Storage,S305,Grain storage
+ST311,Reservoir,Water Structure,S306,Water system
+ST312,Citadel,Urban Core,S306,Administrative area
+ST313,Jali Windows,Architectural Element,S307,Stone lattice
+ST314,Prayer Hall,Hall,S308,Main prayer space
+ST315,Minarets,Tower,S309,Mosque towers
+ST316,Tomb Complex,Tomb,S310,Roza structures
+ST317,Spiral Staircase,Staircase,S311,Helical descent
+ST318,Main Gate,Gateway,S312,Fort entrance
+ST319,Buddhist Caves,Cave,S313,Rock caves
+ST320,Jain Temples,Temple Complex,S314,Cluster
+ST321,Temple Garbhagriha,Sanctum,S315,Inner shrine
+ST322,Victory Arch,Arch,S316,Stone toran
+ST323,Temple Ruins,Temple,S317,Collapsed structure
+ST324,Temple Mandap,Hall,S318,Pillared hall
+ST325,Temple Complex,Temple,S319,Main shrine
+ST326,Jain Shrine,Temple,S320,Jain structure
+ST327,Palace Hall,Palace,S321,Main hall
+ST328,Temple Gate,Gateway,S322,Entrance
+ST329,Lake Embankment,Water Structure,S323,Boundary
+ST330,Triple Gateway,Gateway,S324,Three arches
+ST331,Ashram Buildings,Residential,S325,Living quarters
+ST332,Temple Complex,Temple,S326,Large complex
+ST333,Museum Block,Museum,S327,Exhibit hall
+ST334,Temple Mandir,Temple,S328,Main shrine
+ST335,Hill Temple,Temple,S329,Top shrine
+ST336,Fort Wall,Fortification,S330,River defense
+ST337,Castle Structure,Fort,S331,Main castle
+ST338,Tombs,Tomb,S332,European graves
+ST339,Talav Structure,Water Tank,S333,Reservoir
+ST340,Temple Ruins,Temple,S334,Ancient ruins
+ST341,Pilgrim Complex,Complex,S335,Temple area
+ST342,Tirth Site,Ritual Site,S336,Religious point
+ST343,Rock Edict,Inscription Site,S337,Stone edict
+ST344,Heritage House,Residence,S338,Gandhi home
+ST345,Museum Hall,Museum,S339,Artifacts display
+ST346,Temple Shrine,Temple,S340,Main deity area
+ST347,Memorial,Memorial,S341,Gandhi memorial
+ST348,Marine Zone,Ecological,S342,Protected area
+ST349,Temple Hall,Temple,S343,Prayer area
+ST350,Bird Habitat,Ecological,S344,Nesting zone
+ST351,Palace Complex,Palace,S345,Royal residence
+ST352,Statue Base,Monument,S346,Foundation
+ST353,Hill Structures,Landscape,S347,Facilities
+ST354,Waterfall Basin,Natural,S348,Pool
+ST355,Temple Ruins,Temple,S349,Forest ruins
+ST356,Waterfall Structure,Natural,S350,Rock fall

@@ -1,0 +1,61 @@
+image_id,artifact_id,file_path,description
+IMG001,A001,data/images/dummy/bronze_idol.jpg,Bronze idol artifact image
+IMG002,A002,data/images/dummy/stone_inscription.jpg,Stone inscription artifact image
+IMG003,A003,data/images/dummy/clay_pottery.jpg,Clay pottery artifact image
+IMG004,A004,data/images/dummy/temple_sculpture.jpg,Temple sculpture fragment
+IMG005,A005,data/images/dummy/iron_tool.jpg,Ancient iron tool
+IMG006,A006,data/images/dummy/gold_ornament.jpg,Gold ornament artifact
+IMG007,A007,data/images/dummy/pillar_fragment.jpg,Stone pillar fragment
+IMG008,A008,data/images/dummy/clay_figurine.jpg,Clay figurine artifact
+IMG009,A009,data/images/dummy/bronze_coin.jpg,Bronze coin artifact
+IMG010,A010,data/images/dummy/stone_tablet.jpg,Stone tablet artifact
+IMG011,A301,data/images/dummy/adalaj_floral_carving.jpg,Floral stone carving from Adalaj Stepwell
+IMG012,A302,data/images/dummy/adalaj_inscription.jpg,Arabic inscription at Adalaj Stepwell
+IMG013,A303,data/images/dummy/rani_vav_sculpture.jpg,Deity sculpture at Rani ki Vav
+IMG014,A304,data/images/dummy/nagkanya_figure.jpg,Nagkanya sculpture from Rani ki Vav
+IMG015,A305,data/images/dummy/sun_motif_modhera.jpg,Sun motif carving at Modhera
+IMG016,A306,data/images/dummy/modhera_pillar.jpg,Carved pillar at Sun Temple Modhera
+IMG017,A307,data/images/dummy/champaner_calligraphy.jpg,Islamic calligraphy from Champaner
+IMG018,A308,data/images/dummy/lothal_seal.jpg,Harappan seal from Lothal
+IMG019,A309,data/images/dummy/lothal_beads.jpg,Bead ornament from Lothal
+IMG020,A310,data/images/dummy/dholavira_marking.jpg,Reservoir marking from Dholavira
+IMG021,A311,data/images/dummy/sidi_saiyyed_jali.jpg,Stone jali carving
+IMG022,A312,data/images/dummy/jama_masjid_mihrab.jpg,Mihrab structure in Jama Masjid
+IMG023,A313,data/images/dummy/rani_rupmati_arch.jpg,Decorative arch from mosque
+IMG024,A314,data/images/dummy/sarkhej_tomb_carving.jpg,Tomb carving at Sarkhej Roza
+IMG025,A315,data/images/dummy/dada_harir_inscription.jpg,Stepwell inscription
+IMG026,A316,data/images/dummy/bhadra_fort_engraving.jpg,Fort wall engraving
+IMG027,A317,data/images/dummy/uparkot_relief.jpg,Rock relief in Uparkot caves
+IMG028,A318,data/images/dummy/girnar_idol.jpg,Temple idol from Girnar
+IMG029,A319,data/images/dummy/somnath_lingam.jpg,Shiva lingam at Somnath
+IMG030,A320,data/images/dummy/kirti_toran_arch.jpg,Decorative arch at Kirti Toran
+IMG031,A321,data/images/dummy/rudra_mahalaya_pillar.jpg,Temple pillar remains
+IMG032,A322,data/images/dummy/hatkeshwar_mandap.jpg,Mandap carving
+IMG033,A323,data/images/dummy/shamlaji_vishnu.jpg,Vishnu idol at Shamlaji
+IMG034,A324,data/images/dummy/taranga_jain_idol.jpg,Jain idol at Taranga
+IMG035,A325,data/images/dummy/laxmi_vilas_decor.jpg,Palace decorative element
+IMG036,A326,data/images/dummy/nilkanth_temple_decor.jpg,Temple ornament
+IMG037,A327,data/images/dummy/kankaria_stonework.jpg,Stone embankment
+IMG038,A328,data/images/dummy/teen_darwaza_carving.jpg,Gateway carving
+IMG039,A329,data/images/dummy/sabarmati_items.jpg,Gandhi personal artifacts
+IMG040,A330,data/images/dummy/akshardham_sculpture.jpg,Temple sculpture
+IMG041,A331,data/images/dummy/museum_artifact.jpg,Museum display item
+IMG042,A332,data/images/dummy/dakor_krishna.jpg,Krishna idol at Dakor
+IMG043,A333,data/images/dummy/pavagadh_kali.jpg,Kali idol at Pavagadh
+IMG044,A334,data/images/dummy/bharuch_cannon.jpg,Historic cannon
+IMG045,A335,data/images/dummy/surat_castle_cannon.jpg,Castle cannon
+IMG046,A336,data/images/dummy/dutch_grave_marker.jpg,Grave marker
+IMG047,A337,data/images/dummy/gopi_talav_stone.jpg,Stonework at Gopi Talav
+IMG048,A338,data/images/dummy/navlakha_stone.jpg,Temple stone remains
+IMG049,A339,data/images/dummy/prabhas_mark.jpg,Pilgrim marking
+IMG050,A340,data/images/dummy/bhalka_symbol.jpg,Tirth symbol
+IMG051,A341,data/images/dummy/ashokan_edict.jpg,Ashokan inscription
+IMG052,A342,data/images/dummy/gandhi_house_item.jpg,Household artifact
+IMG053,A343,data/images/dummy/watson_museum_piece.jpg,Museum artifact
+IMG054,A344,data/images/dummy/sudama_temple_idol.jpg,Temple idol
+IMG055,A345,data/images/dummy/kirti_mandir_stone.jpg,Memorial inscription
+IMG056,A346,data/images/dummy/marine_fossil.jpg,Marine fossil
+IMG057,A347,data/images/dummy/hanuman_temple_bell.jpg,Temple bell
+IMG058,A348,data/images/dummy/bird_nest.jpg,Bird nesting artifact
+IMG059,A349,data/images/dummy/rajpipla_palace_item.jpg,Palace artifact
+IMG060,A350,data/images/dummy/statue_component.jpg,Statue structural component

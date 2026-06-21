@@ -1,0 +1,61 @@
+artifact_id,name,type,site_id,structure_id,material_id,description
+A001,Bronze Idol,Sculpture,S001,ST001,M1,Bronze idol discovered near temple ruins in Hampi
+A002,Stone Inscription,Inscription,S002,ST003,M2,Ancient stone inscription found in Badami caves
+A003,Clay Pottery,Pottery,S003,ST005,M3,Decorated clay pottery fragments from Pattadakal site
+A004,Temple Sculpture,Sculpture,S001,ST001,M2,Stone sculpture fragment from Hampi temple complex
+A005,Iron Tool,Tool,S002,ST004,M5,Ancient iron tool discovered in Badami excavation
+A006,Gold Ornament,Jewelry,S004,ST007,M4,Gold ornament excavated near Ajanta cave settlement
+A007,Stone Pillar Fragment,Architecture,S003,ST006,M2,Fragment of carved stone pillar from temple pillar
+A008,Clay Figurine,Figurine,S004,ST008,M3,Small clay figurine discovered near caves
+A009,Bronze Coin,Currency,S005,ST009,M1,Coin found in Ellora temple 
+A010,Stone Tablet,Inscription,S005,ST010,M2,Stone tablet containing ancient inscription near Ellora
+A301,Floral Carvings,Architectural,S301,ST301,M2,Stone carvings
+A302,Arabic Inscription,Inscription,S301,ST301,M2,Wall text
+A303,Deity Sculpture,Sculpture,S301,ST302,M2,God carving
+A304,Nagkanya Figure,Sculpture,S301,ST302,M2,Serpent figure
+A305,Sun Motif,Sculpture,S302,ST303,M2,Sun carvings
+A306,Pillar Carvings,Architectural,S302,ST303,M2,Decorated pillars
+A307,Calligraphy,Inscription,S302,ST304,M2,Arabic text
+A308,Harappan Seal,Seal,S303,ST305,M1,Trade seal
+A309,Bead Ornament,Ornament,S303,ST305,M3,Beads
+A310,Reservoir Marking,Inscription,S303,ST306,M2,Water level
+A311,Jali Pattern,Architectural,S304,ST307,M2,Lattice carving
+A312,Mihrab Stone,Architectural,S304,ST308,M2,Prayer niche
+A313,Arch Design,Architectural,S305,ST309,M2,Arches
+A314,Tomb Carving,Sculpture,S305,ST310,M2,Decorations
+A315,Stepwell Inscriptions,Inscription,S306,ST311,M2,Wall text
+A316,Fort Engraving,Inscription,S306,ST312,M2,Wall marks
+A317,Cave Relief,Sculpture,S307,ST313,M2,Rock carving
+A318,Temple Idol,Sculpture,S308,ST314,M2,Stone idol
+A319,Lingam,Ritual,S309,ST315,M2,Shiva symbol
+A320,Arch Ornament,Architectural,S310,ST316,M2,Decorative arch
+A321,Temple Pillar,Architectural,S311,ST317,M2,Pillar
+A322,Mandap Carving,Architectural,S312,ST318,M2,Hall carvings
+A323,Vishnu Idol,Sculpture,S313,ST319,M2,Stone idol
+A324,Jain Idol,Sculpture,S314,ST320,M2,Tirthankara idol
+A325,Palace Decor,Architectural,S315,ST321,M2,Interior carvings
+A326,Temple Ornament,Architectural,S316,ST322,M2,Decor
+A327,Lake Stonework,Architectural,S317,ST323,M2,Embankment stone
+A328,Gateway Carving,Architectural,S318,ST324,M2,Gate decor
+A329,Gandhi Items,Artifact,S319,ST325,M1,Personal items
+A330,Temple Sculpture,Sculpture,S320,ST326,M2,Decor
+A331,Museum Artifact,Artifact,S321,ST327,M2,Display item
+A332,Krishna Idol,Sculpture,S322,ST328,M2,Idol
+A333,Kali Idol,Sculpture,S323,ST329,M2,Idol
+A334,Fort Cannon,Weapon,S324,ST330,M5,Cannon
+A335,Castle Cannon,Weapon,S325,ST331,M5,Cannon
+A336,Grave Marker,Inscription,S326,ST332,M2,Grave stone
+A337,Lake Stone,Architectural,S327,ST333,M2,Stone
+A338,Temple Stone,Architectural,S328,ST334,M2,Stone
+A339,Pilgrim Mark,Inscription,S329,ST335,M2,Marking
+A340,Tirth Symbol,Ritual,S330,ST336,M2,Symbol
+A341,Ashokan Edict,Inscription,S331,ST337,M2,Rock edict
+A342,House Artifact,Artifact,S332,ST338,M1,Daily use item
+A343,Museum Piece,Artifact,S333,ST339,M2,Display
+A344,Temple Idol,Sculpture,S334,ST340,M2,Idol
+A345,Memorial Stone,Inscription,S335,ST341,M2,Memorial
+A346,Marine Fossil,Artifact,S336,ST342,M2,Fossil
+A347,Temple Bell,Ritual,S337,ST343,M5,Bell
+A348,Bird Nest,Natural,S338,ST344,M1,Nesting
+A349,Palace Artifact,Artifact,S339,ST345,M4,Decor item
+A350,Statue Component,Monument,S340,ST346,M2,Structure piece

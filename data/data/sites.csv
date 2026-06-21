@@ -1,0 +1,484 @@
+site_id,name,address,district,state,latitude,longitude,gis_accuracy
+S101,Amritavarshini Vav,Panchkuva,Ahmedabad,Gujarat,23.025,72.5972,exact
+S102,Dutch Tomb,Near Kankaria Lake,Ahmedabad,Gujarat,23.0058,72.5975,exact
+S103,Khan Talav,Dholka,Ahmedabad,Gujarat,22.7344,72.4297,exact
+S104,Ancient Masjid,Isanpur,Ahmedabad,Gujarat,22.975,72.6031,exact
+S105,Ancient Step Well,Kathwada,Ahmedabad,Gujarat,23.0578,72.7047,exact
+S106,Timbo,Babra,Amreli,Gujarat,21.848,71.3058,exact
+S107,Adnath Temple,Adpokar,Gir Somnath,Gujarat,20.8514,70.7908,exact
+S108,Kandhrmatad Inscriptions,Juni Fafani,Gir Somnath,Gujarat,20.929818,70.762758,"approximate (district: Gir Somnath, Gujarat)"
+S109,Ganganath Mahadev Temple,Tosan,Gir Somnath,Gujarat,20.929818,70.762758,"approximate (district: Gir Somnath, Gujarat)"
+S110,Ancient Shiv Temple,Kasara,Banaskantha,Gujarat,23.9117,71.9133,exact
+S111,Kumbheshwar Mahadev,Kumbhariya,Banaskantha,Gujarat,24.3244,72.8611,exact
+S112,Temple No.1 Near Kantivas,Tarsang Forest,Banaskantha,Gujarat,24.0994,72.8042,exact
+S113,Temple No.2,Tarsang Forest,Banaskantha,Gujarat,24.269387,72.536751,"approximate (district: Banaskantha, Gujarat)"
+S114,Temple No.3,Tarsang Forest,Banaskantha,Gujarat,24.269387,72.536751,"approximate (district: Banaskantha, Gujarat)"
+S115,Temple No.4,Tarsang Forest,Banaskantha,Gujarat,24.269387,72.536751,"approximate (district: Banaskantha, Gujarat)"
+S116,Temple No.5,Tarsang Forest,Banaskantha,Gujarat,24.269387,72.536751,"approximate (district: Banaskantha, Gujarat)"
+S117,Temple No.6,Tarsang Forest,Banaskantha,Gujarat,24.269387,72.536751,"approximate (district: Banaskantha, Gujarat)"
+S118,Temple No.1 (near Mahudi),Tarsang Forest (Near Mahudi),Banaskantha,Gujarat,24.1064,72.8125,exact
+S119,Temple No. 2,Tarsang Forest (Near Mahudi),Banaskantha,Gujarat,24.269387,72.536751,"approximate (district: Banaskantha, Gujarat)"
+S120,Temple No. 3,Tarsang Forest (Near Mahudi),Banaskantha,Gujarat,24.269387,72.536751,"approximate (district: Banaskantha, Gujarat)"
+S121,Temple No. 4,Tarsang Forest (Near Mahudi),Banaskantha,Gujarat,24.269387,72.536751,"approximate (district: Banaskantha, Gujarat)"
+S122,Stepwell,Hadad,Banaskantha,Gujarat,24.2628,72.98,exact
+S123,Ancient Temple,Hadad,Banaskantha,Gujarat,24.2664,72.975,exact
+S124,Muleshwar Mahadev Temple,Padan,Banaskantha,Gujarat,24.2858,71.3133,exact
+S125,Muleshwar Mahadev Temple,Vav,Banaskantha,Gujarat,24.4011,71.485,exact
+S126,Mithi Vav,Palanpur,Banaskantha,Gujarat,24.1689,72.4433,exact
+S127,Zaloragadh Timbo,Zaloragadh (Radhanpur),Patan,Gujarat,23.773753,71.679858,"approximate (district: Patan, Gujarat)"
+S128,Kadia Dungar Caves,Zazpor,Bharuch,Gujarat,21.6736,73.2722,exact
+S129,Haripiya Timbo,Budhel,Bhavnagar,Gujarat,21.6825,72.1592,exact
+S130,Ganga Chhatri,Bhavnagar,Bhavnagar,Gujarat,21.7758,72.1442,exact
+S131,Carvings of Old Darbargadh,Bhavnagar,Bhavnagar,Gujarat,21.771884,72.141645,"approximate (area: Bhavnagar, Bhavnagar)"
+S132,Bhavnath Temple,Bhavnagar,Bhavnagar,Gujarat,21.7778,72.1439,exact
+S133,Firangi Deval,Kalsar,Bhavnagar,Gujarat,21.1214,71.8967,exact
+S134,Gopnath Temple(Ceiling and Pictures on the wall),Talaja,Bhavnagar,Gujarat,21.2097,72.1058,exact
+S135,Brahma Kund,Sihor,Bhavnagar,Gujarat,21.7061,71.9606,exact
+S136,Saat Sheri (Satsheri),Sihor,Bhavnagar,Gujarat,21.7061,71.965,exact
+S137,Minara,Loliyana,Bhavnagar,Gujarat,21.9422,71.7903,exact
+S138,Ancient Temple,Gundi,Bhavnagar,Gujarat,20.888084,70.400865,approximate (name matched in Gujarat)
+S139,Kund & Toran,Kapadvanj,Kheda,Gujarat,23.0353,73.0728,exact
+S140,Vav (Step Well) (Dholikui),Kapadvanj,Kheda,Gujarat,23.0233,73.0717,exact
+S141,Vori Vav,Kapadvanj,Kheda,Gujarat,23.02324,73.072753,"approximate (area: Kapadvanj, Kheda)"
+S142,Mota Todavali Vav,Vadtal,Kheda,Gujarat,22.8597,72.9572,exact
+S143,Vav (Step Well),Mahemdavad,Kheda,Gujarat,22.8258,72.7547,exact
+S144,Bhadrakali Mata Stepwell,Umreth,Anand,Gujarat,22.7047,73.0714,exact
+S145,Bhadeshwar Temple,Anjar,Kachchh,Gujarat,23.1056,70.0292,exact
+S146,Deputy Collector Office (MacMurdo's Bungalow),Anjar,Kachchh,Gujarat,23.1114,70.0275,exact
+S147,Shail Gufa (Cave) No.1,Deshalpar,Kachchh,Gujarat,23.201044,69.435933,"approximate (area: Deshalpar, Kachchh)"
+S148,Shail Gufa No.2,Deshalpar,Kachchh,Gujarat,23.201044,69.435933,"approximate (area: Deshalpar, Kachchh)"
+S149,Pureshwar Temple,Manjal,Kachchh,Gujarat,23.2572,69.3836,exact
+S150,Vadimedi (Shaiv Math),Manjal,Kachchh,Gujarat,23.2583,69.3819,exact
+S151,Gates of Kanthkot,Kanthkot,Kachchh,Gujarat,23.485,70.4642,exact
+S152,Jain Temple,Kanthkot,Kachchh,Gujarat,23.485,70.4642,exact
+S153,Surya Temple,Kanthkot,Kachchh,Gujarat,23.485,70.4642,exact
+S154,Shiva Temple,Kera,Kachchh,Gujarat,23.085,69.5994,exact
+S155,Ram Kund,Bhuj,Kachchh,Gujarat,23.245,69.6611,exact
+S156,Old Temple,Bhadreshwar,Kachchh,Gujarat,22.9122,69.9006,exact
+S157,Eye No Dero Shiva Temple,Chitrod - Mevasa,Kachchh,Gujarat,23.415,70.6972,exact
+S158,Shai Gufa / Siyot Caves,Near Juna Patgadh,Kachchh,Gujarat,23.7406,68.7411,exact
+S159,Mound of Pabumath,Suvai,Kachchh,Gujarat,23.611758,70.491722,"approximate (area: Suvai, Kachchh)"
+S160,Mound of Shobharel,"Shobharel river basin, Khadir Island,NE of Chanpar village",Kachchh,Gujarat,23.583333,70,"approximate (district: Kachchh, Gujarat)"
+S161,Padharghadh,Near Puareshwar (Manjal),Kachchh,Gujarat,23.2561,69.3803,exact
+S162,Lakhpat Fort,Lakhpat,Kachchh,Gujarat,23.6736,69.3803,exact
+S163,Bhuvadeshwar Mahadev Temple,Bhuvad,Kachchh,Gujarat,23.0172,69.899,exact
+S164,Gurdwara,Lakhpat,Kachchh,Gujarat,23.8261,68.7697,exact
+S165,Kirti Stambh (Deva Manek Stambh),Machharada (Kalavad),Jamnagar,Gujarat,22.0856,70.3297,exact
+S166,Ancient Temple,Machharada (Kalavad),Devbhumi Dwarka,Gujarat,20.888084,70.400865,approximate (name matched in Gujarat)
+S167,Shai Gufa of Alech (Patan/Khapra Kodia),Patan (Jamjodhpur),Jamnagar,Gujarat,22.473242,70.05521,"approximate (district: Jamnagar, Gujarat)"
+S168,Mound (Amra),Amra,Jamnagar,Gujarat,22.412,69.9228,exact
+S169,Shiv Temple (Khimeshwar Mahadev),Khimrana,Jamnagar,Gujarat,22.4736,70.0144,exact
+S170,Kotho (Bhujio) Rampart,Jamnagar,Jamnagar,Gujarat,22.4625,70.0692,exact
+S171,Khambhalia Gate,Jamnagar,Jamnagar,Gujarat,22.4608,70.0697,exact
+S172,Inscription of Juma Masjid,Jamnagar,Jamnagar,Gujarat,22.4633,70.0664,exact
+S173,Nagnath Temple,Jamnagar,Jamnagar,Gujarat,22.297334,70.776414,approximate (name matched in Gujarat)
+S174,Lakhota Tower,Jamnagar,Jamnagar,Gujarat,22.4656,70.0656,exact
+S175,Mound (Narmana),Narmana,Jamnagar,Gujarat,22.09,70.1522,exact
+S176,Mound (Bed),Bed,Jamnagar,Gujarat,22.4469,69.8992,exact
+S177,Mound (Moda),Moda,Jamnagar,Gujarat,22.4375,70.28,exact
+S178,Mound (Lakhabaval),Lakhabaval,Jamnagar,Gujarat,22.4203,69.9936,exact
+S179,Mound (Vasai),Vasai,Jamnagar,Gujarat,22.0667,70,exact
+S180,Stone Memorial Inscription & Battlefield,Shekhpat,Shekhpat,Gujarat,22.385005,71.745261,approximate (state: Gujarat)
+S181,Kotho,Jodiya,Jamnagar,Gujarat,22.69251,70.30541,"approximate (area: Jodiya, Jamnagar)"
+S182,Kalika Mata Temple,Dhrasan Vel,Devbhumi Dwarka,Gujarat,22.149336,69.072735,approximate (name matched in Gujarat)
+S183,Stone Memorial of Bhuchar Mori Deri & Battlefield,Dhrol,Jamnagar,Gujarat,22.5828,70.3978,exact
+S184,Forts Nr. Kileshwar,"Rav no Nes, Ghumli",Devbhumi Dwarka,Gujarat,21.84,69.7456,exact
+S185,Ganesh Temple,Ghumli,Devbhumi Dwarka,Gujarat,21.8831,69.7608,exact
+S186,Navlakha Temple,Ghumli,Devbhumi Dwarka,Gujarat,21.8831,69.7608,exact
+S187,Ancient Temple on the Bank of Chelsar Talav,Ghumli,Devbhumi Dwarka,Gujarat,21.8853,69.7561,exact
+S188,Rampol Gates,Ghumli,Devbhumi Dwarka,Gujarat,22.247511,68.968244,"approximate (district: Devbhumi Dwarka, Gujarat)"
+S189,Vikiya Vav,Ghumli,Devbhumi Dwarka,Gujarat,21.8831,69.7608,exact
+S190,Son Kansari,Ghumli,Devbhumi Dwarka,Gujarat,21.8797,69.7514,exact
+S191,Five Temples,Pachhtar,Devbhumi Dwarka,Gujarat,21.8681,69.6811,exact
+S192,Bhimeshwar Mahadev Temples,Near Pachhtar,Devbhumi Dwarka,Gujarat,21.8747,69.6767,exact
+S193,Two Bhavaneshwar Temples,Bhavaneshwar,Devbhumi Dwarka,Gujarat,21.8869,69.6869,exact
+S194,Fort,Modpar,Devbhumi Dwarka,Gujarat,21.8539,69.8086,exact
+S195,Stepwell,Modpar,Devbhumi Dwarka,Gujarat,22.974469,72.603359,approximate (name matched in Gujarat)
+S196,Dhingeshwar Mahadev Temple & Shail Gufao,Modpar,Devbhumi Dwarka,Gujarat,21.7192,69.7067,exact
+S197,Panoti Temple,Hathla,Devbhumi Dwarka,Gujarat,21.8536,69.6222,exact
+S198,Shani Vav,Hathla,Devbhumi Dwarka,Gujarat,21.8533,69.6222,exact
+S199,Mound (Modpar) | Modpar (Lalpur),Modpar (Lalpur),Jamnagar,Gujarat,22.473242,70.05521,"approximate (district: Jamnagar, Gujarat)"
+S200,Temple & Two Inscriptions (Ajara Parshwanath),Ajara (Una),Gir Somnath,Gujarat,20.7911,71.0644,exact
+S201,Seven Basins of Hot Water (Kunds),Tulishyam,Gir Somnath,Gujarat,21.0508,71.0244,exact
+S202,Stone Inscriptions Near Talav,Una-Tulishyam Road,Gir Somnath,Gujarat,20.929818,70.762758,"approximate (district: Gir Somnath, Gujarat)"
+S203,Bhimchas,Una-Tulishyam Road,Junagadh,Gujarat,21.0569,71.0444,exact
+S204,Gupta Prayag,Una,Junagadh,Gujarat,20.7533,71.00219,approximate (name matched in Gujarat)
+S205,Gupta Prayag Kund,Una,Junagadh,Gujarat,20.7522,70.9994,exact
+S206,Jumma Masjid,Delvada,Gir Somnath,Gujarat,20.902673,70.367956,exact
+S207,Minaravali Masjid,Delvada,Gir Somnath,Gujarat,20.7747,71.0453,exact
+S208,Vejal Kotho,Delvada,Gir Somnath,Gujarat,20.773557,71.04185,"approximate (area: Delvada, Gir Somnath)"
+S209,Shah Kotho,Delvada,Gir Somnath,Gujarat,20.773557,71.04185,"approximate (area: Delvada, Gir Somnath)"
+S210,Sana Caves,Shana - Vankia (Una),Gir Somnath,Gujarat,20.9622,71.2008,exact
+S211,Two Stone Inscriptions on Jumma Masjid,Kutiyana,Porbandar,Gujarat,21.622834,69.985209,"approximate (area: Kutiyana, Porbandar)"
+S212,Two Idols of Kshetrapal At Vav (Pujari Vav),Kutiyana,Porbandar,Gujarat,21.6206,69.9708,exact
+S213,Adi Kadi Vav,Uparkot,Junagadh,Gujarat,21.527,70.4697,exact
+S214,Jumma Masjid & Cannon (Neelam And Kadanal),Uparkot,Junagadh,Gujarat,21.5247,70.47,exact
+S215,Navghan Kuvo (Well),Uparkot,Junagadh,Gujarat,21.5239,70.4692,exact
+S216,Stone Inscription of Ra'Mandlik (Samvat 1507),Uparkot,Junagadh,Gujarat,21.524189,70.470799,"approximate (area: Uparkot, Junagadh)"
+S217,Laskari Vav,Uparkot,Junagadh,Gujarat,21.5225,70.4692,exact
+S218,Replica of Ashoka Stone Inscription,Girnar Hill,Junagadh,Gujarat,21.522042,70.458246,"approximate (district: Junagadh, Gujarat)"
+S219,Damodar Kund,Girnar Hill,Junagadh,Gujarat,21.5256,70.4844,exact
+S220,Datar no Chilo,Junagadh,Junagadh,Gujarat,21.522042,70.458246,"approximate (area: Junagadh, Junagadh)"
+S221,Boria Buddhistic Monument Lakhamedi & Vadi-Lakhamedi,Near Bordevi,Junagadh,Gujarat,21.4881,70.5425,exact
+S222,Dhori (Peer) Makbaro,Junagadh,Junagadh,Gujarat,21.522042,70.458246,"approximate (area: Junagadh, Junagadh)"
+S223,Narsinh Maheta No Choro,Junagadh,Junagadh,Gujarat,21.5278,70.4586,exact
+S224,Makbara of Babi raja Before Nawab Mahotabkhanji,Junagadh,Junagadh,Gujarat,21.522042,70.458246,"approximate (area: Junagadh, Junagadh)"
+S225,Makbara of Najubibi with Bara Saiyed (Najibai Maqbara),Junagadh,Junagadh,Gujarat,21.5311,70.4678,exact
+S226,Pancheshwar Caves,Junagadh,Junagadh,Gujarat,21.522042,70.458246,"approximate (area: Junagadh, Junagadh)"
+S227,Mahabat Maqbara complex,Junagadh,Junagadh,Gujarat,21.5272,70.4603,exact
+S228,Matri Mata temple,Junagadh,Junagadh,Gujarat,21.5278,70.4681,exact
+S229,Stone Inscription with Mai Gadechi of H. S. 685,Junagadh,Junagadh,Gujarat,21.5317,70.4667,exact
+S230,Kalika Mata,on Girnar Hill,Junagadh,Gujarat,22.149336,69.072735,approximate (name matched in Gujarat)
+S231,Guru Dattatraya,"Girnar Hill,Junagadh",Junagadh,Gujarat,21.5281,70.5328,exact
+S232,Gorakh Mountain Top (Tuk),"Girnar Hill,Junagadh",Junagadh,Gujarat,21.5278,70.5303,exact
+S233,Gaumukhi,"Girnar Hill,Junagadh",Junagadh,Gujarat,21.5278,70.5253,exact
+S234,Bhim Kund,"Girnar Hill,Junagadh",Junagadh,Gujarat,21.5278,70.5211,exact
+S235,Bhairav Jep (Hill Outcrop),"Girnar Hill,Junagadh",Junagadh,Gujarat,21.5303,70.5244,exact
+S236,Wooden Sandal (Paduka) of Ramchandraji,"Girnar Hill,Junagadh",Junagadh,Gujarat,21.5344,70.5281,exact
+S237,Hanuman Dhara,"Girnar Hill,Junagadh",Junagadh,Gujarat,21.5344,70.5281,exact
+S238,Hathi Pagla (Gajapad Kund),"Girnar Hill,Junagadh",Junagadh,Gujarat,21.5286,70.5233,exact
+S239,Bhimdeval (Sun temple),Bhimdeval (Talala),Gir Somnath,Gujarat,20.9614,70.6461,exact
+S240,Buddhist Stupa - Vajir Panat No Kotho,"Hadmatiya, Talala",Gir Somnath,Gujarat,21.00426,70.635296,"approximate (area: Hadmatiya, Talala, Gir Somnath)"
+S241,Vishnu Temple,Odadar,Porbandar,Gujarat,23.65904,73.082851,approximate (name matched in Gujarat)
+S242,Surya Mandir No.1,Odadar,Porbandar,Gujarat,21.602975,69.853807,"approximate (district: Porbandar, Gujarat)"
+S243,Surya Mandir No.2,Odadar,Porbandar,Gujarat,21.602975,69.853807,"approximate (district: Porbandar, Gujarat)"
+S244,Khimeshwar Mahadev Temple,Kuchhadi,Porbandar,Gujarat,21.6822,69.535,exact
+S245,Chadeshwar Mahadev Temple,Chhaya,Porbandar,Gujarat,21.6072,69.65,exact
+S246,Dhigeshwar Mahadev Temple,Chhaya,Porbandar,Gujarat,21.634448,69.628336,"approximate (area: Chhaya, Porbandar)"
+S247,House of Smt. Kasturba Gandhi,Porbandar,Porbandar,Gujarat,21.6409,69.611,"approximate (area: Porbandar, Porbandar)"
+S248,Sartanji no Choro,Porbandar,Porbandar,Gujarat,21.6409,69.611,"approximate (area: Porbandar, Porbandar)"
+S249,Surya Mandir and Sapta Matrika Mandir,Boricha,Porbandar,Gujarat,21.71799,69.683214,"approximate (area: Boricha, Porbandar)"
+S250,Jaleshwar Mahadev Temple,Fatana,Porbandar,Gujarat,21.8842,69.555,exact
+S251,Five Temples,Balej,Porbandar,Gujarat,21.377613,69.867685,"approximate (area: Balej, Porbandar)"
+S252,Nandeshwar Mahadev,Bokhira,Porbandar,Gujarat,21.602975,69.853807,"approximate (district: Porbandar, Gujarat)"
+S253,Chamunda Mata Temple,Juna Bokhira,Porbandar,Gujarat,21.6692,69.6075,exact
+S254,Seven Temples / Saat Mandiro,Bhansara,Porbandar,Gujarat,21.602975,69.853807,"approximate (district: Porbandar, Gujarat)"
+S255,Ancient Temple (near Madhavrai temple),Madhavpur Ghed,Porbandar,Gujarat,21.2561,69.9561,exact
+S256,Ancient Temple,Miyani,Porbandar,Gujarat,21.8411,69.3817,exact
+S257,Panchayatan Mandir,Visavada,Porbandar,Gujarat,21.8075,69.4531,exact
+S258,Vav,Visavada,Porbandar,Gujarat,21.8075,69.4531,exact
+S259,Dhanvantari no Palio,"Moti Dhaneti,Maliya Hatina",Junagadh,Gujarat,21.095,70.32,exact
+S260,Memorial Stone of Dah Culture,Bagasara-Ghed,Junagadh,Gujarat,21.522042,70.458246,"approximate (district: Junagadh, Gujarat)"
+S261,Jhadeshwar Mahadev Temple,Amarda (Gadh),Porbandar,Gujarat,21.602975,69.853807,"approximate (district: Porbandar, Gujarat)"
+S262,Bileshwar Mahadev Temple,Bileshwar,Porbandar,Gujarat,21.8133,69.7861,exact
+S263,Jambuvanti Caves,Ranavav,Porbandar,Gujarat,21.8156,69.6542,exact
+S264,Nani Vav-no Shilalekh,Dhandhusar,Junagadh,Gujarat,21.549938,70.357164,"approximate (area: Dhandhusar, Junagadh)"
+S265,Shamiyana and Ceiling of Jumma Masjid (S.1408),Vanthli,Junagadh,Gujarat,21.4778,70.3736,exact
+S266,Ra'Khengar Palace (now part of Girnar Jain temples),"Girnar Hill,Junagadh",Junagadh,Gujarat,21.5269,70.5206,exact
+S267,Stone Inscription of Vijayshwar Mahadev -1346/1408,Dhandhusar,Junagadh,Gujarat,21.549938,70.357164,"approximate (area: Dhandhusar, Junagadh)"
+S268,Surya Kund,Dhandhusar,Junagadh,Gujarat,23.583509,72.133516,approximate (name matched in Gujarat)
+S269,Ra Khengar Vav,Vanthli,Junagadh,Gujarat,21.4917,70.3833,exact
+S270,Caves of Hothal Padmini,Jetalpur,Junagadh,Gujarat,21.522042,70.458246,"approximate (district: Junagadh, Gujarat)"
+S271,Ancient Temples (Omnath Mahadev temple),Umba,Gir Somnath,Gujarat,20.9925,70.54,exact
+S272,Makbaro of Hajarat Shah & Tomb of Malik Ayaz,Una,Gir Somnath,Gujarat,20.8286,71.0444,exact
+S273,Kalikamata Temple,Navadra,Gir Somnath,Gujarat,20.929818,70.762758,"approximate (district: Gir Somnath, Gujarat)"
+S274,Bilingual Stone Inscription at Gayatri Temple,Prashnavada,Gir Somnath,Gujarat,20.8208,70.5553,exact
+S275,Prachi Kund,Una-Veraval Road,Gir Somnath,Gujarat,20.9214,70.6419,exact
+S276,Mool Prachi,Una-Veraval Road,Gir Somnath,Gujarat,20.929818,70.762758,"approximate (district: Gir Somnath, Gujarat)"
+S277,Stone Inscription at Kaji Masjid - H.S.902,Prabhas Patan,Junagadh,Gujarat,20.8925,70.4028,exact
+S278,Gorakhnath Mahadev,Gorakhmadhi,Junagadh,Gujarat,20.9061,70.5347,exact
+S279,Jain Temple,Prabhas Patan,Gir Somnath,Gujarat,20.890248,70.402412,exact
+S280,Talav,Prabhas Patan,Gir Somnath,Gujarat,21.977037,69.949453,approximate (name matched in Gujarat)
+S281,Mound of Nagara,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S282,Nek Mahommad Masjid,Prabhas Patan,Gir Somnath,Gujarat,20.8925,70.399,exact
+S283,Ancient Caves,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S284,Ancient Jain Temple (Museum Building),Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S285,Stone Inscription of Bhadrakali Mata,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S286,Maipuri Masjid,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S287,Mangaroli Shah Makbara & Shah Makbara with Stone Inscription,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S288,Stone Inscription at Mussafar Masjid,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S289,Stone Inscription Near Mota Darwaja,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S290,Ceiling of Riyapir Masjid,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S291,Rudreshwar,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S292,Veneshwar Mahadev Temple,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S293,Veraval Gate,Prabhas Patan,Gir Somnath,Gujarat,20.893829,70.40189,exact
+S294,Stone Inscription of Sultan Ahmed (H.S. 905–1543),Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S295,Surya Mandir (Sun Temple),"Near Shitala Manadir, Nagar Timba",Gir Somnath,Gujarat,20.8861,70.4111,exact
+S296,Mound of Sav,Prabhas Patan,Gir Somnath,Gujarat,20.890524,70.401953,"approximate (area: Prabhas Patan, Gir Somnath)"
+S297,Stone Inscription at Jumma Masjid (H.S.732),Veraval,Gir Somnath,Gujarat,20.91011,70.365279,"approximate (area: Veraval, Gir Somnath)"
+S298,Stone Inscription at Harshadmata Temple,Veraval,Gir Somnath,Gujarat,20.91011,70.365279,"approximate (area: Veraval, Gir Somnath)"
+S299,Bauddha Gufa (Caves) of Mandore (Mandovar),Savani-Geer,Gir Somnath,Gujarat,20.975,70.4719,exact
+S300,Chyavan Kund,Sutrapada,Gir Somnath,Gujarat,20.8392,70.4847,exact
+S301,Navdurga Temple,Sutrapada,Gir Somnath,Gujarat,20.8383,70.4836,exact
+S302,Chaumukhi Vav,Chobari,Surendranagar,Gujarat,22.2586,71.2064,exact
+S303,Temple Near Talav,Chobari,Surendranagar,Gujarat,22.2592,71.2053,exact
+S304,Tarnetar Temple,Thangadh,Surendranagar,Gujarat,22.6453,71.2111,exact
+S305,Munibaba Temple (Munim Deval),Thangadh,Surendranagar,Gujarat,22.5319,71.2056,exact
+S306,Panchayatan Temple,Parabadi,Surendranagar,Gujarat,22.2556,71.1922,exact
+S307,Caves,Bhimora,Surendranagar,Gujarat,22.3361,71.2403,exact
+S308,Jeen Darwajo,Zinzuwada,Surendranagar,Gujarat,23.353704,71.65473,"approximate (area: Zinzuwada, Surendranagar)"
+S309,Dink Darwajo,Zinzuwada,Surendranagar,Gujarat,23.353704,71.65473,"approximate (area: Zinzuwada, Surendranagar)"
+S310,South Gates (Dakhkhani Darwaja),Zinzuwada,Surendranagar,Gujarat,23.353704,71.65473,"approximate (area: Zinzuwada, Surendranagar)"
+S311,West Gates,Zinzuwada,Surendranagar,Gujarat,23.353704,71.65473,"approximate (area: Zinzuwada, Surendranagar)"
+S312,Madapol Gates,Zinzuwada,Surendranagar,Gujarat,23.35,71.6519,exact
+S313,Rajeshwari Gates,Zinzuwada,Surendranagar,Gujarat,23.353704,71.65473,"approximate (area: Zinzuwada, Surendranagar)"
+S314,Sarovar,Zinzuwada,Surendranagar,Gujarat,23.3517,71.6544,exact
+S315,Jeenand Kund (Two),Zinzuwada,Surendranagar,Gujarat,23.353704,71.65473,"approximate (area: Zinzuwada, Surendranagar)"
+S316,Remains of Ancient Gates,Kankavati,Surendranagar,Gujarat,23.07352,71.356674,"approximate (area: Kankavati, Surendranagar)"
+S317,Matri Vav,Kankavati,Surendranagar,Gujarat,23.0722,71.3542,exact
+S318,Chandrisar Talav,Pratappur,Surendranagar,Gujarat,22.8592,71.6111,exact
+S319,Ancient Vav,Hampur,Surendranagar,Gujarat,22.9072,71.57,exact
+S320,Gramdevi Temple,Kalmad,Surendranagar,Gujarat,22.77309,71.373748,"approximate (area: Kalmad, Surendranagar)"
+S321,Gangavo Kund and Four Temples on it,Dedadara,Surendranagar,Gujarat,22.7675,71.7639,exact
+S322,Manava Mama Temple,Dedadara,Surendranagar,Gujarat,22.772528,71.763326,"approximate (area: Dedadara, Surendranagar)"
+S323,Rataba alias Rajbai Vav,Rampura,Surendranagar,Gujarat,22.5975,71.5431,exact
+S324,Ganga Vav,Wadhwan,Surendranagar,Gujarat,22.7122,71.6786,exact
+S325,Madhavav,Wadhwan,Surendranagar,Gujarat,22.7094,71.6744,exact
+S326,Vav,Dhandhalpur,Surendranagar,Gujarat,22.3914,71.3606,exact
+S327,Sundari Bhavani Temple,Halvad,Morbi,Gujarat,22.8411,71.1283,exact
+S328,Memorial Stone near Cemetery,Halvad,Morbi,Gujarat,23.018242,71.183382,"approximate (area: Halvad, Morbi)"
+S329,Ancient Vav at Sharneshwar Temple,Halvad,Morbi,Gujarat,23.0075,71.18,exact
+S330,Tom Coryat Makbaro (Thomas Coryat's Tomb),Rajgari near Suvali,Surat,Gujarat,21.1842,72.6378,exact
+S331,Radhakrishna Temple,Dharampur,Valsad,Gujarat,20.5353,73.1728,exact
+S332,Ancient Vav/Stepwell,Ambapur,Gandhinagar,Gujarat,23.1511,72.61,exact
+S333,Arjun Chori (Shiva Temple),Lavana,Mahisagar,Gujarat,23.3222,73.5853,exact
+S334,Kund (Hidimba Kund),Lavana,Mahisagar,Gujarat,23.3211,73.5825,exact
+S335,Temple with Three Entrances (Hidimba Temple),Lavana,Mahisagar,Gujarat,23.3222,73.5856,exact
+S336,Ancient Temple (Ghummatvalu Mandir),Lavana,Mahisagar,Gujarat,23.3214,73.5825,exact
+S337,Bhim Chori (Shiva Temple),Lavana,Mahisagar,Gujarat,23.3217,73.585,exact
+S338,Vahu Ni Vav,Lavana,Mahisagar,Gujarat,23.3217,73.5819,exact
+S339,Shikar Madhi,Lavana,Mahisagar,Gujarat,23.3214,73.5831,exact
+S340,Temple with stone Inscription (Kaleshwari Mata Temple),Lavana,Mahisagar,Gujarat,23.3214,73.5825,exact
+S341,Sasu Ni Vav,Lavana,Mahisagar,Gujarat,23.3211,73.5819,exact
+S342,Ancient temple no.1,Santrampur,Mahisagar,Gujarat,23.1967,73.8811,exact
+S343,Ancient temple no.2,Santrampur,Mahisagar,Gujarat,23.1967,73.8811,exact
+S344,Ancient temple no.3,Santrampur,Mahisagar,Gujarat,23.1967,73.8811,exact
+S345,Gebanshah Vav with Steps,Champaner,Panchmahal,Gujarat,22.4806,73.5311,exact
+S346,Vanzari Vav,Kankanpur,Panchmahal,Gujarat,22.8317,73.4875,exact
+S347,Group of temples,Tuwa (Kankanpur),Panchmahal,Gujarat,22.7992,73.4603,exact
+S348,Pavagadh Killa,Pavagadh/Champaner,Panchmahal,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahal)"
+S349,Machi Killa,Pavagadh/Champaner,Panchmahal,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahal)"
+S350,Bavaman Killa,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S351,Khuneshwar Killa,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S352,Killa at Shikar Bari and Ulan Julan ki Chowki,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S353,Malik Nagar ni Haveli,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S354,Gadi Kundal Darwaza,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S355,Jai Singh no Mahal,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S356,Senapati Ni Kothi,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S357,Pavilion on Medhi Talav,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S358,Masjid in Front of Machi Haveli,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S359,Maratha no Mahal,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S360,Rani no Mahal,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S361,Bandh,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S362,Lila Gumbaj Pase ni Kothi,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S363,Bhangelu Deru,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S364,Chhatris Thambla Nu Bhoyneru,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S365,Zare-e-Zamin,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S366,Pavilion South of Jami Masjid,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S367,Iteri Masjid and Building near to it,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S368,Sainiki Masjid,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S369,Vandra Masjid,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S370,Maqbara Mandvi,Pavagadh/Champaner,Panchmahals,Gujarat,22.495398,73.511914,exact
+S371,Maqbara Near Kamani Masjid,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S372,Underground Water Channel from Bandh to Kasbin Talao,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S373,Underground Water Channel from Navlakhi Talav to Jamuna Kund,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S374,Stone Bridge,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S375,Barrack on Sariya Vakhariya,Pavagadh/Champaner,Panchmahals,Gujarat,22.483285,73.533075,"approximate (area: Pavagadh/Champaner, Panchmahals)"
+S376,Malik Sandal Ni Vav,Mandvi village (Halol),Panchmahals,Gujarat,22.4938,73.5092,exact
+S377,Sindh Mata Ni Vav,Halol Nagar,Panchmahals,Gujarat,22.4972,73.4931,exact
+S378,Chandralekha (Surajkala) Vav,Halol Nagar,Panchmahals,Gujarat,22.5039,73.4617,exact
+S379,Amther Mata Temple & Small Temples,Vadnagar,Mahesana,Gujarat,23.7847,72.6453,exact
+S380,Vav,Modhera,Mahesana,Gujarat,23.5839,72.1317,exact
+S381,Hawa Mahal,Modhera,Patan,Gujarat,23.5836,72.1353,exact
+S382,Khan Sarovar,Patan,Patan,Gujarat,23.8353,72.1133,exact
+S383,Shakti Kund,Akhaj,Mahesana,Gujarat,23.4833,72.4597,exact
+S384,Amba Mata Temple,Kherva,Mahesana,Gujarat,23.5469,72.4411,exact
+S385,Shitala Mata Temple,Butapaldi,Mahesana,Gujarat,23.6694,72.3539,exact
+S386,Nagfani Mata Mandir (with idol),Meu,Mahesana,Gujarat,23.50106,72.513258,"approximate (area: Meu, Mahesana)"
+S387,Shitala Mata Temple,Linch,Mahesana,Gujarat,23.499653,72.37963,"approximate (area: Linch, Mahesana)"
+S388,Vav,Mansa,Gandhinagar,Gujarat,23.4233,72.6583,exact
+S389,Fatipal Gates,Patan,Patan,Gujarat,23.8567,72.1133,exact
+S390,Chhindia Gates,Patan,Patan,Gujarat,23.8558,72.1206,exact
+S391,Bagwada Gates,Patan,Patan,Gujarat,23.8536,72.1164,exact
+S392,Agara Gates,Patan,Patan,Gujarat,23.8508,72.1164,exact
+S393,Tripolia Gate (Tran Darwaja),Patan,Patan,Gujarat,23.8472,72.1122,exact
+S394,Rajgadhi Timbo,Umta,Mahesana,Gujarat,23.7808,72.5381,exact
+S395,Shail Gufo (Khambhalida Caves),Khambhalida,Rajkot,Gujarat,21.7758,70.7061,exact
+S396,Minadevi Vav,Virpur,Rajkot,Gujarat,21.8481,70.6964,exact
+S397,Memorial Stone of Lakha Fulani,Atkot,Rajkot,Gujarat,22.010354,71.148572,"approximate (area: Atkot, Rajkot)"
+S398,Stone Inscription in Darbargadh,Jasdan,Rajkot,Gujarat,22.0399,71.2046,"approximate (area: Jasdan, Rajkot)"
+S399,Caves,Dingthala Dungar (Jasdan),Rajkot,Gujarat,21.35541,72.032272,approximate (name matched in Gujarat)
+S400,Vav (Gelmata Vav),Bhadla,Rajkot,Gujarat,22.1861,71.1019,exact
+S401,Sankleshwar Mahadev,Juni Sankali,Rajkot,Gujarat,21.6936,70.5506,exact
+S402,Old Darbargadh,Dhoraji,Rajkot,Gujarat,21.7392,70.4494,exact
+S403,Temples,Supedi,Rajkot,Gujarat,21.7644,70.3744,exact
+S404,Kuber Vav,Morbi,Morbi,Gujarat,22.8181,70.8358,exact
+S405,Darbargadh No Tamrapatro,Morbi,Morbi,Gujarat,22.8178,70.8403,exact
+S406,Mound Dolidhar,Khorana,Rajkot,Gujarat,22.4275,70.8492,exact
+S407,Stone Inscription at Jadeshwar Mahadev,Wankaner,Morbi,Gujarat,22.6456,70.8544,exact
+S408,Ancient Vav,Sarvad,Morbi,Gujarat,22.9822,70.7019,exact
+S409,Jam Tower,Rajkot,Rajkot,Gujarat,22.3064,70.7972,exact
+S410,Ancient Talav,Tentalav,Vadodara,Gujarat,22.0461,73.4239,exact
+S411,Vidyadhar Vav,Sevasi,Vadodara,Gujarat,22.3183,73.1167,exact
+S412,Surya Narayan Temple,Vadodara,Vadodara,Gujarat,22.3033,73.1883,exact
+S413,Ranmukteshwar Temple,Mankani (Sankheda),Chhota Udaipur,Gujarat,22.2258,73.6725,exact
+S414,Kund,Gambhirpura,Sabarkantha,Gujarat,23.85,73.0147,exact
+S415,Vav,Gambhirpura,Sabarkantha,Gujarat,23.8492,73.0131,exact
+S416,Rannmalchoki,Idariyogadh,Sabarkantha,Gujarat,23.8525,73.0006,exact
+S417,Vav,Chorivad,Sabarkantha,Gujarat,23.9,73.1258,exact
+S418,Ancient Temple,Davad,Sabarkantha,Gujarat,20.888084,70.400865,approximate (name matched in Gujarat)
+S419,Ancient stepwell (vav),Limbhoi,Sabarkantha,Gujarat,23.8658,72.9864,exact
+S420,Kund,Sabli,Sabarkantha,Gujarat,23.7322,73.0578,exact
+S421,Ancient Temple,Davad,Sabarkantha,Gujarat,20.888084,70.400865,approximate (name matched in Gujarat)
+S422,Mahadev Temple,Agiya,Sabarkantha,Gujarat,23.432302,73.049357,exact
+S423,Shiva Temple,Near Ganchhali (Kajavas),Sabarkantha,Gujarat,23.659965,73.079806,exact
+S424,Brahma Vav,Khedbrahma,Sabarkantha,Gujarat,24.0386,73.0481,exact
+S425,Temple No. 1,Ganchhali,Sabarkantha,Gujarat,23.436426,73.049076,exact
+S426,Temple No. 2,Ganchhali,Sabarkantha,Gujarat,23.436495,73.048984,exact
+S427,Temple No. 3,Ganchhali,Sabarkantha,Gujarat,23.436495,73.048984,exact
+S428,Temple No. 4,Ganchhali,Sabarkantha,Gujarat,23.436426,73.049076,exact
+S429,Temple No. 5,Ganchhali,Sabarkantha,Gujarat,23.436426,73.049076,exact
+S430,Gopnath Mahadev Shiv Panchayatan Temple,Gota (Khedbrahma),Sabarkantha,Gujarat,23.9944,73.0639,exact
+S431,Shiva Temple,Dantral? (Detran),Sabarkantha,Gujarat,23.659965,73.079806,exact
+S432,Nilkanth Mahadev Temple,Poshina,Sabarkantha,Gujarat,20.278117,72.881222,approximate (name matched in Gujarat)
+S433,Ruins,Nandej,Aravalli,Gujarat,22.254356,68.97319,approximate (name matched in Gujarat)
+S434,Mahakali Temple,Nandej,Aravalli,Gujarat,20.888369,70.403036,approximate (name matched in Gujarat)
+S435,Mahadev Temple,Nandej,Aravalli,Gujarat,23.767239,73.25422,exact
+S436,Hanumanji Temple,Nandej,Aravalli,Gujarat,20.812002,72.996254,approximate (name matched in Gujarat)
+S437,Shiva Panchayatan Temple,Bhetali,Aravalli,Gujarat,23.7278,73.2936,exact
+S438,Shobhayada Shiva Temple,Moti Bebar,Aravalli,Gujarat,23.6514,73.26,exact
+S439,Ancient Temple,Shamlaji,Aravalli,Gujarat,23.6872,73.3894,exact
+S440,Vav,Shamlaji,Aravalli,Gujarat,23.6878,73.3875,exact
+S441,Harishchandra ni Chori,Shamlaji,Aravalli,Gujarat,23.6861,73.3842,exact
+S442,Pagathiyavali Vav (Stepwell),Tintoi,Aravalli,Gujarat,23.6139,73.3322,exact
+S443,Vanzari Vav,Modasa,Aravalli,Gujarat,23.4667,73.2986,exact
+S444,Temple with Kund,Abhapur,Sabarkantha,Gujarat,24.0011,73.2817,exact
+S445,Jain Temple No.1,Abhapur,Sabarkantha,Gujarat,24.0003,73.2803,exact
+S446,Jain Temple No.2,Abhapur,Sabarkantha,Gujarat,24.0003,73.2803,exact
+S447,Jain Temple No.3,Abhapur,Sabarkantha,Gujarat,24,73.2822,exact
+S448,Sharaneshwar Temple,Abhapur,Sabarkantha,Gujarat,24.0014,73.2689,exact
+S449,Shivashakti Temple,Abhapur,Sabarkantha,Gujarat,23.9994,73.2747,exact
+S450,Jain Temple No.1,Antarsumba,Sabarkantha,Gujarat,23.9889,73.2197,exact
+S451,Jain Temple No.2,Antarsumba,Sabarkantha,Gujarat,23.9889,73.2197,exact
+S452,Jain Temple No.3,Antarsumba,Sabarkantha,Gujarat,23.9883,73.2192,exact
+S453,Jain Temple No.4,Antarsumba,Sabarkantha,Gujarat,23.9881,73.2189,exact
+S454,Shakti Temple,Antarsumba,Sabarkantha,Gujarat,23.9847,73.2097,exact
+S455,Shiva Temple,Antarsumba,Sabarkantha,Gujarat,23.9847,73.2097,exact
+S456,Shiva Panchayatan Temple No.1,Antarsumba,Sabarkantha,Gujarat,23.868851,73.013784,"approximate (district: Sabarkantha, Gujarat)"
+S457,Shiva Panchayatan Temple No.2,Antarsumba,Sabarkantha,Gujarat,23.9883,73.2192,exact
+S458,Vav (Stepwell),Dholi Vav (Vijaynagar),Sabarkantha,Gujarat,23.167147,72.580134,approximate (name matched in Gujarat)
+S459,Nagrani Vav (Stepwell),Khed-Chandarani,Sabarkantha,Gujarat,23.6642,73.0964,exact
+S460,Santhaleshwar Mahadev Temple,Mathasuliya,Sabarkantha,Gujarat,23.5986,73.1389,exact
+S461,Chaumukh Mahadev Temple,Hathrol,Sabarkantha,Gujarat,23.5128,73.1253,exact
+S462,Neminath Jain Temple with three inscriptions,Girnar Hill,Junagadh,Gujarat,21.5272,70.5231,exact
+S463,Vastupal Jain Temple with six inscriptions,Girnar Hill,Junagadh,Gujarat,21.5267,70.5233,exact
+S464,Virji Vora ni Vav,Halvad,Morbi,Gujarat,23.0139,71.1825,exact
+S515,Achyut Bibi's Masjid & Tomb  ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S516,Ahmad Shah's Tomb,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S517,Ahmed Shah's Mosque ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S518,Astodia Gate,Ahmedabad,Ahmedabad,Gujarat,23.016842,72.590971,exact
+S519,Baba Lalui's Masjid  ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S520,Bhadra Gate beside Bhadrakali Temple ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S521,Brick Minars,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S522,Dariya Khan's Tomb ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S523,Dariya Pur Gate,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S524,Dastur Khan's Masjid ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S525,Delhi Gate,Ahmedabad,Ahmedabad,Gujarat,23.037782,72.587952,exact
+S526,Haibatkhan's Masjid ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S527,Inlet to Kankaria Tank ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S528,Jami Masjid ,Ahmedabad,Ahmedabad,Gujarat,22.485847,73.537423,approximate (name matched in Gujarat)
+S529,Kalupur Gate,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S530,Kutub Shah's Mosque,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S531,Mata Bhavani's Well ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S532,Muhafiz Khan's Mosque,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S533,Nawab Sardar Khan Masjid and outer gate ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S534,Nawab Sardar Khan's Rouza,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S535,Panch Kuva Gate,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S536,Premabhai Gate,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S537,Queen's Mosque in Sarangpur ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S538,Raipur Gate,Ahmedabad,Ahmedabad,Gujarat,23.017436,72.594781,exact
+S539,Rani Rupavati's Mosque,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S540,Rani Sipri's Mosque & Tomb  ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S541,Sarangpur Gate ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S542,Shah Alam's Tomb with all surrounding buildings,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S543,Shah Kupa Masjid ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S544,Sidi Bashir's Minar & Tomb (Shaking),Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S545,Sidi Saiyad's Mosque,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S546,Teen Darwaja or Tripolia Gate ,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S547,The Shahpur Kazi Mohmad Chishti's Masjid,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S548,Three gates besides Bhadrakali temple,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S549,Tomb,Ahmedabad,Ahmedabad,Gujarat,23.023754,72.589276,exact
+S550,Tomb of Mir Abu Turab,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S551,Tombs of Queens of Ahmed Shah,Ahmedabad,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (area: Ahmedabad, Ahmedabad)"
+S552,Dada Hari's Mosque & Tomb ,Asarwa ,Ahmedabad,Gujarat,23.047249,72.608805,"approximate (area: Asarwa , Ahmedabad)"
+S553,Dada (Bai) Hari's Stepwell,Asarwa ,Ahmedabad,Gujarat,23.047249,72.608805,"approximate (area: Asarwa , Ahmedabad)"
+S554,Malik Alam's Mosque ,Dani Limda,Ahmedabad,Gujarat,22.996491,72.577403,"approximate (area: Dani Limda, Ahmedabad)"
+S555,Bahlol Khan Gazi's Mosque,Dholka,Ahmedabad,Gujarat,22.734401,72.44129,exact
+S556,Jami Masjid ,Dholka,Ahmedabad,Gujarat,22.485847,73.537423,approximate (name matched in Gujarat)
+S557,Khan Masjid,Dholka,Ahmedabad,Gujarat,22.733819,72.431344,exact
+S558,Malav Tank,Dholka,Ahmedabad,Gujarat,22.726607,72.441186,"approximate (area: Dholka, Ahmedabad)"
+S559,Ruined Building,Dholka,Ahmedabad,Gujarat,22.726607,72.441186,"approximate (area: Dholka, Ahmedabad)"
+S560 ,Jethabhai's Stepwell,Isanpur,Ahmedabad,Gujarat,,,exact
+S561,Small Stone Masjid (Gumle Masjid),Isanpur,Ahmedabad,Gujarat,22.98113,72.601295,"approximate (area: Isanpur, Ahmedabad)"
+S562,Cazi Masjid ,Mandal,Ahmedabad,Gujarat,23.288383,71.917885,"approximate (area: Mandal, Ahmedabad)"
+S563,Jami Masjid ,Mandal,Ahmedabad,Gujarat,22.485847,73.537423,approximate (name matched in Gujarat)
+S564,Sayyid Masjid ,Mandal,Ahmedabad,Gujarat,23.288383,71.917885,"approximate (area: Mandal, Ahmedabad)"
+S565,Small stone Mosque (Rani Masjid) ,Paldi ,Ahmedabad,Gujarat,23.014553,72.563543,"approximate (area: Paldi , Ahmedabad)"
+S566,Bibi's Masjid ,Rajpur/Hirapur,Ahmedabad,Gujarat,23.021537,72.580057,"approximate (district: Ahmedabad, Gujarat)"
+S567,Masjid of Ragusha Pir ,Ranpur ,Ahmedabad,Gujarat,22.359078,71.867252,"approximate (area: Ranpur , Ahmedabad)"
+S651,Gateway of Khan Sarover,Sandsarpati,Patan,Gujarat,23.773753,71.679858,"approximate (district: Patan, Gujarat)"
+S652,Jami Masjid,Siddhpur,Patan,Gujarat,22.485847,73.537423,approximate (name matched in Gujarat)
+S653,Ruins of Rudra Mahalaya temple,Siddhpur,Patan,Gujarat,23.918279,72.368185,"approximate (area: Siddhpur, Patan)"
+S654,Group of temples,Khed & Roda,Sabarkantha,Gujarat,22.26458,69.252729,approximate (name matched in Gujarat)
+S655,Tomb of Sikandarsah,Prantij,Sabarkantha,Gujarat,23.437209,72.851806,"approximate (area: Prantij, Sabarkantha)"
+S656,Ancient site comprising S.Plot No.535,Kamrej,Surat,Gujarat,21.279777,72.948269,"approximate (area: Kamrej, Surat)"
+S657,Dargah known as Khawaja Dana Saheb's Rouza,Surat,Surat,Gujarat,21.209489,72.831706,"approximate (area: Surat, Surat)"
+S658,Old Dutch & Armenian Tombs & Cemeteries,Surat,Surat,Gujarat,21.209489,72.831706,"approximate (area: Surat, Surat)"
+S659,Old English Tombs,Surat,Surat,Gujarat,21.209489,72.831706,"approximate (area: Surat, Surat)"
+S660,Tomb of Khawaja Safar Sulemani,Surat,Surat,Gujarat,21.209489,72.831706,"approximate (area: Surat, Surat)"
+S661,Fateh Burj,Vyara,Tapi,Gujarat,21.114607,73.395022,exact
+S662,Microlithic Tools of Anarapura,Anarapura,Vadodara,Gujarat,22.297314,73.194257,"approximate (district: Vadodara, Gujarat)"
+S663,Hira Gate,Dabhoi,Vadodara,Gujarat,22.133617,73.4201,"approximate (area: Dabhoi, Vadodara)"
+S664,Mahudi (Champaneri) Gate,Dabhoi,Vadodara,Gujarat,22.133617,73.4201,"approximate (area: Dabhoi, Vadodara)"
+S665,Nandodi Gate,Dabhoi,Vadodara,Gujarat,22.133617,73.4201,"approximate (area: Dabhoi, Vadodara)"
+S666,Saptamukhi Vav,Dabhoi,Vadodara,Gujarat,22.133617,73.4201,"approximate (area: Dabhoi, Vadodara)"
+S667,Vadodara Gate,Dabhoi,Vadodara,Gujarat,22.133617,73.4201,"approximate (area: Dabhoi, Vadodara)"
+S668,Hazira or Qutbuddin Mahmad Khan's Tomb,Danteshwar,Vadodara,Gujarat,22.276226,73.210791,"approximate (area: Danteshwar, Vadodara)"
+S669,Ancient site of Sandhiyapura,Goraj,Vadodara,Gujarat,22.331336,73.475877,exact
+S670,Ancient Site (Excavated),Kayavarohan,Vadodara,Gujarat,22.077897,73.249676,"approximate (area: Kayavarohan, Vadodara)"
+S671,Gateway of Torana,Kayavarohan,Vadodara,Gujarat,22.077897,73.249676,"approximate (area: Kayavarohan, Vadodara)"
+S672,Frescos on the walls of Bhau Tambekar’s Wada,Pratap Road,Vadodara,Gujarat,22.297314,73.194257,"approximate (district: Vadodara, Gujarat)"
+S673,Historic Site S.No. 431 to 435,Vakota,Vadodara,Gujarat,22.297314,73.194257,"approximate (district: Vadodara, Gujarat)"
+S674,Ancient site Gohilwad Timbo (Mound),Amreli,Amreli,Gujarat,21.600924,71.216801,"approximate (area: Amreli, Amreli)"
+S675,Fresco on the wall of Kashivisvanath temple,Padar Singha,Amreli,Gujarat,21.417612,71.249609,"approximate (district: Amreli, Gujarat)"
+S676,Ancient Site,Venivadar,Amreli,Gujarat,22.331336,73.475877,approximate (name matched in Gujarat)
+S677,Ancient site / Mound,Sihor,Bhavnagar,Gujarat,21.720494,71.960559,"approximate (area: Sihor, Bhavnagar)"
+S679,Jain temples,Talaja,Bhavnagar,Gujarat,21.526958,70.5231,approximate (name matched in Gujarat)
+S680,Talaja Caves,Talaja,Bhavnagar,Gujarat,21.35541,72.032272,exact
+S681,Ancient site / Mound,Vallabhipur,Bhavnagar,Gujarat,21.888591,71.878162,"approximate (area: Vallabhipur, Bhavnagar)"
+S682,Temple of Rama Laxman,Baradia,Devbhumi Dwarka,Gujarat,22.247511,68.968244,"approximate (district: Devbhumi Dwarka, Gujarat)"
+S683,Gadhi fortress & temple,Dhink,Devbhumi Dwarka,Gujarat,22.247511,68.968244,"approximate (district: Devbhumi Dwarka, Gujarat)"
+S684,Magderu Temple,Dhrasanvel,Devbhumi Dwarka,Gujarat,22.289076,69.051527,exact
+S685,Dwarkadhish Group of temples,Dwarka,Devbhumi Dwarka,Gujarat,22.250489,68.980147,"approximate (area: Dwarka, Devbhumi Dwarka)"
+S686,Kshatrapa Inscriptions,Dwarka,Devbhumi Dwarka,Gujarat,22.250489,68.980147,"approximate (area: Dwarka, Devbhumi Dwarka)"
+S687,Rukmani Temple,Dwarka,Devbhumi Dwarka,Gujarat,22.250489,68.980147,"approximate (area: Dwarka, Devbhumi Dwarka)"
+S688,Gokeshwar Mahadev temple,Lowrali,Devbhumi Dwarka,Gujarat,22.173908,69.092028,approximate (name matched in Gujarat)
+S690,Durvasa Rishi's Ashram,Pindara,Devbhumi Dwarka,Gujarat,22.2645,69.252753,approximate (name matched in Gujarat)
+S691,Guhaditya temple,Varvala,Devbhumi Dwarka,Gujarat,22.301011,68.986963,approximate (name matched in Gujarat)
+S692,Junagadhi (Jain) Temple,Vasai,Devbhumi Dwarka,Gujarat,22.31798,68.999095,approximate (name matched in Gujarat)
+S693,Kankeshvara Mahadeva temple & shrines,Vasai,Devbhumi Dwarka,Gujarat,22.318386,68.997367,approximate (name matched in Gujarat)
+S694,Ranchhod Rayaji Temple,Mul Dwarka,Gir Somnath,Gujarat,20.929818,70.762758,"approximate (district: Gir Somnath, Gujarat)"
+S695,Gop (Sun) Temple,Zinavari,Jamnagar,Gujarat,22.029595,69.929233,"approximate (area: Zinavari, Jamnagar)"
+S696,Ancient Mound,Intwa,Junagadh,Gujarat,21.551455,70.491369,exact
+S698,"Baba Pyare, Khapra Kodia caves",Junagadh,Junagadh,Gujarat,21.522042,70.458246,"approximate (area: Junagadh, Junagadh)"
+S699,Buddhistic Cave,Junagadh,Junagadh,Gujarat,21.522042,70.458246,"approximate (area: Junagadh, Junagadh)"
+S700,Jami Masjid,Mangrol,Junagadh,Gujarat,22.485847,73.537423,approximate (name matched in Gujarat)
+S701,Rahimat Masjid (Bibi Masjid),Mangrol,Junagadh,Gujarat,21.124151,70.11992,"approximate (area: Mangrol, Junagadh)"
+S702,Raveli Masjid,Mangrol,Junagadh,Gujarat,21.124151,70.11992,"approximate (area: Mangrol, Junagadh)"
+S703,Tomb of Rao Lakha Chhatri,Bhuj,Kachchh,Gujarat,23.247245,69.668339,"approximate (area: Bhuj, Kachchh)"
+S704,Ancient Site (Kotada),Dholavira,Kachchh,Gujarat,23.875011,70.217959,"approximate (area: Dholavira, Kachchh)"
+S705,Archaeological Ancient Site and Remains,Juni Kuran,Kachchh,Gujarat,23.944213,69.754021,"approximate (area: Juni Kuran, Kachchh)"
+S706,Siva temple,Kotai,Kachchh,Gujarat,23.583333,70,"approximate (district: Kachchh, Gujarat)"
+S707,Excavated Site,Surkotada,Kachchh,Gujarat,22.490392,73.529144,approximate (name matched in Gujarat)
+S708,Darbargadh,Halvad,Morbi,Gujarat,22.817825,70.84118,exact
+S709,Old Parsvanath temple,Miyani,Porbandar,Gujarat,21.839744,69.383393,"approximate (area: Miyani, Porbandar)"
+S710,House where Mahatma Gandhi was born,Porbandar,Porbandar,Gujarat,21.6409,69.611,"approximate (area: Porbandar, Porbandar)"
+S711,Dhank Caves,Dhank,Rajkot,Gujarat,21.774757,70.131515,"approximate (area: Dhank, Rajkot)"
+S712,Ananteshwara temple,Bhadia Anandpur,Surendranagar,Gujarat,22.224585,71.168065,exact
+S713,Ancient Mound,Rangpur,Surendranagar,Gujarat,21.551455,70.491369,approximate (name matched in Gujarat)
+S714,Navlakha temple,Sejakpur,Surendranagar,Gujarat,22.457736,71.413465,exact
+S715,Ancient Site/Mound in village,Sejakpur,Surendranagar,Gujarat,22.825139,71.620974,"approximate (district: Surendranagar, Gujarat)"
+S716,Sun Temple,Thangadh,Surendranagar,Gujarat,20.901558,70.426961,approximate (name matched in Gujarat)
+S717,Rana Dev's Temple,Wadhwan,Surendranagar,Gujarat,22.702801,71.672393,"approximate (area: Wadhwan, Surendranagar)"
+S718,Ancient Quarry Site I,Dholavira,Kachchh,Gujarat,23.875011,70.217959,"approximate (area: Dholavira, Kachchh)"
+S719,Ancient Quarry Site II,Dholavira,Kachchh,Gujarat,23.875011,70.217959,"approximate (area: Dholavira, Kachchh)"

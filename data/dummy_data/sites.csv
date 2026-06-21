@@ -1,0 +1,56 @@
+site_id,name,address,district,state,latitude,longitude
+S001,Hampi,Hampi,Vijayanagar,Karnataka,15.335,76.46
+S002,Badami,Badami,Bagalkot,Karnataka,15.9149,75.6762
+S003,Pattadakal,Pattadakal,Bagalkot,Karnataka,15.9483,75.8169
+S004,Ajanta,Ajanta,Aurangabad,Maharashtra,20.5519,75.7033
+S005,Ellora,Ellora,Aurangabad,Maharashtra,20.0268,75.179
+S301,Adalaj Stepwell,Adalaj,Gandhinagar,Gujarat,23.1645,72.581
+S302,Rani ki Vav,Banks of Saraswathi river,Patan,Gujarat,23.8588,72.1011
+S303,Sun Temple Modhera,Modhera,Menhsana,Gujarat,23.599,72.1336
+S304,Champaner-Pavagadh Archaeological Park,Champaner,Panchmahal,Gujarat,22.485,73.536
+S305,Lothal,Bhal,Ahmedabad,Gujarat,22.5223,72.2496
+S306,Dholavira,Khadir Bet island,Kutch,Gujarat,23.8865,70.2167
+S307,Sidi Saiyyed Mosque,Lal Darwaja,Ahmedabad,Gujarat,23.0268,72.58
+S308,Jama Masjid,Teen Darwaza,Ahmedabad,Gujarat,23.0242,72.5855
+S309,Rani Rupmati Mosque,Mirzapur,Ahmedabad,Gujarat,23.022,72.5714
+S310,Sarkhej Roza,"Makarba, Sarkhej",Ahmedabad,Gujarat,22.9915,72.5
+S311,Dada Harir Stepwell,Asarwa,Ahmedabad,Gujarat,23.046,72.612
+S312,Bhadra Fort,Near Lal Darwaja,Ahmedabad,Gujarat,23.026,72.5805
+S313,Uparkot Fort,Mullawada,Junagadh,Gujarat,21.5222,70.4579
+S314,Girnar Temples,Mount Girnar,Junagadh,Gujarat,21.522,70.529
+S315,Somnath Temple,Prabhas Patan,Gir Somnath,Gujarat,20.888,70.401
+S316,Kirti Toran,Vadnagar,Menhsana,Gujarat,23.7833,72.6333
+S317,Rudra Mahalaya,Siddhpur,Patan,Gujarat,23.9167,72.3833
+S318,Hatkeshwar Temple,Vadnagar,Menhsana,Gujarat,23.783,72.632
+S319,Shamlaji Temple,Aravalli Ranges,Aravalli,Gujarat,23.545,73.35
+S320,Taranga Jain Temple,Kheralu,Mehsana,Gujarat,23.73,72.74
+S321,Lakshmi Vilas Palace,Moti Baug,Vadodara,Gujarat,22.305,73.1926
+S322,Nilkanthdham,Poicha,Narmada,Gujarat,21.881,73.352
+S323,Kankaria Lake,Maninagar,Ahmedabad,Gujarat,23.006,72.6
+S324,Teen Darwaza,Bhadra,Ahmedabad,Gujarat,23.0255,72.582
+S325,Sabarmati Ashram,Sabarmati,Ahmedabad,Gujarat,23.06,72.58
+S326,Akshardham Temple,"Sector 20, J Road",Gandhinagar,Gujarat,23.2156,72.6369
+S327,Laxmi Vilas Palace Museum,Moti Baug,Vadodara,Gujarat,22.3055,73.1928
+S328,Dakor Temple,Dakor,Kheda,Gujarat,22.75,73.15
+S329,Pavagadh Temple,Pavagadh,Panchmahal,Gujarat,22.48,73.53
+S330,Bharuch Fort,Near Gulf of Khambhat,Bharuch,Gujarat,21.705,72.995
+S331,Surat Castle,Banks of Tapi river,Surat,Gujarat,21.1702,72.8311
+S332,Dutch Cemetery,Gulam Falia,Surat,Gujarat,21.2,72.82
+S333,Gopi Talav,Gopipura,Surat,Gujarat,21.18,72.83
+S334,Navlakha Temple,Ghumli,Dwarka,Gujarat,21.9,69.67
+S335,Prabhas Patan,Veraval,Gir Somnath,Gujarat,20.89,70.4
+S336,Bhalka Tirth,Veraval,Gir Somnath,Gujarat,20.9,70.38
+S337,Junagadh Ashokan Edicts,Girnar Hills,Junagadh,Gujarat,21.53,70.46
+S338,Kaba Gandhi No Delo,Saurashtra,Rajkot,Gujarat,22.3,70.8
+S339,Watson Museum,Saurashtra,Rajkot,Gujarat,22.3005,70.802
+S340,Sudama Temple,Sudamapuri,Porbandar,Gujarat,21.64,69.61
+S341,Kirti Mandir,Saurashtra,Porbandar,Gujarat,21.6405,69.608
+S342,Marine National Park,Southern shore of Gulf of Kutch,Jamnagar,Gujarat,22.58,69.6
+S343,Bala Hanuman Temple,Lakhota Lake,Jamnagar,Gujarat,22.47,70.06
+S344,Khijadiya Bird Sanctuary,Southeastern coast of Gulf of Kutch,Jamnagar,Gujarat,22.52,70.08
+S345,Rajpipla Palace,Rajpipla,Narmada,Gujarat,21.87,73.5
+S346,Statue of Unity,Kevadia,Narmada,Gujarat,21.838,73.7191
+S347,Saputara Hill Station,Kevadia,Dang,Gujarat,20.58,73.75
+S348,Gira Falls,Waghai,Dang,Gujarat,20.6,73.7
+S349,Polo Forest,Vijaynagar Taluka,Sabarkantha,Gujarat,23.3,73
+S350,Zarwani Waterfall,Shoolpaneshwar Wildlife Sanctuary,Narmada,Gujarat,21.85,73.6

@@ -1,0 +1,3492 @@
+
+====================================================================================================
+QUESTION: temples in Junagadh
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.district) CONTAINS "junagadh"
+            OR toLower(s.state) CONTAINS "junagadh"
+            OR toLower(s.address) CONTAINS "junagadh"
+        )
+
+        AND (
+            toLower(st.type) CONTAINS "temple"
+            OR toLower(s.name) CONTAINS "temple"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Matri Mata temple",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Junagadh",
+        "latitude": 21.5278,
+        "longitude": 70.4681,
+        "gis_accuracy": "exact",
+        "structure_name": "Matri Mata temple",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Kalika Mata",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "on Girnar Hill",
+        "latitude": 22.149336,
+        "longitude": 69.072735,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Kalika Mata",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Guru Dattatraya",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill,Junagadh",
+        "latitude": 21.5281,
+        "longitude": 70.5328,
+        "gis_accuracy": "exact",
+        "structure_name": "Guru Dattatraya Shrine",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Ra'Khengar Palace (now part of Girnar Jain temples)",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill,Junagadh",
+        "latitude": 21.5269,
+        "longitude": 70.5206,
+        "gis_accuracy": "exact",
+        "structure_name": "Ra'Khengar Palace",
+        "structure_type": "Palace"
+    },
+    {
+        "site_name": "Gorakhnath Mahadev",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Gorakhmadhi",
+        "latitude": 20.9061,
+        "longitude": 70.5347,
+        "gis_accuracy": "exact",
+        "structure_name": "Gorakhnath Mahadev",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Neminath Jain Temple with three inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5272,
+        "longitude": 70.5231,
+        "gis_accuracy": "exact",
+        "structure_name": "Neminath Jain Temple with three inscriptions",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Vastupal Jain Temple with six inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5267,
+        "longitude": 70.5233,
+        "gis_accuracy": "exact",
+        "structure_name": "Vastupal Jain Temple with six inscriptions",
+        "structure_type": "Temple"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: mosques in Ahmedabad
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.district) CONTAINS "ahmedabad"
+            OR toLower(s.state) CONTAINS "ahmedabad"
+            OR toLower(s.address) CONTAINS "ahmedabad"
+        )
+
+        AND (
+            toLower(st.type) CONTAINS "mosque"
+            OR toLower(s.name) CONTAINS "mosque"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Ancient Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Isanpur",
+        "latitude": 22.975,
+        "longitude": 72.6031,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Achyut Bibi's Masjid & Tomb",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Achyut Bibi's Masjid & Tomb",
+        "structure_type": "Mosque-Tomb"
+    },
+    {
+        "site_name": "Ahmed Shah's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Ahmed Shah's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Baba Lalui's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Baba Lalui's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Dastur Khan's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Dastur Khan's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Haibatkhan's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Haibatkhan's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Jami Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 22.485847,
+        "longitude": 73.537423,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Jami Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Kutub Shah's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Kutub Shah's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Muhafiz Khan's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Muhafiz Khan's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Nawab Sardar Khan Masjid and outer gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Nawab Sardar Khan Masjid and outer gate",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Queen's Mosque in Sarangpur",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Queen's Mosque in Sarangpur",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Rani Rupavati's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Rani Rupavati's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Rani Sipri's Mosque & Tomb",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Rani Sipri's Mosque & Tomb",
+        "structure_type": "Mosque-Tomb"
+    },
+    {
+        "site_name": "Shah Kupa Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Shah Kupa Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Sidi Saiyad's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Sidi Saiyad's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "The Shahpur Kazi Mohmad Chishti's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "The Shahpur Kazi Mohmad Chishti's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Dada Hari's Mosque & Tomb",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Asarwa",
+        "latitude": 23.047249,
+        "longitude": 72.608805,
+        "gis_accuracy": "approximate (area: Asarwa , Ahmedabad)",
+        "structure_name": "Dada Hari's Mosque & Tomb",
+        "structure_type": "Mosque-Tomb"
+    },
+    {
+        "site_name": "Malik Alam's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Dani Limda",
+        "latitude": 22.996491,
+        "longitude": 72.577403,
+        "gis_accuracy": "approximate (area: Dani Limda, Ahmedabad)",
+        "structure_name": "Malik Alam's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Bahlol Khan Gazi's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Dholka",
+        "latitude": 22.734401,
+        "longitude": 72.44129,
+        "gis_accuracy": "exact",
+        "structure_name": "Bahlol Khan Gazi's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Jami Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Dholka",
+        "latitude": 22.485847,
+        "longitude": 73.537423,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Jami Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Khan Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Dholka",
+        "latitude": 22.733819,
+        "longitude": 72.431344,
+        "gis_accuracy": "exact",
+        "structure_name": "Khan Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Small Stone Masjid (Gumle Masjid)",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Isanpur",
+        "latitude": 22.98113,
+        "longitude": 72.601295,
+        "gis_accuracy": "approximate (area: Isanpur, Ahmedabad)",
+        "structure_name": "Small Stone Masjid (Gumle Masjid)",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Cazi Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Mandal",
+        "latitude": 23.288383,
+        "longitude": 71.917885,
+        "gis_accuracy": "approximate (area: Mandal, Ahmedabad)",
+        "structure_name": "Cazi Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Jami Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Mandal",
+        "latitude": 22.485847,
+        "longitude": 73.537423,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Jami Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Sayyid Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Mandal",
+        "latitude": 23.288383,
+        "longitude": 71.917885,
+        "gis_accuracy": "approximate (area: Mandal, Ahmedabad)",
+        "structure_name": "Sayyid Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Small stone Mosque (Rani Masjid)",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Paldi",
+        "latitude": 23.014553,
+        "longitude": 72.563543,
+        "gis_accuracy": "approximate (area: Paldi , Ahmedabad)",
+        "structure_name": "Small stone Mosque (Rani Masjid)",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Bibi's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Rajpur/Hirapur",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (district: Ahmedabad, Gujarat)",
+        "structure_name": "Bibi's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Masjid of Ragusha Pir",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ranpur",
+        "latitude": 22.359078,
+        "longitude": 71.867252,
+        "gis_accuracy": "approximate (area: Ranpur , Ahmedabad)",
+        "structure_name": "Masjid of Ragusha Pir",
+        "structure_type": "Mosque"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: stepwells in Gujarat
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.district) CONTAINS "gujarat"
+            OR toLower(s.state) CONTAINS "gujarat"
+            OR toLower(s.address) CONTAINS "gujarat"
+        )
+
+        AND (
+            toLower(st.type) CONTAINS "stepwell"
+            OR toLower(s.name) CONTAINS "stepwell"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Amritavarshini Vav",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Panchkuva",
+        "latitude": 23.025,
+        "longitude": 72.5972,
+        "gis_accuracy": "exact",
+        "structure_name": "Amritavarshini Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Ancient Step Well",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Kathwada",
+        "latitude": 23.0578,
+        "longitude": 72.7047,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Step Well",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Stepwell",
+        "state": "Gujarat",
+        "district": "Banaskantha",
+        "address": "Hadad",
+        "latitude": 24.2628,
+        "longitude": 72.98,
+        "gis_accuracy": "exact",
+        "structure_name": "Stepwell",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Mithi Vav",
+        "state": "Gujarat",
+        "district": "Banaskantha",
+        "address": "Palanpur",
+        "latitude": 24.1689,
+        "longitude": 72.4433,
+        "gis_accuracy": "exact",
+        "structure_name": "Mithi Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vav (Step Well) (Dholikui)",
+        "state": "Gujarat",
+        "district": "Kheda",
+        "address": "Kapadvanj",
+        "latitude": 23.0233,
+        "longitude": 73.0717,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav (Step Well)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vori Vav",
+        "state": "Gujarat",
+        "district": "Kheda",
+        "address": "Kapadvanj",
+        "latitude": 23.02324,
+        "longitude": 73.072753,
+        "gis_accuracy": "approximate (area: Kapadvanj, Kheda)",
+        "structure_name": "Vori Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Mota Todavali Vav",
+        "state": "Gujarat",
+        "district": "Kheda",
+        "address": "Vadtal",
+        "latitude": 22.8597,
+        "longitude": 72.9572,
+        "gis_accuracy": "exact",
+        "structure_name": "Mota Todavali Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vav (Step Well)",
+        "state": "Gujarat",
+        "district": "Kheda",
+        "address": "Mahemdavad",
+        "latitude": 22.8258,
+        "longitude": 72.7547,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav (Step Well)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Bhadrakali Mata Stepwell",
+        "state": "Gujarat",
+        "district": "Anand",
+        "address": "Umreth",
+        "latitude": 22.7047,
+        "longitude": 73.0714,
+        "gis_accuracy": "exact",
+        "structure_name": "Bhadrakali Mata Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vikiya Vav",
+        "state": "Gujarat",
+        "district": "Devbhumi Dwarka",
+        "address": "Ghumli",
+        "latitude": 21.8831,
+        "longitude": 69.7608,
+        "gis_accuracy": "exact",
+        "structure_name": "Vikiya Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Stepwell",
+        "state": "Gujarat",
+        "district": "Devbhumi Dwarka",
+        "address": "Modpar",
+        "latitude": 22.974469,
+        "longitude": 72.603359,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Shani Vav",
+        "state": "Gujarat",
+        "district": "Devbhumi Dwarka",
+        "address": "Hathla",
+        "latitude": 21.8533,
+        "longitude": 69.6222,
+        "gis_accuracy": "exact",
+        "structure_name": "Shani Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Adi Kadi Vav",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Uparkot",
+        "latitude": 21.527,
+        "longitude": 70.4697,
+        "gis_accuracy": "exact",
+        "structure_name": "Adi Kadi Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Laskari Vav",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Uparkot",
+        "latitude": 21.5225,
+        "longitude": 70.4692,
+        "gis_accuracy": "exact",
+        "structure_name": "Laskari Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Porbandar",
+        "address": "Visavada",
+        "latitude": 21.8075,
+        "longitude": 69.4531,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Ra Khengar Vav",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Vanthli",
+        "latitude": 21.4917,
+        "longitude": 70.3833,
+        "gis_accuracy": "exact",
+        "structure_name": "Ra Khengar Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Chaumukhi Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Chobari",
+        "latitude": 22.2586,
+        "longitude": 71.2064,
+        "gis_accuracy": "exact",
+        "structure_name": "Chaumukhi Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Matri Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Kankavati",
+        "latitude": 23.0722,
+        "longitude": 71.3542,
+        "gis_accuracy": "exact",
+        "structure_name": "Matri Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Hampur",
+        "latitude": 22.9072,
+        "longitude": 71.57,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Rataba alias Rajbai Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Rampura",
+        "latitude": 22.5975,
+        "longitude": 71.5431,
+        "gis_accuracy": "exact",
+        "structure_name": "Rataba alias Rajbai Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ganga Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Wadhwan",
+        "latitude": 22.7122,
+        "longitude": 71.6786,
+        "gis_accuracy": "exact",
+        "structure_name": "Ganga Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Madhavav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Wadhwan",
+        "latitude": 22.7094,
+        "longitude": 71.6744,
+        "gis_accuracy": "exact",
+        "structure_name": "Madhavav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Dhandhalpur",
+        "latitude": 22.3914,
+        "longitude": 71.3606,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient Vav at Sharneshwar Temple",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Halvad",
+        "latitude": 23.0075,
+        "longitude": 71.18,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Vav at Sharneshwar Temple",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient Vav/Stepwell",
+        "state": "Gujarat",
+        "district": "Gandhinagar",
+        "address": "Ambapur",
+        "latitude": 23.1511,
+        "longitude": 72.61,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Vav/Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vahu Ni Vav",
+        "state": "Gujarat",
+        "district": "Mahisagar",
+        "address": "Lavana",
+        "latitude": 23.3217,
+        "longitude": 73.5819,
+        "gis_accuracy": "exact",
+        "structure_name": "Vahu Ni Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Sasu Ni Vav",
+        "state": "Gujarat",
+        "district": "Mahisagar",
+        "address": "Lavana",
+        "latitude": 23.3211,
+        "longitude": 73.5819,
+        "gis_accuracy": "exact",
+        "structure_name": "Sasu Ni Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Gebanshah Vav with Steps",
+        "state": "Gujarat",
+        "district": "Panchmahal",
+        "address": "Champaner",
+        "latitude": 22.4806,
+        "longitude": 73.5311,
+        "gis_accuracy": "exact",
+        "structure_name": "Gebanshah Vav with Steps",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vanzari Vav",
+        "state": "Gujarat",
+        "district": "Panchmahal",
+        "address": "Kankanpur",
+        "latitude": 22.8317,
+        "longitude": 73.4875,
+        "gis_accuracy": "exact",
+        "structure_name": "Vanzari Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Malik Sandal Ni Vav",
+        "state": "Gujarat",
+        "district": "Panchmahals",
+        "address": "Mandvi village (Halol)",
+        "latitude": 22.4938,
+        "longitude": 73.5092,
+        "gis_accuracy": "exact",
+        "structure_name": "Malik Sandal Ni Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Sindh Mata Ni Vav",
+        "state": "Gujarat",
+        "district": "Panchmahals",
+        "address": "Halol Nagar",
+        "latitude": 22.4972,
+        "longitude": 73.4931,
+        "gis_accuracy": "exact",
+        "structure_name": "Sindh Mata Ni Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Chandralekha (Surajkala) Vav",
+        "state": "Gujarat",
+        "district": "Panchmahals",
+        "address": "Halol Nagar",
+        "latitude": 22.5039,
+        "longitude": 73.4617,
+        "gis_accuracy": "exact",
+        "structure_name": "Chandralekha (Surajkala) Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Mahesana",
+        "address": "Modhera",
+        "latitude": 23.5839,
+        "longitude": 72.1317,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Gandhinagar",
+        "address": "Mansa",
+        "latitude": 23.4233,
+        "longitude": 72.6583,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Minadevi Vav",
+        "state": "Gujarat",
+        "district": "Rajkot",
+        "address": "Virpur",
+        "latitude": 21.8481,
+        "longitude": 70.6964,
+        "gis_accuracy": "exact",
+        "structure_name": "Minadevi Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav (Gelmata Vav)",
+        "state": "Gujarat",
+        "district": "Rajkot",
+        "address": "Bhadla",
+        "latitude": 22.1861,
+        "longitude": 71.1019,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav (Gelmata Vav)",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Kuber Vav",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Morbi",
+        "latitude": 22.8181,
+        "longitude": 70.8358,
+        "gis_accuracy": "exact",
+        "structure_name": "Kuber Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient Vav",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Sarvad",
+        "latitude": 22.9822,
+        "longitude": 70.7019,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vidyadhar Vav",
+        "state": "Gujarat",
+        "district": "Vadodara",
+        "address": "Sevasi",
+        "latitude": 22.3183,
+        "longitude": 73.1167,
+        "gis_accuracy": "exact",
+        "structure_name": "Vidyadhar Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Gambhirpura",
+        "latitude": 23.8492,
+        "longitude": 73.0131,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Chorivad",
+        "latitude": 23.9,
+        "longitude": 73.1258,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient stepwell (vav)",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Limbhoi",
+        "latitude": 23.8658,
+        "longitude": 72.9864,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient stepwell (vav)",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Brahma Vav",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Khedbrahma",
+        "latitude": 24.0386,
+        "longitude": 73.0481,
+        "gis_accuracy": "exact",
+        "structure_name": "Brahma Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Aravalli",
+        "address": "Shamlaji",
+        "latitude": 23.6878,
+        "longitude": 73.3875,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Pagathiyavali Vav (Stepwell)",
+        "state": "Gujarat",
+        "district": "Aravalli",
+        "address": "Tintoi",
+        "latitude": 23.6139,
+        "longitude": 73.3322,
+        "gis_accuracy": "exact",
+        "structure_name": "Pagathiyavali Vav (Stepwell)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vanzari Vav",
+        "state": "Gujarat",
+        "district": "Aravalli",
+        "address": "Modasa",
+        "latitude": 23.4667,
+        "longitude": 73.2986,
+        "gis_accuracy": "exact",
+        "structure_name": "Vanzari Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vav (Stepwell)",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Dholi Vav (Vijaynagar)",
+        "latitude": 23.167147,
+        "longitude": 72.580134,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Vav (Stepwell)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Nagrani Vav (Stepwell)",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Khed-Chandarani",
+        "latitude": 23.6642,
+        "longitude": 73.0964,
+        "gis_accuracy": "exact",
+        "structure_name": "Nagrani Vav (Stepwell)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Virji Vora ni Vav",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Halvad",
+        "latitude": 23.0139,
+        "longitude": 71.1825,
+        "gis_accuracy": "exact",
+        "structure_name": "Virji Vora ni Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Dada (Bai) Hari's Stepwell",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Asarwa",
+        "latitude": 23.047249,
+        "longitude": 72.608805,
+        "gis_accuracy": "approximate (area: Asarwa , Ahmedabad)",
+        "structure_name": "Dada (Bai) Hari's Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Jethabhai's Stepwell",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Isanpur",
+        "latitude": null,
+        "longitude": null,
+        "gis_accuracy": "exact",
+        "structure_name": "Jethabhai's Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Saptamukhi Vav",
+        "state": "Gujarat",
+        "district": "Vadodara",
+        "address": "Dabhoi",
+        "latitude": 22.133617,
+        "longitude": 73.4201,
+        "gis_accuracy": "approximate (area: Dabhoi, Vadodara)",
+        "structure_name": "Saptamukhi Vav",
+        "structure_type": "Stepwell"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: all memorial stones
+
+GENERATED CYPHER:
+
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+WHERE toLower(a.type) CONTAINS "memorial"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+RESULT:
+
+[
+    {
+        "site_name": "Stone Memorial Inscription & Battlefield",
+        "state": "Gujarat",
+        "district": "Shekhpat",
+        "address": "Shekhpat",
+        "latitude": 22.385005,
+        "longitude": 71.745261,
+        "gis_accuracy": "approximate (state: Gujarat)",
+        "artifact_name": "Stone Memorial Inscription & Battlefield",
+        "artifact_type": "Memorial(Inscription)"
+    },
+    {
+        "site_name": "Dhanvantari no Palio",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Moti Dhaneti,Maliya Hatina",
+        "latitude": 21.095,
+        "longitude": 70.32,
+        "gis_accuracy": "exact",
+        "artifact_name": "Dhanvantari no Palio",
+        "artifact_type": "Memorial Stone"
+    },
+    {
+        "site_name": "Memorial Stone of Dah Culture",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Bagasara-Ghed",
+        "latitude": 21.522042,
+        "longitude": 70.458246,
+        "gis_accuracy": "approximate (district: Junagadh, Gujarat)",
+        "artifact_name": "Memorial Stone of Dah Culture",
+        "artifact_type": "Memorial Stone"
+    },
+    {
+        "site_name": "Memorial Stone near Cemetery",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Halvad",
+        "latitude": 23.018242,
+        "longitude": 71.183382,
+        "gis_accuracy": "approximate (area: Halvad, Morbi)",
+        "artifact_name": "Memorial Stone near Cemetery",
+        "artifact_type": "Memorial Stone"
+    },
+    {
+        "site_name": "Memorial Stone of Lakha Fulani",
+        "state": "Gujarat",
+        "district": "Rajkot",
+        "address": "Atkot",
+        "latitude": 22.010354,
+        "longitude": 71.148572,
+        "gis_accuracy": "approximate (area: Atkot, Rajkot)",
+        "artifact_name": "Memorial Stone of Lakha Fulani",
+        "artifact_type": "Memorial Stone"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: stone inscription at masjid
+
+GENERATED CYPHER:
+
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+MATCH (s)-[:HAS_ARTIFACT]->(a:Artifact)
+
+WHERE (
+    toLower(s.name) CONTAINS "masjid"
+    OR toLower(s.district) CONTAINS "masjid"
+    OR toLower(s.state) CONTAINS "masjid"
+    OR toLower(s.address) CONTAINS "masjid"
+)
+AND toLower(st.type) CONTAINS "mosque"
+AND toLower(a.type) CONTAINS "inscription"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+RESULT:
+
+[
+    {
+        "site_name": "Inscription of Juma Masjid",
+        "state": "Gujarat",
+        "district": "Jamnagar",
+        "address": "Jamnagar",
+        "latitude": 22.4633,
+        "longitude": 70.0664,
+        "gis_accuracy": "exact",
+        "structure_name": "Juma Masjid(Inscription)",
+        "structure_type": "Mosque(inscription at mosque)",
+        "artifact_name": "Inscription of Juma Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Two Stone Inscriptions on Jumma Masjid",
+        "state": "Gujarat",
+        "district": "Porbandar",
+        "address": "Kutiyana",
+        "latitude": 21.622834,
+        "longitude": 69.985209,
+        "gis_accuracy": "approximate (area: Kutiyana, Porbandar)",
+        "structure_name": "Two Stone Inscriptions on Jumma Masjid",
+        "structure_type": "Mosque(inscription at mosque)",
+        "artifact_name": "Two Stone Inscriptions on Jumma Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Kaji Masjid - H.S.902",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Prabhas Patan",
+        "latitude": 20.8925,
+        "longitude": 70.4028,
+        "gis_accuracy": "exact",
+        "structure_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "structure_type": "Inscription at Mosque",
+        "artifact_name": "Stone Inscription at Kaji Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Mussafar Masjid",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Prabhas Patan",
+        "latitude": 20.890524,
+        "longitude": 70.401953,
+        "gis_accuracy": "approximate (area: Prabhas Patan, Gir Somnath)",
+        "structure_name": "Stone Inscription at Mussafar Masjid",
+        "structure_type": "Inscription at Mosque",
+        "artifact_name": "Stone Inscription at Mussafar Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Veraval",
+        "latitude": 20.91011,
+        "longitude": 70.365279,
+        "gis_accuracy": "approximate (area: Veraval, Gir Somnath)",
+        "structure_name": "Jumma Masjid",
+        "structure_type": "Mosque",
+        "artifact_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "artifact_type": "Inscription"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: structures in Kaji Masjid
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.name) CONTAINS "kaji masjid"
+            OR toLower(s.address) CONTAINS "kaji masjid"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Stone Inscription at Kaji Masjid - H.S.902",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Prabhas Patan",
+        "latitude": 20.8925,
+        "longitude": 70.4028,
+        "gis_accuracy": "exact",
+        "structure_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "structure_type": "Inscription at Mosque"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: temples in Ahmedabad
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.district) CONTAINS "ahmedabad"
+            OR toLower(s.state) CONTAINS "ahmedabad"
+            OR toLower(s.address) CONTAINS "ahmedabad"
+        )
+
+        AND (
+            toLower(st.type) CONTAINS "temple"
+            OR toLower(s.name) CONTAINS "temple"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Bhadra Gate beside Bhadrakali Temple",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Bhadra Gate beside Bhadrakali Temple",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Three gates besides Bhadrakali temple",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Three gates besides Bhadrakali temple",
+        "structure_type": "Gate"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: temples in Junagadh
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.district) CONTAINS "una"
+            OR toLower(s.state) CONTAINS "una"
+            OR toLower(s.address) CONTAINS "una"
+        )
+
+        AND (
+            toLower(st.type) CONTAINS "temple"
+            OR toLower(s.name) CONTAINS "temple"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Temple & Two Inscriptions (Ajara Parshwanath)",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Ajara (Una)",
+        "latitude": 20.7911,
+        "longitude": 71.0644,
+        "gis_accuracy": "exact",
+        "structure_name": "Temple & Two Inscriptions (Ajara Parshwanath)",
+        "structure_type": "Temple+Inscription"
+    },
+    {
+        "site_name": "Matri Mata temple",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Junagadh",
+        "latitude": 21.5278,
+        "longitude": 70.4681,
+        "gis_accuracy": "exact",
+        "structure_name": "Matri Mata temple",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Kalika Mata",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "on Girnar Hill",
+        "latitude": 22.149336,
+        "longitude": 69.072735,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Kalika Mata",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Guru Dattatraya",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill,Junagadh",
+        "latitude": 21.5281,
+        "longitude": 70.5328,
+        "gis_accuracy": "exact",
+        "structure_name": "Guru Dattatraya Shrine",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Chamunda Mata Temple",
+        "state": "Gujarat",
+        "district": "Porbandar",
+        "address": "Juna Bokhira",
+        "latitude": 21.6692,
+        "longitude": 69.6075,
+        "gis_accuracy": "exact",
+        "structure_name": "Chamunda Mata Temple",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Ra'Khengar Palace (now part of Girnar Jain temples)",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill,Junagadh",
+        "latitude": 21.5269,
+        "longitude": 70.5206,
+        "gis_accuracy": "exact",
+        "structure_name": "Ra'Khengar Palace",
+        "structure_type": "Palace"
+    },
+    {
+        "site_name": "Gorakhnath Mahadev",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Gorakhmadhi",
+        "latitude": 20.9061,
+        "longitude": 70.5347,
+        "gis_accuracy": "exact",
+        "structure_name": "Gorakhnath Mahadev",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Neminath Jain Temple with three inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5272,
+        "longitude": 70.5231,
+        "gis_accuracy": "exact",
+        "structure_name": "Neminath Jain Temple with three inscriptions",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Vastupal Jain Temple with six inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5267,
+        "longitude": 70.5233,
+        "gis_accuracy": "exact",
+        "structure_name": "Vastupal Jain Temple with six inscriptions",
+        "structure_type": "Temple"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: mosques in Ahmedabad
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.district) CONTAINS "ahmedabad"
+            OR toLower(s.state) CONTAINS "ahmedabad"
+            OR toLower(s.address) CONTAINS "ahmedabad"
+        )
+
+        AND (
+            toLower(st.type) CONTAINS "mosque"
+            OR toLower(s.name) CONTAINS "mosque"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Ancient Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Isanpur",
+        "latitude": 22.975,
+        "longitude": 72.6031,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Achyut Bibi's Masjid & Tomb",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Achyut Bibi's Masjid & Tomb",
+        "structure_type": "Mosque-Tomb"
+    },
+    {
+        "site_name": "Ahmed Shah's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Ahmed Shah's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Baba Lalui's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Baba Lalui's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Dastur Khan's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Dastur Khan's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Haibatkhan's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Haibatkhan's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Jami Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 22.485847,
+        "longitude": 73.537423,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Jami Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Kutub Shah's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Kutub Shah's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Muhafiz Khan's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Muhafiz Khan's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Nawab Sardar Khan Masjid and outer gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Nawab Sardar Khan Masjid and outer gate",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Queen's Mosque in Sarangpur",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Queen's Mosque in Sarangpur",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Rani Rupavati's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Rani Rupavati's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Rani Sipri's Mosque & Tomb",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Rani Sipri's Mosque & Tomb",
+        "structure_type": "Mosque-Tomb"
+    },
+    {
+        "site_name": "Shah Kupa Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Shah Kupa Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Sidi Saiyad's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Sidi Saiyad's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "The Shahpur Kazi Mohmad Chishti's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "The Shahpur Kazi Mohmad Chishti's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Dada Hari's Mosque & Tomb",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Asarwa",
+        "latitude": 23.047249,
+        "longitude": 72.608805,
+        "gis_accuracy": "approximate (area: Asarwa , Ahmedabad)",
+        "structure_name": "Dada Hari's Mosque & Tomb",
+        "structure_type": "Mosque-Tomb"
+    },
+    {
+        "site_name": "Malik Alam's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Dani Limda",
+        "latitude": 22.996491,
+        "longitude": 72.577403,
+        "gis_accuracy": "approximate (area: Dani Limda, Ahmedabad)",
+        "structure_name": "Malik Alam's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Bahlol Khan Gazi's Mosque",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Dholka",
+        "latitude": 22.734401,
+        "longitude": 72.44129,
+        "gis_accuracy": "exact",
+        "structure_name": "Bahlol Khan Gazi's Mosque",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Jami Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Dholka",
+        "latitude": 22.485847,
+        "longitude": 73.537423,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Jami Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Khan Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Dholka",
+        "latitude": 22.733819,
+        "longitude": 72.431344,
+        "gis_accuracy": "exact",
+        "structure_name": "Khan Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Small Stone Masjid (Gumle Masjid)",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Isanpur",
+        "latitude": 22.98113,
+        "longitude": 72.601295,
+        "gis_accuracy": "approximate (area: Isanpur, Ahmedabad)",
+        "structure_name": "Small Stone Masjid (Gumle Masjid)",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Cazi Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Mandal",
+        "latitude": 23.288383,
+        "longitude": 71.917885,
+        "gis_accuracy": "approximate (area: Mandal, Ahmedabad)",
+        "structure_name": "Cazi Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Jami Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Mandal",
+        "latitude": 22.485847,
+        "longitude": 73.537423,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Jami Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Sayyid Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Mandal",
+        "latitude": 23.288383,
+        "longitude": 71.917885,
+        "gis_accuracy": "approximate (area: Mandal, Ahmedabad)",
+        "structure_name": "Sayyid Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Small stone Mosque (Rani Masjid)",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Paldi",
+        "latitude": 23.014553,
+        "longitude": 72.563543,
+        "gis_accuracy": "approximate (area: Paldi , Ahmedabad)",
+        "structure_name": "Small stone Mosque (Rani Masjid)",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Bibi's Masjid",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Rajpur/Hirapur",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (district: Ahmedabad, Gujarat)",
+        "structure_name": "Bibi's Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Masjid of Ragusha Pir",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ranpur",
+        "latitude": 22.359078,
+        "longitude": 71.867252,
+        "gis_accuracy": "approximate (area: Ranpur , Ahmedabad)",
+        "structure_name": "Masjid of Ragusha Pir",
+        "structure_type": "Mosque"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: stepwells in Gujarat
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.district) CONTAINS "gujarat"
+            OR toLower(s.state) CONTAINS "gujarat"
+            OR toLower(s.address) CONTAINS "gujarat"
+        )
+
+        AND (
+            toLower(st.type) CONTAINS "stepwell"
+            OR toLower(s.name) CONTAINS "stepwell"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Amritavarshini Vav",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Panchkuva",
+        "latitude": 23.025,
+        "longitude": 72.5972,
+        "gis_accuracy": "exact",
+        "structure_name": "Amritavarshini Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Ancient Step Well",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Kathwada",
+        "latitude": 23.0578,
+        "longitude": 72.7047,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Step Well",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Stepwell",
+        "state": "Gujarat",
+        "district": "Banaskantha",
+        "address": "Hadad",
+        "latitude": 24.2628,
+        "longitude": 72.98,
+        "gis_accuracy": "exact",
+        "structure_name": "Stepwell",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Mithi Vav",
+        "state": "Gujarat",
+        "district": "Banaskantha",
+        "address": "Palanpur",
+        "latitude": 24.1689,
+        "longitude": 72.4433,
+        "gis_accuracy": "exact",
+        "structure_name": "Mithi Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vav (Step Well) (Dholikui)",
+        "state": "Gujarat",
+        "district": "Kheda",
+        "address": "Kapadvanj",
+        "latitude": 23.0233,
+        "longitude": 73.0717,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav (Step Well)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vori Vav",
+        "state": "Gujarat",
+        "district": "Kheda",
+        "address": "Kapadvanj",
+        "latitude": 23.02324,
+        "longitude": 73.072753,
+        "gis_accuracy": "approximate (area: Kapadvanj, Kheda)",
+        "structure_name": "Vori Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Mota Todavali Vav",
+        "state": "Gujarat",
+        "district": "Kheda",
+        "address": "Vadtal",
+        "latitude": 22.8597,
+        "longitude": 72.9572,
+        "gis_accuracy": "exact",
+        "structure_name": "Mota Todavali Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vav (Step Well)",
+        "state": "Gujarat",
+        "district": "Kheda",
+        "address": "Mahemdavad",
+        "latitude": 22.8258,
+        "longitude": 72.7547,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav (Step Well)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Bhadrakali Mata Stepwell",
+        "state": "Gujarat",
+        "district": "Anand",
+        "address": "Umreth",
+        "latitude": 22.7047,
+        "longitude": 73.0714,
+        "gis_accuracy": "exact",
+        "structure_name": "Bhadrakali Mata Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vikiya Vav",
+        "state": "Gujarat",
+        "district": "Devbhumi Dwarka",
+        "address": "Ghumli",
+        "latitude": 21.8831,
+        "longitude": 69.7608,
+        "gis_accuracy": "exact",
+        "structure_name": "Vikiya Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Stepwell",
+        "state": "Gujarat",
+        "district": "Devbhumi Dwarka",
+        "address": "Modpar",
+        "latitude": 22.974469,
+        "longitude": 72.603359,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Shani Vav",
+        "state": "Gujarat",
+        "district": "Devbhumi Dwarka",
+        "address": "Hathla",
+        "latitude": 21.8533,
+        "longitude": 69.6222,
+        "gis_accuracy": "exact",
+        "structure_name": "Shani Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Adi Kadi Vav",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Uparkot",
+        "latitude": 21.527,
+        "longitude": 70.4697,
+        "gis_accuracy": "exact",
+        "structure_name": "Adi Kadi Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Laskari Vav",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Uparkot",
+        "latitude": 21.5225,
+        "longitude": 70.4692,
+        "gis_accuracy": "exact",
+        "structure_name": "Laskari Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Porbandar",
+        "address": "Visavada",
+        "latitude": 21.8075,
+        "longitude": 69.4531,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Ra Khengar Vav",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Vanthli",
+        "latitude": 21.4917,
+        "longitude": 70.3833,
+        "gis_accuracy": "exact",
+        "structure_name": "Ra Khengar Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Chaumukhi Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Chobari",
+        "latitude": 22.2586,
+        "longitude": 71.2064,
+        "gis_accuracy": "exact",
+        "structure_name": "Chaumukhi Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Matri Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Kankavati",
+        "latitude": 23.0722,
+        "longitude": 71.3542,
+        "gis_accuracy": "exact",
+        "structure_name": "Matri Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Hampur",
+        "latitude": 22.9072,
+        "longitude": 71.57,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Rataba alias Rajbai Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Rampura",
+        "latitude": 22.5975,
+        "longitude": 71.5431,
+        "gis_accuracy": "exact",
+        "structure_name": "Rataba alias Rajbai Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ganga Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Wadhwan",
+        "latitude": 22.7122,
+        "longitude": 71.6786,
+        "gis_accuracy": "exact",
+        "structure_name": "Ganga Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Madhavav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Wadhwan",
+        "latitude": 22.7094,
+        "longitude": 71.6744,
+        "gis_accuracy": "exact",
+        "structure_name": "Madhavav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Surendranagar",
+        "address": "Dhandhalpur",
+        "latitude": 22.3914,
+        "longitude": 71.3606,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient Vav at Sharneshwar Temple",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Halvad",
+        "latitude": 23.0075,
+        "longitude": 71.18,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Vav at Sharneshwar Temple",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient Vav/Stepwell",
+        "state": "Gujarat",
+        "district": "Gandhinagar",
+        "address": "Ambapur",
+        "latitude": 23.1511,
+        "longitude": 72.61,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Vav/Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vahu Ni Vav",
+        "state": "Gujarat",
+        "district": "Mahisagar",
+        "address": "Lavana",
+        "latitude": 23.3217,
+        "longitude": 73.5819,
+        "gis_accuracy": "exact",
+        "structure_name": "Vahu Ni Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Sasu Ni Vav",
+        "state": "Gujarat",
+        "district": "Mahisagar",
+        "address": "Lavana",
+        "latitude": 23.3211,
+        "longitude": 73.5819,
+        "gis_accuracy": "exact",
+        "structure_name": "Sasu Ni Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Gebanshah Vav with Steps",
+        "state": "Gujarat",
+        "district": "Panchmahal",
+        "address": "Champaner",
+        "latitude": 22.4806,
+        "longitude": 73.5311,
+        "gis_accuracy": "exact",
+        "structure_name": "Gebanshah Vav with Steps",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vanzari Vav",
+        "state": "Gujarat",
+        "district": "Panchmahal",
+        "address": "Kankanpur",
+        "latitude": 22.8317,
+        "longitude": 73.4875,
+        "gis_accuracy": "exact",
+        "structure_name": "Vanzari Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Malik Sandal Ni Vav",
+        "state": "Gujarat",
+        "district": "Panchmahals",
+        "address": "Mandvi village (Halol)",
+        "latitude": 22.4938,
+        "longitude": 73.5092,
+        "gis_accuracy": "exact",
+        "structure_name": "Malik Sandal Ni Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Sindh Mata Ni Vav",
+        "state": "Gujarat",
+        "district": "Panchmahals",
+        "address": "Halol Nagar",
+        "latitude": 22.4972,
+        "longitude": 73.4931,
+        "gis_accuracy": "exact",
+        "structure_name": "Sindh Mata Ni Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Chandralekha (Surajkala) Vav",
+        "state": "Gujarat",
+        "district": "Panchmahals",
+        "address": "Halol Nagar",
+        "latitude": 22.5039,
+        "longitude": 73.4617,
+        "gis_accuracy": "exact",
+        "structure_name": "Chandralekha (Surajkala) Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Mahesana",
+        "address": "Modhera",
+        "latitude": 23.5839,
+        "longitude": 72.1317,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Gandhinagar",
+        "address": "Mansa",
+        "latitude": 23.4233,
+        "longitude": 72.6583,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Minadevi Vav",
+        "state": "Gujarat",
+        "district": "Rajkot",
+        "address": "Virpur",
+        "latitude": 21.8481,
+        "longitude": 70.6964,
+        "gis_accuracy": "exact",
+        "structure_name": "Minadevi Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav (Gelmata Vav)",
+        "state": "Gujarat",
+        "district": "Rajkot",
+        "address": "Bhadla",
+        "latitude": 22.1861,
+        "longitude": 71.1019,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav (Gelmata Vav)",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Kuber Vav",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Morbi",
+        "latitude": 22.8181,
+        "longitude": 70.8358,
+        "gis_accuracy": "exact",
+        "structure_name": "Kuber Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient Vav",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Sarvad",
+        "latitude": 22.9822,
+        "longitude": 70.7019,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vidyadhar Vav",
+        "state": "Gujarat",
+        "district": "Vadodara",
+        "address": "Sevasi",
+        "latitude": 22.3183,
+        "longitude": 73.1167,
+        "gis_accuracy": "exact",
+        "structure_name": "Vidyadhar Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Gambhirpura",
+        "latitude": 23.8492,
+        "longitude": 73.0131,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Chorivad",
+        "latitude": 23.9,
+        "longitude": 73.1258,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Ancient stepwell (vav)",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Limbhoi",
+        "latitude": 23.8658,
+        "longitude": 72.9864,
+        "gis_accuracy": "exact",
+        "structure_name": "Ancient stepwell (vav)",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Brahma Vav",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Khedbrahma",
+        "latitude": 24.0386,
+        "longitude": 73.0481,
+        "gis_accuracy": "exact",
+        "structure_name": "Brahma Vav",
+        "structure_type": "Stepwell (Vav)"
+    },
+    {
+        "site_name": "Vav",
+        "state": "Gujarat",
+        "district": "Aravalli",
+        "address": "Shamlaji",
+        "latitude": 23.6878,
+        "longitude": 73.3875,
+        "gis_accuracy": "exact",
+        "structure_name": "Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Pagathiyavali Vav (Stepwell)",
+        "state": "Gujarat",
+        "district": "Aravalli",
+        "address": "Tintoi",
+        "latitude": 23.6139,
+        "longitude": 73.3322,
+        "gis_accuracy": "exact",
+        "structure_name": "Pagathiyavali Vav (Stepwell)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vanzari Vav",
+        "state": "Gujarat",
+        "district": "Aravalli",
+        "address": "Modasa",
+        "latitude": 23.4667,
+        "longitude": 73.2986,
+        "gis_accuracy": "exact",
+        "structure_name": "Vanzari Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Vav (Stepwell)",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Dholi Vav (Vijaynagar)",
+        "latitude": 23.167147,
+        "longitude": 72.580134,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Vav (Stepwell)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Nagrani Vav (Stepwell)",
+        "state": "Gujarat",
+        "district": "Sabarkantha",
+        "address": "Khed-Chandarani",
+        "latitude": 23.6642,
+        "longitude": 73.0964,
+        "gis_accuracy": "exact",
+        "structure_name": "Nagrani Vav (Stepwell)",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Virji Vora ni Vav",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Halvad",
+        "latitude": 23.0139,
+        "longitude": 71.1825,
+        "gis_accuracy": "exact",
+        "structure_name": "Virji Vora ni Vav",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Dada (Bai) Hari's Stepwell",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Asarwa",
+        "latitude": 23.047249,
+        "longitude": 72.608805,
+        "gis_accuracy": "approximate (area: Asarwa , Ahmedabad)",
+        "structure_name": "Dada (Bai) Hari's Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Jethabhai's Stepwell",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Isanpur",
+        "latitude": null,
+        "longitude": null,
+        "gis_accuracy": "exact",
+        "structure_name": "Jethabhai's Stepwell",
+        "structure_type": "Stepwell"
+    },
+    {
+        "site_name": "Saptamukhi Vav",
+        "state": "Gujarat",
+        "district": "Vadodara",
+        "address": "Dabhoi",
+        "latitude": 22.133617,
+        "longitude": 73.4201,
+        "gis_accuracy": "approximate (area: Dabhoi, Vadodara)",
+        "structure_name": "Saptamukhi Vav",
+        "structure_type": "Stepwell"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: all inscriptions
+
+GENERATED CYPHER:
+
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+WHERE toLower(a.type) CONTAINS "inscription"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+RESULT:
+
+[
+    {
+        "site_name": "Kandhrmatad Inscriptions",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Juni Fafani",
+        "latitude": 20.929818,
+        "longitude": 70.762758,
+        "gis_accuracy": "approximate (district: Gir Somnath, Gujarat)",
+        "artifact_name": "Kandhrmatad Inscriptions",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Inscription of Juma Masjid",
+        "state": "Gujarat",
+        "district": "Jamnagar",
+        "address": "Jamnagar",
+        "latitude": 22.4633,
+        "longitude": 70.0664,
+        "gis_accuracy": "exact",
+        "artifact_name": "Inscription of Juma Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Memorial Inscription & Battlefield",
+        "state": "Gujarat",
+        "district": "Shekhpat",
+        "address": "Shekhpat",
+        "latitude": 22.385005,
+        "longitude": 71.745261,
+        "gis_accuracy": "approximate (state: Gujarat)",
+        "artifact_name": "Stone Memorial Inscription & Battlefield",
+        "artifact_type": "Memorial(Inscription)"
+    },
+    {
+        "site_name": "Temple & Two Inscriptions (Ajara Parshwanath)",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Ajara (Una)",
+        "latitude": 20.7911,
+        "longitude": 71.0644,
+        "gis_accuracy": "exact",
+        "artifact_name": "Temple & Two Inscriptions (Ajara Parshwanath)",
+        "artifact_type": "Temple+Inscription"
+    },
+    {
+        "site_name": "Stone Inscription with Mai Gadechi of H. S. 685",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Junagadh",
+        "latitude": 21.5317,
+        "longitude": 70.4667,
+        "gis_accuracy": "exact",
+        "artifact_name": "Stone Inscription with Mai Gadechi of H. S. 685",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscriptions Near Talav",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Una-Tulishyam Road",
+        "latitude": 20.929818,
+        "longitude": 70.762758,
+        "gis_accuracy": "approximate (district: Gir Somnath, Gujarat)",
+        "artifact_name": "Stone Inscriptions Near Talav",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Replica of Ashoka Stone Inscription",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.522042,
+        "longitude": 70.458246,
+        "gis_accuracy": "approximate (district: Junagadh, Gujarat)",
+        "artifact_name": "Replica of Ashoka Stone Inscription",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription of Ra'Mandlik (Samvat 1507)",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Uparkot",
+        "latitude": 21.524189,
+        "longitude": 70.470799,
+        "gis_accuracy": "approximate (area: Uparkot, Junagadh)",
+        "artifact_name": "Stone Inscription of Ra'Mandlik (Samvat 1507)",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Two Stone Inscriptions on Jumma Masjid",
+        "state": "Gujarat",
+        "district": "Porbandar",
+        "address": "Kutiyana",
+        "latitude": 21.622834,
+        "longitude": 69.985209,
+        "gis_accuracy": "approximate (area: Kutiyana, Porbandar)",
+        "artifact_name": "Two Stone Inscriptions on Jumma Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Nani Vav-no Shilalekh",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Dhandhusar",
+        "latitude": 21.549938,
+        "longitude": 70.357164,
+        "gis_accuracy": "approximate (area: Dhandhusar, Junagadh)",
+        "artifact_name": "Nani Vav-no Shilalekh",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription of Vijayshwar Mahadev -1346/1408",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Dhandhusar",
+        "latitude": 21.549938,
+        "longitude": 70.357164,
+        "gis_accuracy": "approximate (area: Dhandhusar, Junagadh)",
+        "artifact_name": "Stone Inscription of Vijayshwar Mahadev",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Bilingual Stone Inscription at Gayatri Temple",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Prashnavada",
+        "latitude": 20.8208,
+        "longitude": 70.5553,
+        "gis_accuracy": "exact",
+        "artifact_name": "Bilingual Stone Inscription at Gayatri Temple",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Kaji Masjid - H.S.902",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Prabhas Patan",
+        "latitude": 20.8925,
+        "longitude": 70.4028,
+        "gis_accuracy": "exact",
+        "artifact_name": "Stone Inscription at Kaji Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription of Bhadrakali Mata",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Prabhas Patan",
+        "latitude": 20.890524,
+        "longitude": 70.401953,
+        "gis_accuracy": "approximate (area: Prabhas Patan, Gir Somnath)",
+        "artifact_name": "Stone Inscription of Bhadrakali Mata",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Mangaroli Shah Makbara & Shah Makbara with Stone Inscription",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Prabhas Patan",
+        "latitude": 20.890524,
+        "longitude": 70.401953,
+        "gis_accuracy": "approximate (area: Prabhas Patan, Gir Somnath)",
+        "artifact_name": "Stone Inscription (at Shah Makbara)",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Mussafar Masjid",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Prabhas Patan",
+        "latitude": 20.890524,
+        "longitude": 70.401953,
+        "gis_accuracy": "approximate (area: Prabhas Patan, Gir Somnath)",
+        "artifact_name": "Stone Inscription at Mussafar Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription Near Mota Darwaja",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Prabhas Patan",
+        "latitude": 20.890524,
+        "longitude": 70.401953,
+        "gis_accuracy": "approximate (area: Prabhas Patan, Gir Somnath)",
+        "artifact_name": "Stone Inscription Near Mota Darwaja",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription of Sultan Ahmed (H.S. 905â€“1543)",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Prabhas Patan",
+        "latitude": 20.890524,
+        "longitude": 70.401953,
+        "gis_accuracy": "approximate (area: Prabhas Patan, Gir Somnath)",
+        "artifact_name": "Stone Inscription of Sultan Ahmed",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Veraval",
+        "latitude": 20.91011,
+        "longitude": 70.365279,
+        "gis_accuracy": "approximate (area: Veraval, Gir Somnath)",
+        "artifact_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Harshadmata Temple",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Veraval",
+        "latitude": 20.91011,
+        "longitude": 70.365279,
+        "gis_accuracy": "approximate (area: Veraval, Gir Somnath)",
+        "artifact_name": "Stone Inscription at Harshadmata Temple",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Temple with stone Inscription (Kaleshwari Mata Temple)",
+        "state": "Gujarat",
+        "district": "Mahisagar",
+        "address": "Lavana",
+        "latitude": 23.3214,
+        "longitude": 73.5825,
+        "gis_accuracy": "exact",
+        "artifact_name": "Stone Inscription (Kaleshwari Mata Temple)",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription in Darbargadh",
+        "state": "Gujarat",
+        "district": "Rajkot",
+        "address": "Jasdan",
+        "latitude": 22.0399,
+        "longitude": 71.2046,
+        "gis_accuracy": "approximate (area: Jasdan, Rajkot)",
+        "artifact_name": "Stone Inscription in Darbargadh",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Darbargadh No Tamrapatro",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Morbi",
+        "latitude": 22.8178,
+        "longitude": 70.8403,
+        "gis_accuracy": "exact",
+        "artifact_name": "Tamrapatra (Copper Plate Record)",
+        "artifact_type": "Inscription/Record"
+    },
+    {
+        "site_name": "Stone Inscription at Jadeshwar Mahadev",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Wankaner",
+        "latitude": 22.6456,
+        "longitude": 70.8544,
+        "gis_accuracy": "exact",
+        "artifact_name": "Stone Inscription at Jadeshwar Mahadev",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Neminath Jain Temple with three inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5272,
+        "longitude": 70.5231,
+        "gis_accuracy": "exact",
+        "artifact_name": "Three Inscriptions (Neminath Jain Temple)",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Vastupal Jain Temple with six inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5267,
+        "longitude": 70.5233,
+        "gis_accuracy": "exact",
+        "artifact_name": "Six Inscriptions (Vastupal Jain Temple)",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Kshatrapa Inscriptions",
+        "state": "Gujarat",
+        "district": "Devbhumi Dwarka",
+        "address": "Dwarka",
+        "latitude": 22.250489,
+        "longitude": 68.980147,
+        "gis_accuracy": "approximate (area: Dwarka, Devbhumi Dwarka)",
+        "artifact_name": "Kshatrapa Inscriptions",
+        "artifact_type": "Inscription"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: all memorial stones
+
+GENERATED CYPHER:
+
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+WHERE toLower(a.type) CONTAINS "memorial"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+RESULT:
+
+[
+    {
+        "site_name": "Stone Memorial Inscription & Battlefield",
+        "state": "Gujarat",
+        "district": "Shekhpat",
+        "address": "Shekhpat",
+        "latitude": 22.385005,
+        "longitude": 71.745261,
+        "gis_accuracy": "approximate (state: Gujarat)",
+        "artifact_name": "Stone Memorial Inscription & Battlefield",
+        "artifact_type": "Memorial(Inscription)"
+    },
+    {
+        "site_name": "Dhanvantari no Palio",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Moti Dhaneti,Maliya Hatina",
+        "latitude": 21.095,
+        "longitude": 70.32,
+        "gis_accuracy": "exact",
+        "artifact_name": "Dhanvantari no Palio",
+        "artifact_type": "Memorial Stone"
+    },
+    {
+        "site_name": "Memorial Stone of Dah Culture",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Bagasara-Ghed",
+        "latitude": 21.522042,
+        "longitude": 70.458246,
+        "gis_accuracy": "approximate (district: Junagadh, Gujarat)",
+        "artifact_name": "Memorial Stone of Dah Culture",
+        "artifact_type": "Memorial Stone"
+    },
+    {
+        "site_name": "Memorial Stone near Cemetery",
+        "state": "Gujarat",
+        "district": "Morbi",
+        "address": "Halvad",
+        "latitude": 23.018242,
+        "longitude": 71.183382,
+        "gis_accuracy": "approximate (area: Halvad, Morbi)",
+        "artifact_name": "Memorial Stone near Cemetery",
+        "artifact_type": "Memorial Stone"
+    },
+    {
+        "site_name": "Memorial Stone of Lakha Fulani",
+        "state": "Gujarat",
+        "district": "Rajkot",
+        "address": "Atkot",
+        "latitude": 22.010354,
+        "longitude": 71.148572,
+        "gis_accuracy": "approximate (area: Atkot, Rajkot)",
+        "artifact_name": "Memorial Stone of Lakha Fulani",
+        "artifact_type": "Memorial Stone"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: stone inscription at masjid
+
+GENERATED CYPHER:
+
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+MATCH (s)-[:HAS_ARTIFACT]->(a:Artifact)
+
+WHERE (
+    toLower(s.name) CONTAINS "masjid"
+    OR toLower(s.district) CONTAINS "masjid"
+    OR toLower(s.state) CONTAINS "masjid"
+    OR toLower(s.address) CONTAINS "masjid"
+)
+AND toLower(st.type) CONTAINS "mosque"
+AND toLower(a.type) CONTAINS "inscription"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+RESULT:
+
+[
+    {
+        "site_name": "Inscription of Juma Masjid",
+        "state": "Gujarat",
+        "district": "Jamnagar",
+        "address": "Jamnagar",
+        "latitude": 22.4633,
+        "longitude": 70.0664,
+        "gis_accuracy": "exact",
+        "structure_name": "Juma Masjid(Inscription)",
+        "structure_type": "Mosque(inscription at mosque)",
+        "artifact_name": "Inscription of Juma Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Two Stone Inscriptions on Jumma Masjid",
+        "state": "Gujarat",
+        "district": "Porbandar",
+        "address": "Kutiyana",
+        "latitude": 21.622834,
+        "longitude": 69.985209,
+        "gis_accuracy": "approximate (area: Kutiyana, Porbandar)",
+        "structure_name": "Two Stone Inscriptions on Jumma Masjid",
+        "structure_type": "Mosque(inscription at mosque)",
+        "artifact_name": "Two Stone Inscriptions on Jumma Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Kaji Masjid - H.S.902",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Prabhas Patan",
+        "latitude": 20.8925,
+        "longitude": 70.4028,
+        "gis_accuracy": "exact",
+        "structure_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "structure_type": "Inscription at Mosque",
+        "artifact_name": "Stone Inscription at Kaji Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Mussafar Masjid",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Prabhas Patan",
+        "latitude": 20.890524,
+        "longitude": 70.401953,
+        "gis_accuracy": "approximate (area: Prabhas Patan, Gir Somnath)",
+        "structure_name": "Stone Inscription at Mussafar Masjid",
+        "structure_type": "Inscription at Mosque",
+        "artifact_name": "Stone Inscription at Mussafar Masjid",
+        "artifact_type": "Inscription"
+    },
+    {
+        "site_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Veraval",
+        "latitude": 20.91011,
+        "longitude": 70.365279,
+        "gis_accuracy": "approximate (area: Veraval, Gir Somnath)",
+        "structure_name": "Jumma Masjid",
+        "structure_type": "Mosque",
+        "artifact_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "artifact_type": "Inscription"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: structures in Jumma Masjid
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.name) CONTAINS "jumma masjid"
+            OR toLower(s.address) CONTAINS "jumma masjid"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Jumma Masjid",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Delvada",
+        "latitude": 20.902673,
+        "longitude": 70.367956,
+        "gis_accuracy": "exact",
+        "structure_name": "Jumma Masjid",
+        "structure_type": "Mosque"
+    },
+    {
+        "site_name": "Two Stone Inscriptions on Jumma Masjid",
+        "state": "Gujarat",
+        "district": "Porbandar",
+        "address": "Kutiyana",
+        "latitude": 21.622834,
+        "longitude": 69.985209,
+        "gis_accuracy": "approximate (area: Kutiyana, Porbandar)",
+        "structure_name": "Two Stone Inscriptions on Jumma Masjid",
+        "structure_type": "Mosque(inscription at mosque)"
+    },
+    {
+        "site_name": "Jumma Masjid & Cannon (Neelam And Kadanal)",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Uparkot",
+        "latitude": 21.5247,
+        "longitude": 70.47,
+        "gis_accuracy": "exact",
+        "structure_name": "Jumma Masjid & Cannon (Neelam And Kadanal)",
+        "structure_type": "Monument"
+    },
+    {
+        "site_name": "Stone Inscription at Jumma Masjid (H.S.732)",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Veraval",
+        "latitude": 20.91011,
+        "longitude": 70.365279,
+        "gis_accuracy": "approximate (area: Veraval, Gir Somnath)",
+        "structure_name": "Jumma Masjid",
+        "structure_type": "Mosque"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: temples in unknown place
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.name) CONTAINS "unknown place"
+            OR toLower(s.address) CONTAINS "unknown place"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[]
+====================================================================================================
+
+====================================================================================================
+QUESTION: gates in Ahmedabad
+
+GENERATED CYPHER:
+
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+WHERE (
+    toLower(s.district) CONTAINS "ahmedabad"
+    OR toLower(s.state) CONTAINS "ahmedabad"
+    OR toLower(s.address) CONTAINS "ahmedabad"
+    OR toLower(s.name) CONTAINS "ahmedabad"
+)
+AND toLower(st.type) CONTAINS "gate"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+RESULT:
+
+[
+    {
+        "site_name": "Astodia Gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.016842,
+        "longitude": 72.590971,
+        "gis_accuracy": "exact",
+        "structure_name": "Astodia Gate",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Bhadra Gate beside Bhadrakali Temple",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Bhadra Gate beside Bhadrakali Temple",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Dariya Pur Gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Dariya Pur Gate",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Delhi Gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.037782,
+        "longitude": 72.587952,
+        "gis_accuracy": "exact",
+        "structure_name": "Delhi Gate",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Kalupur Gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Kalupur Gate",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Panch Kuva Gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Panch Kuva Gate",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Premabhai Gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Premabhai Gate",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Raipur Gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.017436,
+        "longitude": 72.594781,
+        "gis_accuracy": "exact",
+        "structure_name": "Raipur Gate",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Sarangpur Gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Sarangpur Gate",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Teen Darwaja or Tripolia Gate",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Teen Darwaja or Tripolia Gate",
+        "structure_type": "Gate"
+    },
+    {
+        "site_name": "Three gates besides Bhadrakali temple",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "address": "Ahmedabad",
+        "latitude": 23.021537,
+        "longitude": 72.580057,
+        "gis_accuracy": "approximate (area: Ahmedabad, Ahmedabad)",
+        "structure_name": "Three gates besides Bhadrakali temple",
+        "structure_type": "Gate"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: temples in Junagadh
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.district) CONTAINS "una"
+            OR toLower(s.state) CONTAINS "una"
+            OR toLower(s.address) CONTAINS "una"
+        )
+
+        AND (
+            toLower(st.type) CONTAINS "temple"
+            OR toLower(s.name) CONTAINS "temple"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Temple & Two Inscriptions (Ajara Parshwanath)",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Ajara (Una)",
+        "latitude": 20.7911,
+        "longitude": 71.0644,
+        "gis_accuracy": "exact",
+        "structure_name": "Temple & Two Inscriptions (Ajara Parshwanath)",
+        "structure_type": "Temple+Inscription"
+    },
+    {
+        "site_name": "Matri Mata temple",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Junagadh",
+        "latitude": 21.5278,
+        "longitude": 70.4681,
+        "gis_accuracy": "exact",
+        "structure_name": "Matri Mata temple",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Kalika Mata",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "on Girnar Hill",
+        "latitude": 22.149336,
+        "longitude": 69.072735,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Kalika Mata",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Guru Dattatraya",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill,Junagadh",
+        "latitude": 21.5281,
+        "longitude": 70.5328,
+        "gis_accuracy": "exact",
+        "structure_name": "Guru Dattatraya Shrine",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Chamunda Mata Temple",
+        "state": "Gujarat",
+        "district": "Porbandar",
+        "address": "Juna Bokhira",
+        "latitude": 21.6692,
+        "longitude": 69.6075,
+        "gis_accuracy": "exact",
+        "structure_name": "Chamunda Mata Temple",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Ra'Khengar Palace (now part of Girnar Jain temples)",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill,Junagadh",
+        "latitude": 21.5269,
+        "longitude": 70.5206,
+        "gis_accuracy": "exact",
+        "structure_name": "Ra'Khengar Palace",
+        "structure_type": "Palace"
+    },
+    {
+        "site_name": "Gorakhnath Mahadev",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Gorakhmadhi",
+        "latitude": 20.9061,
+        "longitude": 70.5347,
+        "gis_accuracy": "exact",
+        "structure_name": "Gorakhnath Mahadev",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Neminath Jain Temple with three inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5272,
+        "longitude": 70.5231,
+        "gis_accuracy": "exact",
+        "structure_name": "Neminath Jain Temple with three inscriptions",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Vastupal Jain Temple with six inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5267,
+        "longitude": 70.5233,
+        "gis_accuracy": "exact",
+        "structure_name": "Vastupal Jain Temple with six inscriptions",
+        "structure_type": "Temple"
+    }
+]
+====================================================================================================
+
+====================================================================================================
+QUESTION: temples in Junagadh
+
+GENERATED CYPHER:
+
+
+        MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+        WHERE (
+            toLower(s.district) CONTAINS "una"
+            OR toLower(s.state) CONTAINS "una"
+            OR toLower(s.address) CONTAINS "una"
+        )
+
+        AND (
+            toLower(st.type) CONTAINS "temple"
+            OR toLower(s.name) CONTAINS "temple"
+        )
+
+        RETURN DISTINCT
+            
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+,
+            st.name AS structure_name,
+            st.type AS structure_type
+        
+
+RESULT:
+
+[
+    {
+        "site_name": "Temple & Two Inscriptions (Ajara Parshwanath)",
+        "state": "Gujarat",
+        "district": "Gir Somnath",
+        "address": "Ajara (Una)",
+        "latitude": 20.7911,
+        "longitude": 71.0644,
+        "gis_accuracy": "exact",
+        "structure_name": "Temple & Two Inscriptions (Ajara Parshwanath)",
+        "structure_type": "Temple+Inscription"
+    },
+    {
+        "site_name": "Matri Mata temple",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Junagadh",
+        "latitude": 21.5278,
+        "longitude": 70.4681,
+        "gis_accuracy": "exact",
+        "structure_name": "Matri Mata temple",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Kalika Mata",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "on Girnar Hill",
+        "latitude": 22.149336,
+        "longitude": 69.072735,
+        "gis_accuracy": "approximate (name matched in Gujarat)",
+        "structure_name": "Kalika Mata",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Guru Dattatraya",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill,Junagadh",
+        "latitude": 21.5281,
+        "longitude": 70.5328,
+        "gis_accuracy": "exact",
+        "structure_name": "Guru Dattatraya Shrine",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Chamunda Mata Temple",
+        "state": "Gujarat",
+        "district": "Porbandar",
+        "address": "Juna Bokhira",
+        "latitude": 21.6692,
+        "longitude": 69.6075,
+        "gis_accuracy": "exact",
+        "structure_name": "Chamunda Mata Temple",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Ra'Khengar Palace (now part of Girnar Jain temples)",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill,Junagadh",
+        "latitude": 21.5269,
+        "longitude": 70.5206,
+        "gis_accuracy": "exact",
+        "structure_name": "Ra'Khengar Palace",
+        "structure_type": "Palace"
+    },
+    {
+        "site_name": "Gorakhnath Mahadev",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Gorakhmadhi",
+        "latitude": 20.9061,
+        "longitude": 70.5347,
+        "gis_accuracy": "exact",
+        "structure_name": "Gorakhnath Mahadev",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Neminath Jain Temple with three inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5272,
+        "longitude": 70.5231,
+        "gis_accuracy": "exact",
+        "structure_name": "Neminath Jain Temple with three inscriptions",
+        "structure_type": "Temple"
+    },
+    {
+        "site_name": "Vastupal Jain Temple with six inscriptions",
+        "state": "Gujarat",
+        "district": "Junagadh",
+        "address": "Girnar Hill",
+        "latitude": 21.5267,
+        "longitude": 70.5233,
+        "gis_accuracy": "exact",
+        "structure_name": "Vastupal Jain Temple with six inscriptions",
+        "structure_type": "Temple"
+    }
+]
+====================================================================================================
