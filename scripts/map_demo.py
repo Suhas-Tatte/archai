@@ -4,6 +4,8 @@ import logging
 import math
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from urllib.parse import urlparse, parse_qs 
+import llm.llm_main as llm_main
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -18,6 +20,10 @@ logger = logging.getLogger(__name__)
 
 class MapDemoHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
+        if self.path.startswith("/api/query"):
+            self._handle_query_api()
+            return
+        
         if self.path == "/api/sites":
             self._handle_sites_api()
             return
@@ -58,7 +64,54 @@ class MapDemoHandler(SimpleHTTPRequestHandler):
             logger.exception("Failed loading site data")
             self.send_error(500, "Failed to load site data from CSV")
 
+    def _handle_query_api(self):
+        parsed = urlparse(self.path)
+        params = parse_qs(parsed.query)
+        q = params.get("q", [""])[0].strip()
 
+        if not q:
+            self.send_error(400, "Missing query parameter 'q'")
+            return
+        
+        try:
+            results = llm_main.ask_question(q)
+            
+            if not isinstance(results, list):
+                results = [] 
+            
+            sites = []
+            for r in results:
+                lat = r.get("latitude")
+                lon = r.get("longitude")
+                try:
+                    lat = None if lat is None else float(lat)
+                    lon = None if lon is None else float(lon)
+                except (ValueError, TypeError):
+                    continue 
+                if lat is None or lon is None:
+                    continue 
+
+                sites.append({
+                    "site_name": r.get("site_name"),
+                    "structure_name": r.get("structure_name"),
+                    "artifact_name": r.get("artifact_name"),
+                    "district": r.get("district"),
+                    "state": r.get("state"),
+                    "latitude": lat,
+                    "longitude": lon,
+                })
+
+            payload = json.dumps(sites, ensure_ascii=False).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Length", str(len(payload)))
+            self.end_headers()
+            self.wfile.write(payload)
+        
+        except Exception:
+            logger.exception("LLM/Neo4j query failed")
+            self.send_error(500, "LLM/Neo4j query failed")
+            
 def _find_sites_csv():
     for candidate in DATA_CANDIDATES:
         if candidate.exists():

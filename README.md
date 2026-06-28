@@ -165,7 +165,7 @@ pip install -r requirements.txt
 
 Run:
 ```
-python -m graph_layer.ingestion
+python -m graph_layer.ingestion_data
 ```
 Expected output:
 

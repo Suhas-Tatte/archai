@@ -13,7 +13,8 @@
   <style>
     body { margin: 0; font-family: Arial, sans-serif; }
     header { padding: 10px 14px; border-bottom: 1px solid #ddd; }
-    #map { height: calc(100vh - 58px); width: 100%; }
+    #map { height: calc(100vh - 58px); width: 100%;}
+    #json-output { background-color: #221d1d25; overflow:auto; margin:0; padding:10px; border-left:1px solid #221d1d25; }
     .hint { color: #555; font-size: 14px; }
   </style>
 </head>
@@ -21,8 +22,23 @@
   <header>
     <strong>Archai Temporary Map Demo</strong>
     <div class="hint">Showing site markers from CSV data (name, district, state, coordinates).</div>
+    <form id="query-form" style="display: inline-block; margin-left: 12px;">
+      <input id="query-input" type="text" placeholder="Enter search (e.g. 'temples in Ahmedabad')" style="width: 360px;"/>
+      <button id="query-btn" type="submit">Search</button>
+      <label style="margin-left: 8px; ">
+        <select id="view-mode">
+          <option value="map">Map Result</option>
+          <option value="both">Both</option>
+          <option value="json">LLM Result</option>
+        </select>
+      </label>
+    </form>
   </header>
-  <div id="map"></div>
+  <div id="result-container">
+    <div id="map"></div>
+    <pre id="json-output" style="height: 300px; overflow: auto; padding: 10px; border-top: 1px solid #ccc; display: none;"></pre>
+  </div>
+  
 
   <script
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -33,53 +49,144 @@
     const map = L.map('map').setView([22.8, 78.9], 5);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
+      maxZoom: 15,
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    fetch('/api/sites')
-      .then((r) => r.json())
-      .then((sites) => {
-        if (!Array.isArray(sites)) {
-          alert('Invalid site data response: expected an array of sites.');
-          return;
-        }
+    const form = document.getElementById('query-form');
+    const queryInput = document.getElementById('query-input');
+    const viewMode = document.getElementById('view-mode');
+    const jsonOutput = document.getElementById('json-output');
 
-        if (sites.length === 0) {
-          alert('No sites found in the dataset.');
-          return;
-        }
+    let currentMarkers = [];
 
-        const bounds = [];
+    function clearMarkers() {
+      currentMarkers.forEach((m) => map.removeLayer(m));
+      currentMarkers = [];
+    }
 
-        sites.forEach((site) => {
-          if (
-            site.latitude === null || site.latitude === undefined ||
-            site.longitude === null || site.longitude === undefined
+    function runQuery(query) {
+      return fetch(
+        '/api/query?q=' +
+        encodeURIComponent(query)
+      )
+      .then(r => r.json());
+    }
+
+    function renderSites(sites) {
+      if(!Array.isArray(sites)) {
+        alert('Invalid site data response: expected an array.');
+        return;
+      }
+      clearMarkers();
+      if (sites.length === 0) {
+        clearMarkers();
+        alert('No sites found.');
+        return;
+      }
+      
+      const bounds = [];
+      const groupedSites = {};
+
+      sites.forEach((site) => {
+        if (
+          site.latitude === null || site.latitude === undefined ||
+          site.longitude === null || site.longitude === undefined
           ) return;
-          const locationBits = [site.district, site.state].filter(Boolean);
-          const locationText = locationBits.length ? locationBits.join(', ') : 'Location unavailable';
 
-          const marker = L.marker([site.latitude, site.longitude]).addTo(map);
-          marker.bindPopup(
-            `<b>${site.name || 'Unknown Site'}</b><br/>` +
-            `${locationText}<br/>` +
-            `Lat: ${site.latitude}, Lng: ${site.longitude}`
-          );
+        const key = `${site.latitude},${site.longitude}`;
+        if (!groupedSites[key]) {
+          groupedSites[key] = [];
+        }
+        groupedSites[key].push(site);
+      });
+      
+      Object.values(groupedSites).forEach(group => {
+        const firstSite = group[0];
+        let popupHtml = `<h3>${group.length} Results</h3>`;
 
-          bounds.push([site.latitude, site.longitude]);
+        group.forEach(site => {
+          popupHtml += `
+            <hr>
+            <b>Site:</b> ${site.site_name || 'N/A'}<br>
+            <b>Structure:</b> ${site.structure_name || 'N/A'}<br>
+            <b>Artifact:</b> ${site.artifact_name || 'N/A'}<br>
+            <b>District:</b> ${site.district || 'N/A'}<br>
+            <b>State:</b> ${site.state || 'N/A'}<br>
+            <b>Coordinates:</b> ${site.latitude}, ${site.longitude}
+          `;
         });
 
-        if (bounds.length > 0) {
-          map.fitBounds(bounds, { padding: [30, 30] });
-        } else {
-          alert('No sites with valid coordinates found.');
-        }
+        const marker = L.marker([firstSite.latitude, firstSite.longitude]).addTo(map);
+        marker.bindPopup(popupHtml);
+        currentMarkers.push(marker);
+        bounds.push([firstSite.latitude, firstSite.longitude]);
+
       })
-      .catch((err) => {
+
+      if (bounds.length > 0) {
+        map.fitBounds(bounds, { padding: [30, 30] });
+      } else {
+        alert('No sites with valid coordinates found.');
+      }
+      
+    }
+
+    function fetchCsvSites() {
+      return fetch('/api/sites')
+        .then((r) => r.json())
+        .then(renderSites)
+        .catch((err) => {
+          console.error(err);
+          alert('Failed to load CSV site data.');
+        });
+    }
+
+    function fetchLlmSites(query) {
+      const url = '/api/query?q=' + encodeURIComponent(query);
+      return fetch(url)
+        .then((r) => r.json())
+        .then(renderSites)
+        .catch((err) => {
+          console.error(err);
+          alert('Failed to load LLM/Neo4j site data.');
+        });
+    }
+
+    form.addEventListener('submit', async(e) => {
+      e.preventDefault();
+      const q = queryInput.value.trim();
+
+      if(!q){
+        alert("Enter a query");
+        return;
+      }
+
+      try{
+        const data =await runQuery(q);
+
+        if (viewMode.value === 'json') {
+          clearMarkers();
+          document.getElementById('map').style.display = 'none';
+          jsonOutput.style.display = 'block';
+          jsonOutput.textContent = JSON.stringify(data, null, 2);
+        } else if (viewMode.value === 'map') {
+          document.getElementById('map').style.display = 'block';
+          jsonOutput.style.display = 'none';
+          renderSites(data);
+        } else {
+          document.getElementById('map').style.display = 'block';
+          jsonOutput.style.display = 'block';
+          jsonOutput.textContent = JSON.stringify(data, null, 2);
+          renderSites(data);
+        }
+      } catch (err) {
         console.error(err);
-        alert('Failed to load site data. Check terminal logs.');
-      });
+        alert('Query failed:\n' + err.message);
+      }
+    });
+
+    // no default markers
   </script>
 </body>
 </html>

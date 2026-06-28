@@ -1,6 +1,6 @@
-from model import generate_cypher, extract_location_llm
-from graph import run_query
-from rules import (
+from .model import generate_cypher, extract_location_llm
+from .graph import run_query
+from .rules import (
     detect_location,
     detect_structure_type,
     is_structure_query,

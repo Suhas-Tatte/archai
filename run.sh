@@ -25,6 +25,6 @@ fi
 
 # 5. Run ingestion
 echo "📊 Loading data into Neo4j..."
-python -m graph_layer.ingestion
+python -m graph_layer.ingestion_data
 
 echo "✅ Done! Open Neo4j Browser at http://localhost:7474"
