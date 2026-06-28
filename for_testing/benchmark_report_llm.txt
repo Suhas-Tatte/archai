@@ -1,0 +1,2054 @@
+====================================================================================================
+ARCHAI BENCHMARK REPORT
+====================================================================================================
+
+====================================================================================================
+Benchmark : Temple Retrieval - Ahmedabad
+Question  : temples in Ahmedabad
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+WHERE (
+    toLower(s.district) CONTAINS "ahmedabad"
+    OR toLower(s.state) CONTAINS "ahmedabad"
+    OR toLower(s.address) CONTAINS "ahmedabad"
+    OR toLower(s.name) CONTAINS "ahmedabad"
+)
+AND toLower(st.type) CONTAINS "temple"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 2
+Returned Count : 0
+
+Precision : 0.00%
+Recall    : 0.00%
+F1 Score  : 0.00%
+
+Exact Match : False
+Count Match : False
+
+Correct Sites
+------------------------------
+None
+
+Missing Sites
+------------------------------
+✗ Bhadra Gate beside Bhadrakali Temple
+✗ Three gates besides Bhadrakali temple
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Temple Retrieval - Junagadh
+Question  : temples in Junagadh
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+WHERE (
+    toLower(s.district) CONTAINS "junagadh"
+    OR toLower(s.state) CONTAINS "junagadh"
+    OR toLower(s.address) CONTAINS "junagadh"
+    OR toLower(s.name) CONTAINS "junagadh"
+)
+AND toLower(st.type) CONTAINS "temple"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 7
+Returned Count : 7
+
+Precision : 85.71%
+Recall    : 85.71%
+F1 Score  : 85.71%
+
+Exact Match : False
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Gorakhnath Mahadev
+✓ Guru Dattatraya
+✓ Kalika Mata
+✓ Matri Mata temple
+✓ Neminath Jain Temple with three inscriptions
+✓ Vastupal Jain Temple with six inscriptions
+
+Missing Sites
+------------------------------
+✗ Ra'Khengar Palace (now part of Girnar Jain temples)
+
+Extra Sites
+------------------------------
++ Junagadhi (Jain) Temple
+
+====================================================================================================
+Benchmark : Mosques in Ahmedabad
+Question  : mosques in Ahmedabad
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+WHERE (
+    toLower(s.district) CONTAINS "ahmedabad"
+    OR toLower(s.state) CONTAINS "ahmedabad"
+    OR toLower(s.address) CONTAINS "ahmedabad"
+    OR toLower(s.name) CONTAINS "ahmedabad"
+)
+AND toLower(st.type) CONTAINS "mosque"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 26
+Returned Count : 26
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Achyut Bibi's Masjid & Tomb
+✓ Ahmed Shah's Mosque
+✓ Ancient Masjid
+✓ Baba Lalui's Masjid
+✓ Bahlol Khan Gazi's Mosque
+✓ Bibi's Masjid
+✓ Cazi Masjid
+✓ Dada Hari's Mosque & Tomb
+✓ Dastur Khan's Masjid
+✓ Haibatkhan's Masjid
+✓ Jami Masjid
+✓ Khan Masjid
+✓ Kutub Shah's Mosque
+✓ Malik Alam's Mosque
+✓ Masjid of Ragusha Pir
+✓ Muhafiz Khan's Mosque
+✓ Nawab Sardar Khan Masjid and outer gate
+✓ Queen's Mosque in Sarangpur
+✓ Rani Rupavati's Mosque
+✓ Rani Sipri's Mosque & Tomb
+✓ Sayyid Masjid
+✓ Shah Kupa Masjid
+✓ Sidi Saiyad's Mosque
+✓ Small Stone Masjid (Gumle Masjid)
+✓ Small stone Mosque (Rani Masjid)
+✓ The Shahpur Kazi Mohmad Chishti's Masjid
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Stepwells in Gujarat
+Question  : stepwells in Gujarat
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+WHERE (
+    toLower(s.district) CONTAINS "gujarat"
+    OR toLower(s.state) CONTAINS "gujarat"
+    OR toLower(s.address) CONTAINS "gujarat"
+    OR toLower(s.name) CONTAINS "gujarat"
+)
+AND toLower(st.type) CONTAINS "stepwell"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 43
+Returned Count : 43
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Adi Kadi Vav
+✓ Amritavarshini Vav
+✓ Ancient Step Well
+✓ Ancient Vav
+✓ Ancient Vav at Sharneshwar Temple
+✓ Ancient Vav/Stepwell
+✓ Ancient stepwell (vav)
+✓ Bhadrakali Mata Stepwell
+✓ Brahma Vav
+✓ Chandralekha (Surajkala) Vav
+✓ Chaumukhi Vav
+✓ Dada (Bai) Hari's Stepwell
+✓ Ganga Vav
+✓ Gebanshah Vav with Steps
+✓ Jethabhai's Stepwell
+✓ Kuber Vav
+✓ Laskari Vav
+✓ Madhavav
+✓ Malik Sandal Ni Vav
+✓ Matri Vav
+✓ Minadevi Vav
+✓ Mithi Vav
+✓ Mota Todavali Vav
+✓ Nagrani Vav (Stepwell)
+✓ Pagathiyavali Vav (Stepwell)
+✓ Ra Khengar Vav
+✓ Rataba alias Rajbai Vav
+✓ Saptamukhi Vav
+✓ Sasu Ni Vav
+✓ Shani Vav
+✓ Sindh Mata Ni Vav
+✓ Stepwell
+✓ Vahu Ni Vav
+✓ Vanzari Vav
+✓ Vav
+✓ Vav (Gelmata Vav)
+✓ Vav (Step Well)
+✓ Vav (Step Well) (Dholikui)
+✓ Vav (Stepwell)
+✓ Vidyadhar Vav
+✓ Vikiya Vav
+✓ Virji Vora ni Vav
+✓ Vori Vav
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : All Inscriptions
+Question  : all inscriptions
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+WHERE toLower(a.type) CONTAINS "inscription"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 27
+Returned Count : 27
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Bilingual Stone Inscription at Gayatri Temple
+✓ Darbargadh No Tamrapatro
+✓ Inscription of Juma Masjid
+✓ Kandhrmatad Inscriptions
+✓ Kshatrapa Inscriptions
+✓ Mangaroli Shah Makbara & Shah Makbara with Stone Inscription
+✓ Nani Vav-no Shilalekh
+✓ Neminath Jain Temple with three inscriptions
+✓ Replica of Ashoka Stone Inscription
+✓ Stone Inscription Near Mota Darwaja
+✓ Stone Inscription at Harshadmata Temple
+✓ Stone Inscription at Jadeshwar Mahadev
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription at Mussafar Masjid
+✓ Stone Inscription in Darbargadh
+✓ Stone Inscription of Bhadrakali Mata
+✓ Stone Inscription of Ra'Mandlik (Samvat 1507)
+✓ Stone Inscription of Sultan Ahmed (H.S. 905â€“1543)
+✓ Stone Inscription of Vijayshwar Mahadev -1346/1408
+✓ Stone Inscription with Mai Gadechi of H. S. 685
+✓ Stone Inscriptions Near Talav
+✓ Stone Memorial Inscription & Battlefield
+✓ Temple & Two Inscriptions (Ajara Parshwanath)
+✓ Temple with stone Inscription (Kaleshwari Mata Temple)
+✓ Two Stone Inscriptions on Jumma Masjid
+✓ Vastupal Jain Temple with six inscriptions
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : All Memorial Stones
+Question  : all memorial stones
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+WHERE toLower(a.type) CONTAINS "memorial"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 5
+Returned Count : 5
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Dhanvantari no Palio
+✓ Memorial Stone near Cemetery
+✓ Memorial Stone of Dah Culture
+✓ Memorial Stone of Lakha Fulani
+✓ Stone Memorial Inscription & Battlefield
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Stone Inscription at Masjid
+Question  : stone inscription at masjid
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+MATCH (s)-[:HAS_ARTIFACT]->(a:Artifact)
+
+WHERE (
+    toLower(s.name) CONTAINS "masjid"
+    OR toLower(s.district) CONTAINS "masjid"
+    OR toLower(s.state) CONTAINS "masjid"
+    OR toLower(s.address) CONTAINS "masjid"
+)
+AND toLower(st.type) CONTAINS "mosque"
+AND toLower(a.type) CONTAINS "inscription"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 5
+Returned Count : 5
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Inscription of Juma Masjid
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription at Mussafar Masjid
+✓ Two Stone Inscriptions on Jumma Masjid
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Structures in Jumma Masjid
+Question  : structures in Jumma Masjid
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+WHERE (
+    toLower(s.name) CONTAINS "jumma masjid"
+    OR toLower(s.district) CONTAINS "jumma masjid"
+    OR toLower(s.state) CONTAINS "jumma masjid"
+    OR toLower(s.address) CONTAINS "jumma masjid"
+)
+
+AND toLower(st.type) CONTAINS "mosque"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 4
+Returned Count : 3
+
+Precision : 100.00%
+Recall    : 75.00%
+F1 Score  : 85.71%
+
+Exact Match : False
+Count Match : False
+
+Correct Sites
+------------------------------
+✓ Jumma Masjid
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Two Stone Inscriptions on Jumma Masjid
+
+Missing Sites
+------------------------------
+✗ Jumma Masjid & Cannon (Neelam And Kadanal)
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Negative Query
+Question  : temples in unknown place
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+WHERE toLower(st.type) CONTAINS "temple"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 0
+Returned Count : 137
+
+Precision : 0.00%
+Recall    : 0.00%
+F1 Score  : 0.00%
+
+Exact Match : False
+Count Match : False
+
+Correct Sites
+------------------------------
+None
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
++ Adnath Temple
++ Amba Mata Temple
++ Amther Mata Temple & Small Temples
++ Ananteshwara temple
++ Ancient Jain Temple (Museum Building)
++ Ancient Shiv Temple
++ Ancient Temple
++ Ancient Temple (Ghummatvalu Mandir)
++ Ancient Temple (near Madhavrai temple)
++ Ancient Temple on the Bank of Chelsar Talav
++ Ancient Temples (Omnath Mahadev temple)
++ Ancient temple no.1
++ Ancient temple no.2
++ Ancient temple no.3
++ Arjun Chori (Shiva Temple)
++ Bhadeshwar Temple
++ Bhavnath Temple
++ Bhim Chori (Shiva Temple)
++ Bhimdeval (Sun temple)
++ Bhimeshwar Mahadev Temples
++ Bhuvadeshwar Mahadev Temple
++ Bileshwar Mahadev Temple
++ Bilingual Stone Inscription at Gayatri Temple
++ Chadeshwar Mahadev Temple
++ Chamunda Mata Temple
++ Chaumukh Mahadev Temple
++ Dhigeshwar Mahadev Temple
++ Dhingeshwar Mahadev Temple & Shail Gufao
++ Dwarkadhish Group of temples
++ Eye No Dero Shiva Temple
++ Firangi Deval
++ Five Temples
++ Fresco on the wall of Kashivisvanath temple
++ Ganesh Temple
++ Ganganath Mahadev Temple
++ Gokeshwar Mahadev temple
++ Gop (Sun) Temple
++ Gopnath Mahadev Shiv Panchayatan Temple
++ Gopnath Temple(Ceiling and Pictures on the wall)
++ Gorakhnath Mahadev
++ Gramdevi Temple
++ Group of temples
++ Guhaditya temple
++ Gurdwara
++ Guru Dattatraya
++ Hanumanji Temple
++ Jain Temple
++ Jain Temple No.1
++ Jain Temple No.2
++ Jain Temple No.3
++ Jain Temple No.4
++ Jain temples
++ Jaleshwar Mahadev Temple
++ Jhadeshwar Mahadev Temple
++ Junagadhi (Jain) Temple
++ Kalika Mata
++ Kalika Mata Temple
++ Kalikamata Temple
++ Kankeshvara Mahadeva temple & shrines
++ Khimeshwar Mahadev Temple
++ Kumbheshwar Mahadev
++ Magderu Temple
++ Mahadev Temple
++ Mahakali Temple
++ Manava Mama Temple
++ Matri Mata temple
++ Muleshwar Mahadev Temple
++ Munibaba Temple (Munim Deval)
++ Nagfani Mata Mandir (with idol)
++ Nagnath Temple
++ Nandeshwar Mahadev
++ Navdurga Temple
++ Navlakha Temple
++ Navlakha temple
++ Neminath Jain Temple with three inscriptions
++ Nilkanth Mahadev Temple
++ Old Parsvanath temple
++ Old Temple
++ Panchayatan Mandir
++ Panchayatan Temple
++ Panoti Temple
++ Pureshwar Temple
++ Radhakrishna Temple
++ Rana Dev's Temple
++ Ranchhod Rayaji Temple
++ Ranmukteshwar Temple
++ Rudreshwar
++ Ruins of Rudra Mahalaya temple
++ Rukmani Temple
++ Sankleshwar Mahadev
++ Santhaleshwar Mahadev Temple
++ Seven Temples / Saat Mandiro
++ Shakti Temple
++ Sharaneshwar Temple
++ Shitala Mata Temple
++ Shiv Temple (Khimeshwar Mahadev)
++ Shiva Panchayatan Temple
++ Shiva Panchayatan Temple No.1
++ Shiva Panchayatan Temple No.2
++ Shiva Temple
++ Shivashakti Temple
++ Shobhayada Shiva Temple
++ Siva temple
++ Stepwell
++ Stone Inscription at Harshadmata Temple
++ Sun Temple
++ Sundari Bhavani Temple
++ Surya Mandir (Sun Temple)
++ Surya Mandir No.1
++ Surya Mandir No.2
++ Surya Mandir and Sapta Matrika Mandir
++ Surya Narayan Temple
++ Surya Temple
++ Tarnetar Temple
++ Temple & Two Inscriptions (Ajara Parshwanath)
++ Temple Near Talav
++ Temple No. 1
++ Temple No. 2
++ Temple No. 3
++ Temple No. 4
++ Temple No. 5
++ Temple No.1 (near Mahudi)
++ Temple No.1 Near Kantivas
++ Temple No.2
++ Temple No.3
++ Temple No.4
++ Temple No.5
++ Temple No.6
++ Temple of Rama Laxman
++ Temple with Kund
++ Temple with Three Entrances (Hidimba Temple)
++ Temple with stone Inscription (Kaleshwari Mata Temple)
++ Temples
++ Two Bhavaneshwar Temples
++ Vastupal Jain Temple with six inscriptions
++ Veneshwar Mahadev Temple
++ Vishnu Temple
+
+====================================================================================================
+Benchmark : Gates in Ahmedabad
+Question  : gates in Ahmedabad
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+WHERE (
+    toLower(s.district) CONTAINS "ahmedabad"
+    OR toLower(s.state) CONTAINS "ahmedabad"
+    OR toLower(s.address) CONTAINS "ahmedabad"
+    OR toLower(s.name) CONTAINS "ahmedabad"
+)
+AND toLower(st.type) CONTAINS "gate"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 11
+Returned Count : 11
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Astodia Gate
+✓ Bhadra Gate beside Bhadrakali Temple
+✓ Dariya Pur Gate
+✓ Delhi Gate
+✓ Kalupur Gate
+✓ Panch Kuva Gate
+✓ Premabhai Gate
+✓ Raipur Gate
+✓ Sarangpur Gate
+✓ Teen Darwaja or Tripolia Gate
+✓ Three gates besides Bhadrakali temple
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Structures in Adalaj Stepwell
+Question  : structures in Adalaj Stepwell
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+
+WHERE (
+    toLower(s.name) CONTAINS "adalaj stepwell"
+    OR toLower(s.district) CONTAINS "adalaj stepwell"
+    OR toLower(s.state) CONTAINS "adalaj stepwell"
+    OR toLower(s.address) CONTAINS "adalaj stepwell"
+)
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 0
+Returned Count : 0
+
+Precision : 0.00%
+Recall    : 100.00%
+F1 Score  : 0.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+None
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Structures in Kaji Masjid
+Question  : structures in Kaji Masjid
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+WHERE (
+    toLower(s.name) CONTAINS "kaji masjid"
+    OR toLower(s.district) CONTAINS "kaji masjid"
+    OR toLower(s.state) CONTAINS "kaji masjid"
+    OR toLower(s.address) CONTAINS "kaji masjid"
+)
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 1
+Returned Count : 1
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Stone Inscription at Kaji Masjid - H.S.902
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Artifacts in Ahmedabad
+Question  : artifacts in Ahmedabad
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+WHERE (
+    toLower(s.district) CONTAINS "ahmedabad"
+    OR toLower(s.state) CONTAINS "ahmedabad"
+    OR toLower(s.address) CONTAINS "ahmedabad"
+    OR toLower(s.name) CONTAINS "ahmedabad"
+)
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 0
+Returned Count : 0
+
+Precision : 0.00%
+Recall    : 100.00%
+F1 Score  : 0.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+None
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Artifacts in Junagadh
+Question  : artifacts in Junagadh
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+WHERE (
+    toLower(s.district) CONTAINS "junagadh"
+    OR toLower(s.state) CONTAINS "junagadh"
+    OR toLower(s.address) CONTAINS "junagadh"
+    OR toLower(s.name) CONTAINS "junagadh"
+)
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 14
+Returned Count : 14
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Ancient Mound
+✓ Dhanvantari no Palio
+✓ Hathi Pagla (Gajapad Kund)
+✓ Memorial Stone of Dah Culture
+✓ Nani Vav-no Shilalekh
+✓ Neminath Jain Temple with three inscriptions
+✓ Replica of Ashoka Stone Inscription
+✓ Shamiyana and Ceiling of Jumma Masjid (S.1408)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription of Ra'Mandlik (Samvat 1507)
+✓ Stone Inscription of Vijayshwar Mahadev -1346/1408
+✓ Stone Inscription with Mai Gadechi of H. S. 685
+✓ Vastupal Jain Temple with six inscriptions
+✓ Wooden Sandal (Paduka) of Ramchandraji
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Inscriptions in Gujarat
+Question  : inscriptions in Gujarat
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+WHERE (
+    toLower(s.district) CONTAINS "gujarat"
+    OR toLower(s.state) CONTAINS "gujarat"
+    OR toLower(s.address) CONTAINS "gujarat"
+    OR toLower(s.name) CONTAINS "gujarat"
+)
+AND toLower(a.type) CONTAINS "inscription"
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 27
+Returned Count : 27
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Bilingual Stone Inscription at Gayatri Temple
+✓ Darbargadh No Tamrapatro
+✓ Inscription of Juma Masjid
+✓ Kandhrmatad Inscriptions
+✓ Kshatrapa Inscriptions
+✓ Mangaroli Shah Makbara & Shah Makbara with Stone Inscription
+✓ Nani Vav-no Shilalekh
+✓ Neminath Jain Temple with three inscriptions
+✓ Replica of Ashoka Stone Inscription
+✓ Stone Inscription Near Mota Darwaja
+✓ Stone Inscription at Harshadmata Temple
+✓ Stone Inscription at Jadeshwar Mahadev
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription at Mussafar Masjid
+✓ Stone Inscription in Darbargadh
+✓ Stone Inscription of Bhadrakali Mata
+✓ Stone Inscription of Ra'Mandlik (Samvat 1507)
+✓ Stone Inscription of Sultan Ahmed (H.S. 905â€“1543)
+✓ Stone Inscription of Vijayshwar Mahadev -1346/1408
+✓ Stone Inscription with Mai Gadechi of H. S. 685
+✓ Stone Inscriptions Near Talav
+✓ Stone Memorial Inscription & Battlefield
+✓ Temple & Two Inscriptions (Ajara Parshwanath)
+✓ Temple with stone Inscription (Kaleshwari Mata Temple)
+✓ Two Stone Inscriptions on Jumma Masjid
+✓ Vastupal Jain Temple with six inscriptions
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Memorial Stones in Gujarat
+Question  : memorial stones in Gujarat
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+
+WHERE (
+    toLower(s.district) CONTAINS "gujarat"
+    OR toLower(s.state) CONTAINS "gujarat"
+    OR toLower(s.address) CONTAINS "gujarat"
+    OR toLower(s.name) CONTAINS "gujarat"
+)
+
+AND toLower(a.type) CONTAINS "memorial"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 5
+Returned Count : 5
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Dhanvantari no Palio
+✓ Memorial Stone near Cemetery
+✓ Memorial Stone of Dah Culture
+✓ Memorial Stone of Lakha Fulani
+✓ Stone Memorial Inscription & Battlefield
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Temples with Inscriptions
+Question  : temples with inscriptions
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+MATCH (s)-[:HAS_ARTIFACT]->(a:Artifact)
+
+WHERE toLower(st.type) CONTAINS "temple"
+AND toLower(a.type) CONTAINS "inscription"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 6
+Returned Count : 6
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Bilingual Stone Inscription at Gayatri Temple
+✓ Neminath Jain Temple with three inscriptions
+✓ Stone Inscription at Harshadmata Temple
+✓ Temple & Two Inscriptions (Ajara Parshwanath)
+✓ Temple with stone Inscription (Kaleshwari Mata Temple)
+✓ Vastupal Jain Temple with six inscriptions
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Mosques with Inscriptions
+Question  : mosques with inscriptions
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+MATCH (s)-[:HAS_ARTIFACT]->(a:Artifact)
+
+WHERE toLower(st.type) CONTAINS "mosque"
+AND toLower(a.type) CONTAINS "inscription"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 5
+Returned Count : 5
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Inscription of Juma Masjid
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription at Mussafar Masjid
+✓ Two Stone Inscriptions on Jumma Masjid
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Stepwells with Inscriptions
+Question  : stepwells with inscriptions
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+MATCH (s)-[:HAS_ARTIFACT]->(a:Artifact)
+
+WHERE toLower(st.type) CONTAINS "stepwell"
+AND toLower(a.type) CONTAINS "inscription"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 0
+Returned Count : 0
+
+Precision : 0.00%
+Recall    : 100.00%
+F1 Score  : 0.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+None
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Structures Having Inscriptions
+Question  : structures having inscriptions
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+MATCH (s)-[:HAS_ARTIFACT]->(a:Artifact)
+
+WHERE toLower(a.type) CONTAINS "inscription"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 13
+Returned Count : 13
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Bilingual Stone Inscription at Gayatri Temple
+✓ Darbargadh No Tamrapatro
+✓ Inscription of Juma Masjid
+✓ Mangaroli Shah Makbara & Shah Makbara with Stone Inscription
+✓ Neminath Jain Temple with three inscriptions
+✓ Stone Inscription at Harshadmata Temple
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription at Mussafar Masjid
+✓ Temple & Two Inscriptions (Ajara Parshwanath)
+✓ Temple with stone Inscription (Kaleshwari Mata Temple)
+✓ Two Stone Inscriptions on Jumma Masjid
+✓ Vastupal Jain Temple with six inscriptions
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Sites in Ahmedabad
+Question  : sites in Ahmedabad
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)
+WHERE (
+    toLower(s.name) CONTAINS "ahmedabad"
+    OR toLower(s.district) CONTAINS "ahmedabad"
+    OR toLower(s.state) CONTAINS "ahmedabad"
+    OR toLower(s.address) CONTAINS "ahmedabad"
+)
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+
+Expected Count : 56
+Returned Count : 56
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Achyut Bibi's Masjid & Tomb
+✓ Ahmad Shah's Tomb
+✓ Ahmed Shah's Mosque
+✓ Amritavarshini Vav
+✓ Ancient Masjid
+✓ Ancient Step Well
+✓ Astodia Gate
+✓ Baba Lalui's Masjid
+✓ Bahlol Khan Gazi's Mosque
+✓ Bhadra Gate beside Bhadrakali Temple
+✓ Bibi's Masjid
+✓ Brick Minars
+✓ Cazi Masjid
+✓ Dada (Bai) Hari's Stepwell
+✓ Dada Hari's Mosque & Tomb
+✓ Dariya Khan's Tomb
+✓ Dariya Pur Gate
+✓ Dastur Khan's Masjid
+✓ Delhi Gate
+✓ Dutch Tomb
+✓ Haibatkhan's Masjid
+✓ Inlet to Kankaria Tank
+✓ Jami Masjid
+✓ Jethabhai's Stepwell
+✓ Kalupur Gate
+✓ Khan Masjid
+✓ Khan Talav
+✓ Kutub Shah's Mosque
+✓ Malav Tank
+✓ Malik Alam's Mosque
+✓ Masjid of Ragusha Pir
+✓ Mata Bhavani's Well
+✓ Muhafiz Khan's Mosque
+✓ Nawab Sardar Khan Masjid and outer gate
+✓ Nawab Sardar Khan's Rouza
+✓ Panch Kuva Gate
+✓ Premabhai Gate
+✓ Queen's Mosque in Sarangpur
+✓ Raipur Gate
+✓ Rani Rupavati's Mosque
+✓ Rani Sipri's Mosque & Tomb
+✓ Ruined Building
+✓ Sarangpur Gate
+✓ Sayyid Masjid
+✓ Shah Alam's Tomb with all surrounding buildings
+✓ Shah Kupa Masjid
+✓ Sidi Bashir's Minar & Tomb (Shaking)
+✓ Sidi Saiyad's Mosque
+✓ Small Stone Masjid (Gumle Masjid)
+✓ Small stone Mosque (Rani Masjid)
+✓ Teen Darwaja or Tripolia Gate
+✓ The Shahpur Kazi Mohmad Chishti's Masjid
+✓ Three gates besides Bhadrakali temple
+✓ Tomb
+✓ Tomb of Mir Abu Turab
+✓ Tombs of Queens of Ahmed Shah
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Sites in Junagadh
+Question  : sites in Junagadh
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)
+
+WHERE (
+    toLower(s.district) CONTAINS "junagadh"
+    OR toLower(s.state) CONTAINS "junagadh"
+    OR toLower(s.address) CONTAINS "junagadh"
+    OR toLower(s.name) CONTAINS "junagadh"
+)
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+
+Expected Count : 48
+Returned Count : 49
+
+Precision : 97.96%
+Recall    : 100.00%
+F1 Score  : 98.97%
+
+Exact Match : False
+Count Match : False
+
+Correct Sites
+------------------------------
+✓ Adi Kadi Vav
+✓ Ancient Mound
+✓ Baba Pyare, Khapra Kodia caves
+✓ Bhairav Jep (Hill Outcrop)
+✓ Bhim Kund
+✓ Bhimchas
+✓ Boria Buddhistic Monument Lakhamedi & Vadi-Lakhamedi
+✓ Buddhistic Cave
+✓ Caves of Hothal Padmini
+✓ Damodar Kund
+✓ Datar no Chilo
+✓ Dhanvantari no Palio
+✓ Dhori (Peer) Makbaro
+✓ Gaumukhi
+✓ Gorakh Mountain Top (Tuk)
+✓ Gorakhnath Mahadev
+✓ Gupta Prayag
+✓ Gupta Prayag Kund
+✓ Guru Dattatraya
+✓ Hanuman Dhara
+✓ Hathi Pagla (Gajapad Kund)
+✓ Jami Masjid
+✓ Jumma Masjid & Cannon (Neelam And Kadanal)
+✓ Kalika Mata
+✓ Laskari Vav
+✓ Mahabat Maqbara complex
+✓ Makbara of Babi raja Before Nawab Mahotabkhanji
+✓ Makbara of Najubibi with Bara Saiyed (Najibai Maqbara)
+✓ Matri Mata temple
+✓ Memorial Stone of Dah Culture
+✓ Nani Vav-no Shilalekh
+✓ Narsinh Maheta No Choro
+✓ Navghan Kuvo (Well)
+✓ Neminath Jain Temple with three inscriptions
+✓ Pancheshwar Caves
+✓ Ra Khengar Vav
+✓ Ra'Khengar Palace (now part of Girnar Jain temples)
+✓ Rahimat Masjid (Bibi Masjid)
+✓ Raveli Masjid
+✓ Replica of Ashoka Stone Inscription
+✓ Shamiyana and Ceiling of Jumma Masjid (S.1408)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription of Ra'Mandlik (Samvat 1507)
+✓ Stone Inscription of Vijayshwar Mahadev -1346/1408
+✓ Stone Inscription with Mai Gadechi of H. S. 685
+✓ Surya Kund
+✓ Vastupal Jain Temple with six inscriptions
+✓ Wooden Sandal (Paduka) of Ramchandraji
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
++ Junagadhi (Jain) Temple
+
+====================================================================================================
+Benchmark : Sites in Gujarat
+Question  : sites in Gujarat
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)
+WHERE (
+    toLower(s.name) CONTAINS "gujarat"
+    OR toLower(s.district) CONTAINS "gujarat"
+    OR toLower(s.state) CONTAINS "gujarat"
+    OR toLower(s.address) CONTAINS "gujarat"
+)
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy
+
+Expected Count : 445
+Returned Count : 445
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Achyut Bibi's Masjid & Tomb
+✓ Adi Kadi Vav
+✓ Adnath Temple
+✓ Agara Gates
+✓ Ahmad Shah's Tomb
+✓ Ahmed Shah's Mosque
+✓ Amba Mata Temple
+✓ Amritavarshini Vav
+✓ Amther Mata Temple & Small Temples
+✓ Ananteshwara temple
+✓ Ancient Caves
+✓ Ancient Jain Temple (Museum Building)
+✓ Ancient Masjid
+✓ Ancient Mound
+✓ Ancient Quarry Site I
+✓ Ancient Quarry Site II
+✓ Ancient Shiv Temple
+✓ Ancient Site
+✓ Ancient Site (Excavated)
+✓ Ancient Site (Kotada)
+✓ Ancient Site/Mound in village
+✓ Ancient Step Well
+✓ Ancient Talav
+✓ Ancient Temple
+✓ Ancient Temple (Ghummatvalu Mandir)
+✓ Ancient Temple (near Madhavrai temple)
+✓ Ancient Temple on the Bank of Chelsar Talav
+✓ Ancient Temples (Omnath Mahadev temple)
+✓ Ancient Vav
+✓ Ancient Vav at Sharneshwar Temple
+✓ Ancient Vav/Stepwell
+✓ Ancient site / Mound
+✓ Ancient site Gohilwad Timbo (Mound)
+✓ Ancient site comprising S.Plot No.535
+✓ Ancient site of Sandhiyapura
+✓ Ancient stepwell (vav)
+✓ Ancient temple no.1
+✓ Ancient temple no.2
+✓ Ancient temple no.3
+✓ Archaeological Ancient Site and Remains
+✓ Arjun Chori (Shiva Temple)
+✓ Astodia Gate
+✓ Baba Lalui's Masjid
+✓ Baba Pyare, Khapra Kodia caves
+✓ Bagwada Gates
+✓ Bahlol Khan Gazi's Mosque
+✓ Bandh
+✓ Barrack on Sariya Vakhariya
+✓ Bauddha Gufa (Caves) of Mandore (Mandovar)
+✓ Bavaman Killa
+✓ Bhadeshwar Temple
+✓ Bhadra Gate beside Bhadrakali Temple
+✓ Bhadrakali Mata Stepwell
+✓ Bhairav Jep (Hill Outcrop)
+✓ Bhangelu Deru
+✓ Bhavnath Temple
+✓ Bhim Chori (Shiva Temple)
+✓ Bhim Kund
+✓ Bhimchas
+✓ Bhimdeval (Sun temple)
+✓ Bhimeshwar Mahadev Temples
+✓ Bhuvadeshwar Mahadev Temple
+✓ Bibi's Masjid
+✓ Bileshwar Mahadev Temple
+✓ Bilingual Stone Inscription at Gayatri Temple
+✓ Boria Buddhistic Monument Lakhamedi & Vadi-Lakhamedi
+✓ Brahma Kund
+✓ Brahma Vav
+✓ Brick Minars
+✓ Buddhist Stupa - Vajir Panat No Kotho
+✓ Buddhistic Cave
+✓ Carvings of Old Darbargadh
+✓ Caves
+✓ Caves of Hothal Padmini
+✓ Cazi Masjid
+✓ Ceiling of Riyapir Masjid
+✓ Chadeshwar Mahadev Temple
+✓ Chamunda Mata Temple
+✓ Chandralekha (Surajkala) Vav
+✓ Chandrisar Talav
+✓ Chaumukh Mahadev Temple
+✓ Chaumukhi Vav
+✓ Chhatris Thambla Nu Bhoyneru
+✓ Chhindia Gates
+✓ Chyavan Kund
+✓ Dada (Bai) Hari's Stepwell
+✓ Dada Hari's Mosque & Tomb
+✓ Damodar Kund
+✓ Darbargadh
+✓ Darbargadh No Tamrapatro
+✓ Dargah known as Khawaja Dana Saheb's Rouza
+✓ Dariya Khan's Tomb
+✓ Dariya Pur Gate
+✓ Dastur Khan's Masjid
+✓ Datar no Chilo
+✓ Delhi Gate
+✓ Deputy Collector Office (MacMurdo's Bungalow)
+✓ Dhank Caves
+✓ Dhanvantari no Palio
+✓ Dhigeshwar Mahadev Temple
+✓ Dhingeshwar Mahadev Temple & Shail Gufao
+✓ Dhori (Peer) Makbaro
+✓ Dink Darwajo
+✓ Durvasa Rishi's Ashram
+✓ Dutch Tomb
+✓ Dwarkadhish Group of temples
+✓ Excavated Site
+✓ Eye No Dero Shiva Temple
+✓ Fateh Burj
+✓ Fatipal Gates
+✓ Firangi Deval
+✓ Five Temples
+✓ Fort
+✓ Forts Nr. Kileshwar
+✓ Fresco on the wall of Kashivisvanath temple
+✓ Frescos on the walls of Bhau Tambekarâ€™s Wada
+✓ Gadhi fortress & temple
+✓ Gadi Kundal Darwaza
+✓ Ganesh Temple
+✓ Ganga Chhatri
+✓ Ganga Vav
+✓ Ganganath Mahadev Temple
+✓ Gangavo Kund and Four Temples on it
+✓ Gates of Kanthkot
+✓ Gateway of Khan Sarover
+✓ Gateway of Torana
+✓ Gaumukhi
+✓ Gebanshah Vav with Steps
+✓ Gokeshwar Mahadev temple
+✓ Gop (Sun) Temple
+✓ Gopnath Mahadev Shiv Panchayatan Temple
+✓ Gopnath Temple(Ceiling and Pictures on the wall)
+✓ Gorakh Mountain Top (Tuk)
+✓ Gorakhnath Mahadev
+✓ Gramdevi Temple
+✓ Group of temples
+✓ Guhaditya temple
+✓ Gupta Prayag
+✓ Gupta Prayag Kund
+✓ Gurdwara
+✓ Guru Dattatraya
+✓ Haibatkhan's Masjid
+✓ Hanuman Dhara
+✓ Hanumanji Temple
+✓ Haripiya Timbo
+✓ Harishchandra ni Chori
+✓ Hathi Pagla (Gajapad Kund)
+✓ Hawa Mahal
+✓ Hazira or Qutbuddin Mahmad Khan's Tomb
+✓ Hira Gate
+✓ Historic Site S.No. 431 to 435
+✓ House of Smt. Kasturba Gandhi
+✓ House where Mahatma Gandhi was born
+✓ Inlet to Kankaria Tank
+✓ Inscription of Juma Masjid
+✓ Iteri Masjid and Building near to it
+✓ Jai Singh no Mahal
+✓ Jain Temple
+✓ Jain Temple No.1
+✓ Jain Temple No.2
+✓ Jain Temple No.3
+✓ Jain Temple No.4
+✓ Jain temples
+✓ Jaleshwar Mahadev Temple
+✓ Jam Tower
+✓ Jambuvanti Caves
+✓ Jami Masjid
+✓ Jeen Darwajo
+✓ Jeenand Kund (Two)
+✓ Jethabhai's Stepwell
+✓ Jhadeshwar Mahadev Temple
+✓ Jumma Masjid
+✓ Jumma Masjid & Cannon (Neelam And Kadanal)
+✓ Junagadhi (Jain) Temple
+✓ Kadia Dungar Caves
+✓ Kalika Mata
+✓ Kalika Mata Temple
+✓ Kalikamata Temple
+✓ Kalupur Gate
+✓ Kandhrmatad Inscriptions
+✓ Kankeshvara Mahadeva temple & shrines
+✓ Khambhalia Gate
+✓ Khan Masjid
+✓ Khan Sarovar
+✓ Khan Talav
+✓ Khimeshwar Mahadev Temple
+✓ Khuneshwar Killa
+✓ Killa at Shikar Bari and Ulan Julan ki Chowki
+✓ Kirti Stambh (Deva Manek Stambh)
+✓ Kotho
+✓ Kotho (Bhujio) Rampart
+✓ Kshatrapa Inscriptions
+✓ Kuber Vav
+✓ Kumbheshwar Mahadev
+✓ Kund
+✓ Kund & Toran
+✓ Kund (Hidimba Kund)
+✓ Kutub Shah's Mosque
+✓ Lakhota Tower
+✓ Lakhpat Fort
+✓ Laskari Vav
+✓ Lila Gumbaj Pase ni Kothi
+✓ Machi Killa
+✓ Madapol Gates
+✓ Madhavav
+✓ Magderu Temple
+✓ Mahabat Maqbara complex
+✓ Mahadev Temple
+✓ Mahakali Temple
+✓ Mahudi (Champaneri) Gate
+✓ Maipuri Masjid
+✓ Makbara of Babi raja Before Nawab Mahotabkhanji
+✓ Makbara of Najubibi with Bara Saiyed (Najibai Maqbara)
+✓ Makbaro of Hajarat Shah & Tomb of Malik Ayaz
+✓ Malav Tank
+✓ Malik Alam's Mosque
+✓ Malik Nagar ni Haveli
+✓ Malik Sandal Ni Vav
+✓ Manava Mama Temple
+✓ Mangaroli Shah Makbara & Shah Makbara with Stone Inscription
+✓ Maqbara Mandvi
+✓ Maqbara Near Kamani Masjid
+✓ Maratha no Mahal
+✓ Masjid in Front of Machi Haveli
+✓ Masjid of Ragusha Pir
+✓ Mata Bhavani's Well
+✓ Matri Mata temple
+✓ Matri Vav
+✓ Memorial Stone near Cemetery
+✓ Memorial Stone of Dah Culture
+✓ Memorial Stone of Lakha Fulani
+✓ Microlithic Tools of Anarapura
+✓ Minadevi Vav
+✓ Minara
+✓ Minaravali Masjid
+✓ Mithi Vav
+✓ Mool Prachi
+✓ Mota Todavali Vav
+✓ Mound (Amra)
+✓ Mound (Bed)
+✓ Mound (Lakhabaval)
+✓ Mound (Moda)
+✓ Mound (Modpar) | Modpar (Lalpur)
+✓ Mound (Narmana)
+✓ Mound (Vasai)
+✓ Mound Dolidhar
+✓ Mound of Nagara
+✓ Mound of Pabumath
+✓ Mound of Sav
+✓ Mound of Shobharel
+✓ Muhafiz Khan's Mosque
+✓ Muleshwar Mahadev Temple
+✓ Munibaba Temple (Munim Deval)
+✓ Nagfani Mata Mandir (with idol)
+✓ Nagnath Temple
+✓ Nagrani Vav (Stepwell)
+✓ Nandeshwar Mahadev
+✓ Nandodi Gate
+✓ Nani Vav-no Shilalekh
+✓ Narsinh Maheta No Choro
+✓ Navdurga Temple
+✓ Navghan Kuvo (Well)
+✓ Navlakha Temple
+✓ Navlakha temple
+✓ Nawab Sardar Khan Masjid and outer gate
+✓ Nawab Sardar Khan's Rouza
+✓ Nek Mahommad Masjid
+✓ Neminath Jain Temple with three inscriptions
+✓ Nilkanth Mahadev Temple
+✓ Old Darbargadh
+✓ Old Dutch & Armenian Tombs & Cemeteries
+✓ Old English Tombs
+✓ Old Parsvanath temple
+✓ Old Temple
+✓ Padharghadh
+✓ Pagathiyavali Vav (Stepwell)
+✓ Panch Kuva Gate
+✓ Panchayatan Mandir
+✓ Panchayatan Temple
+✓ Pancheshwar Caves
+✓ Panoti Temple
+✓ Pavagadh Killa
+✓ Pavilion South of Jami Masjid
+✓ Pavilion on Medhi Talav
+✓ Prachi Kund
+✓ Premabhai Gate
+✓ Pureshwar Temple
+✓ Queen's Mosque in Sarangpur
+✓ Ra Khengar Vav
+✓ Ra'Khengar Palace (now part of Girnar Jain temples)
+✓ Radhakrishna Temple
+✓ Rahimat Masjid (Bibi Masjid)
+✓ Raipur Gate
+✓ Rajeshwari Gates
+✓ Rajgadhi Timbo
+✓ Ram Kund
+✓ Rampol Gates
+✓ Rana Dev's Temple
+✓ Ranchhod Rayaji Temple
+✓ Rani Rupavati's Mosque
+✓ Rani Sipri's Mosque & Tomb
+✓ Rani no Mahal
+✓ Ranmukteshwar Temple
+✓ Rannmalchoki
+✓ Rataba alias Rajbai Vav
+✓ Raveli Masjid
+✓ Remains of Ancient Gates
+✓ Replica of Ashoka Stone Inscription
+✓ Rudreshwar
+✓ Ruined Building
+✓ Ruins
+✓ Ruins of Rudra Mahalaya temple
+✓ Rukmani Temple
+✓ Saat Sheri (Satsheri)
+✓ Sainiki Masjid
+✓ Sana Caves
+✓ Sankleshwar Mahadev
+✓ Santhaleshwar Mahadev Temple
+✓ Saptamukhi Vav
+✓ Sarangpur Gate
+✓ Sarovar
+✓ Sartanji no Choro
+✓ Sasu Ni Vav
+✓ Sayyid Masjid
+✓ Senapati Ni Kothi
+✓ Seven Basins of Hot Water (Kunds)
+✓ Seven Temples / Saat Mandiro
+✓ Shah Alam's Tomb with all surrounding buildings
+✓ Shah Kotho
+✓ Shah Kupa Masjid
+✓ Shai Gufa / Siyot Caves
+✓ Shai Gufa of Alech (Patan/Khapra Kodia)
+✓ Shail Gufa (Cave) No.1
+✓ Shail Gufa No.2
+✓ Shail Gufo (Khambhalida Caves)
+✓ Shakti Kund
+✓ Shakti Temple
+✓ Shamiyana and Ceiling of Jumma Masjid (S.1408)
+✓ Shani Vav
+✓ Sharaneshwar Temple
+✓ Shikar Madhi
+✓ Shitala Mata Temple
+✓ Shiv Temple (Khimeshwar Mahadev)
+✓ Shiva Panchayatan Temple
+✓ Shiva Panchayatan Temple No.1
+✓ Shiva Panchayatan Temple No.2
+✓ Shiva Temple
+✓ Shivashakti Temple
+✓ Shobhayada Shiva Temple
+✓ Sidi Bashir's Minar & Tomb (Shaking)
+✓ Sidi Saiyad's Mosque
+✓ Sindh Mata Ni Vav
+✓ Siva temple
+✓ Small Stone Masjid (Gumle Masjid)
+✓ Small stone Mosque (Rani Masjid)
+✓ Son Kansari
+✓ South Gates (Dakhkhani Darwaja)
+✓ Stepwell
+✓ Stone Bridge
+✓ Stone Inscription Near Mota Darwaja
+✓ Stone Inscription at Harshadmata Temple
+✓ Stone Inscription at Jadeshwar Mahadev
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription at Mussafar Masjid
+✓ Stone Inscription in Darbargadh
+✓ Stone Inscription of Bhadrakali Mata
+✓ Stone Inscription of Ra'Mandlik (Samvat 1507)
+✓ Stone Inscription of Sultan Ahmed (H.S. 905â€“1543)
+✓ Stone Inscription of Vijayshwar Mahadev -1346/1408
+✓ Stone Inscription with Mai Gadechi of H. S. 685
+✓ Stone Inscriptions Near Talav
+✓ Stone Memorial Inscription & Battlefield
+✓ Stone Memorial of Bhuchar Mori Deri & Battlefield
+✓ Sun Temple
+✓ Sundari Bhavani Temple
+✓ Surya Kund
+✓ Surya Mandir (Sun Temple)
+✓ Surya Mandir No.1
+✓ Surya Mandir No.2
+✓ Surya Mandir and Sapta Matrika Mandir
+✓ Surya Narayan Temple
+✓ Surya Temple
+✓ Talaja Caves
+✓ Talav
+✓ Tarnetar Temple
+✓ Teen Darwaja or Tripolia Gate
+✓ Temple & Two Inscriptions (Ajara Parshwanath)
+✓ Temple Near Talav
+✓ Temple No. 1
+✓ Temple No. 2
+✓ Temple No. 3
+✓ Temple No. 4
+✓ Temple No. 5
+✓ Temple No.1 (near Mahudi)
+✓ Temple No.1 Near Kantivas
+✓ Temple No.2
+✓ Temple No.3
+✓ Temple No.4
+✓ Temple No.5
+✓ Temple No.6
+✓ Temple of Rama Laxman
+✓ Temple with Kund
+✓ Temple with Three Entrances (Hidimba Temple)
+✓ Temple with stone Inscription (Kaleshwari Mata Temple)
+✓ Temples
+✓ The Shahpur Kazi Mohmad Chishti's Masjid
+✓ Three gates besides Bhadrakali temple
+✓ Timbo
+✓ Tom Coryat Makbaro (Thomas Coryat's Tomb)
+✓ Tomb
+✓ Tomb of Khawaja Safar Sulemani
+✓ Tomb of Mir Abu Turab
+✓ Tomb of Rao Lakha Chhatri
+✓ Tomb of Sikandarsah
+✓ Tombs of Queens of Ahmed Shah
+✓ Tripolia Gate (Tran Darwaja)
+✓ Two Bhavaneshwar Temples
+✓ Two Idols of Kshetrapal At Vav (Pujari Vav)
+✓ Two Stone Inscriptions on Jumma Masjid
+✓ Underground Water Channel from Bandh to Kasbin Talao
+✓ Underground Water Channel from Navlakhi Talav to Jamuna Kund
+✓ Vadimedi (Shaiv Math)
+✓ Vadodara Gate
+✓ Vahu Ni Vav
+✓ Vandra Masjid
+✓ Vanzari Vav
+✓ Vastupal Jain Temple with six inscriptions
+✓ Vav
+✓ Vav (Gelmata Vav)
+✓ Vav (Step Well)
+✓ Vav (Step Well) (Dholikui)
+✓ Vav (Stepwell)
+✓ Vejal Kotho
+✓ Veneshwar Mahadev Temple
+✓ Veraval Gate
+✓ Vidyadhar Vav
+✓ Vikiya Vav
+✓ Virji Vora ni Vav
+✓ Vishnu Temple
+✓ Vori Vav
+✓ West Gates
+✓ Wooden Sandal (Paduka) of Ramchandraji
+✓ Zaloragadh Timbo
+✓ Zare-e-Zamin
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Fantasy Query
+Question  : structures in Hogwarts
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+WHERE (
+    toLower(s.name) CONTAINS "hogwarts"
+    OR toLower(s.district) CONTAINS "hogwarts"
+    OR toLower(s.state) CONTAINS "hogwarts"
+    OR toLower(s.address) CONTAINS "hogwarts"
+)
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    st.name AS structure_name,
+    st.type AS structure_type
+
+Expected Count : 0
+Returned Count : 0
+
+Precision : 0.00%
+Recall    : 100.00%
+F1 Score  : 0.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+None
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Mars Query
+Question  : inscriptions in Mars
+
+Generated Cypher
+------------------------------
+MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+
+WHERE (
+    toLower(s.name) CONTAINS "mars"
+    OR toLower(s.district) CONTAINS "mars"
+    OR toLower(s.state) CONTAINS "mars"
+    OR toLower(s.address) CONTAINS "mars"
+)
+
+AND toLower(a.type) CONTAINS "inscription"
+
+RETURN DISTINCT
+    s.name AS site_name,
+    s.state AS state,
+    s.district AS district,
+    s.address AS address,
+    s.latitude AS latitude,
+    s.longitude AS longitude,
+    s.gis_accuracy AS gis_accuracy,
+    a.name AS artifact_name,
+    a.type AS artifact_type
+
+Expected Count : 0
+Returned Count : 0
+
+Precision : 0.00%
+Recall    : 100.00%
+F1 Score  : 0.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+None
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+OVERALL EVALUATION METRICS
+====================================================================================================
+
+Total Benchmark Queries : 25
+
+Average Precision       : 71.35%
+Average Recall          : 90.43%
+Average F1 Score        : 70.82%
+
+Exact Matches           : 20/25
+Count Matches           : 21/25
+
+Overall Retrieval Performance : 70.82%
+
+====================================================================================================
+METRIC DEFINITIONS
+====================================================================================================
+
+Precision : Percentage of retrieved sites that are correct.
+Recall    : Percentage of expected sites successfully retrieved.
+F1 Score  : Harmonic mean of Precision and Recall.
+Exact Match : Returned site set exactly matches Neo4j ground truth.
+Count Match : Returned the same number of sites as Neo4j.

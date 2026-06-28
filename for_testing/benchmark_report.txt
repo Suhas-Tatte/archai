@@ -1,0 +1,374 @@
+====================================================================================================
+ARCHAI BENCHMARK REPORT
+====================================================================================================
+
+====================================================================================================
+Benchmark : Temple Retrieval - Ahmedabad
+Question  : temples in Ahmedabad
+
+Expected Count : 2
+Returned Count : 2
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Bhadra Gate beside Bhadrakali Temple
+✓ Three gates besides Bhadrakali temple
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Temple Retrieval - Junagadh
+Question  : temples in Junagadh
+
+Expected Count : 7
+Returned Count : 9
+
+Precision : 77.78%
+Recall    : 100.00%
+F1 Score  : 87.50%
+
+Exact Match : False
+Count Match : False
+
+Correct Sites
+------------------------------
+✓ Gorakhnath Mahadev
+✓ Guru Dattatraya
+✓ Kalika Mata
+✓ Matri Mata temple
+✓ Neminath Jain Temple with three inscriptions
+✓ Ra'Khengar Palace (now part of Girnar Jain temples)
+✓ Vastupal Jain Temple with six inscriptions
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
++ Chamunda Mata Temple
++ Temple & Two Inscriptions (Ajara Parshwanath)
+
+====================================================================================================
+Benchmark : Mosques in Ahmedabad
+Question  : mosques in Ahmedabad
+
+Expected Count : 26
+Returned Count : 26
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Achyut Bibi's Masjid & Tomb
+✓ Ahmed Shah's Mosque
+✓ Ancient Masjid
+✓ Baba Lalui's Masjid
+✓ Bahlol Khan Gazi's Mosque
+✓ Bibi's Masjid
+✓ Cazi Masjid
+✓ Dada Hari's Mosque & Tomb
+✓ Dastur Khan's Masjid
+✓ Haibatkhan's Masjid
+✓ Jami Masjid
+✓ Khan Masjid
+✓ Kutub Shah's Mosque
+✓ Malik Alam's Mosque
+✓ Masjid of Ragusha Pir
+✓ Muhafiz Khan's Mosque
+✓ Nawab Sardar Khan Masjid and outer gate
+✓ Queen's Mosque in Sarangpur
+✓ Rani Rupavati's Mosque
+✓ Rani Sipri's Mosque & Tomb
+✓ Sayyid Masjid
+✓ Shah Kupa Masjid
+✓ Sidi Saiyad's Mosque
+✓ Small Stone Masjid (Gumle Masjid)
+✓ Small stone Mosque (Rani Masjid)
+✓ The Shahpur Kazi Mohmad Chishti's Masjid
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Stepwells in Gujarat
+Question  : stepwells in Gujarat
+
+Expected Count : 43
+Returned Count : 43
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Adi Kadi Vav
+✓ Amritavarshini Vav
+✓ Ancient Step Well
+✓ Ancient Vav
+✓ Ancient Vav at Sharneshwar Temple
+✓ Ancient Vav/Stepwell
+✓ Ancient stepwell (vav)
+✓ Bhadrakali Mata Stepwell
+✓ Brahma Vav
+✓ Chandralekha (Surajkala) Vav
+✓ Chaumukhi Vav
+✓ Dada (Bai) Hari's Stepwell
+✓ Ganga Vav
+✓ Gebanshah Vav with Steps
+✓ Jethabhai's Stepwell
+✓ Kuber Vav
+✓ Laskari Vav
+✓ Madhavav
+✓ Malik Sandal Ni Vav
+✓ Matri Vav
+✓ Minadevi Vav
+✓ Mithi Vav
+✓ Mota Todavali Vav
+✓ Nagrani Vav (Stepwell)
+✓ Pagathiyavali Vav (Stepwell)
+✓ Ra Khengar Vav
+✓ Rataba alias Rajbai Vav
+✓ Saptamukhi Vav
+✓ Sasu Ni Vav
+✓ Shani Vav
+✓ Sindh Mata Ni Vav
+✓ Stepwell
+✓ Vahu Ni Vav
+✓ Vanzari Vav
+✓ Vav
+✓ Vav (Gelmata Vav)
+✓ Vav (Step Well)
+✓ Vav (Step Well) (Dholikui)
+✓ Vav (Stepwell)
+✓ Vidyadhar Vav
+✓ Vikiya Vav
+✓ Virji Vora ni Vav
+✓ Vori Vav
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : All Inscriptions
+Question  : all inscriptions
+
+Expected Count : 27
+Returned Count : 27
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Bilingual Stone Inscription at Gayatri Temple
+✓ Darbargadh No Tamrapatro
+✓ Inscription of Juma Masjid
+✓ Kandhrmatad Inscriptions
+✓ Kshatrapa Inscriptions
+✓ Mangaroli Shah Makbara & Shah Makbara with Stone Inscription
+✓ Nani Vav-no Shilalekh
+✓ Neminath Jain Temple with three inscriptions
+✓ Replica of Ashoka Stone Inscription
+✓ Stone Inscription Near Mota Darwaja
+✓ Stone Inscription at Harshadmata Temple
+✓ Stone Inscription at Jadeshwar Mahadev
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription at Mussafar Masjid
+✓ Stone Inscription in Darbargadh
+✓ Stone Inscription of Bhadrakali Mata
+✓ Stone Inscription of Ra'Mandlik (Samvat 1507)
+✓ Stone Inscription of Sultan Ahmed (H.S. 905â€“1543)
+✓ Stone Inscription of Vijayshwar Mahadev -1346/1408
+✓ Stone Inscription with Mai Gadechi of H. S. 685
+✓ Stone Inscriptions Near Talav
+✓ Stone Memorial Inscription & Battlefield
+✓ Temple & Two Inscriptions (Ajara Parshwanath)
+✓ Temple with stone Inscription (Kaleshwari Mata Temple)
+✓ Two Stone Inscriptions on Jumma Masjid
+✓ Vastupal Jain Temple with six inscriptions
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : All Memorial Stones
+Question  : all memorial stones
+
+Expected Count : 5
+Returned Count : 5
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Dhanvantari no Palio
+✓ Memorial Stone near Cemetery
+✓ Memorial Stone of Dah Culture
+✓ Memorial Stone of Lakha Fulani
+✓ Stone Memorial Inscription & Battlefield
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Stone Inscription at Masjid
+Question  : stone inscription at masjid
+
+Expected Count : 5
+Returned Count : 5
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Inscription of Juma Masjid
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Stone Inscription at Kaji Masjid - H.S.902
+✓ Stone Inscription at Mussafar Masjid
+✓ Two Stone Inscriptions on Jumma Masjid
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Structures in Jumma Masjid
+Question  : structures in Jumma Masjid
+
+Expected Count : 4
+Returned Count : 4
+
+Precision : 100.00%
+Recall    : 100.00%
+F1 Score  : 100.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+✓ Jumma Masjid
+✓ Jumma Masjid & Cannon (Neelam And Kadanal)
+✓ Stone Inscription at Jumma Masjid (H.S.732)
+✓ Two Stone Inscriptions on Jumma Masjid
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+Benchmark : Negative Query
+Question  : temples in unknown place
+
+Expected Count : 0
+Returned Count : 0
+
+Precision : 0.00%
+Recall    : 100.00%
+F1 Score  : 0.00%
+
+Exact Match : True
+Count Match : True
+
+Correct Sites
+------------------------------
+None
+
+Missing Sites
+------------------------------
+None
+
+Extra Sites
+------------------------------
+None
+
+====================================================================================================
+OVERALL EVALUATION METRICS
+====================================================================================================
+
+Total Benchmark Queries : 9
+
+Average Precision       : 86.42%
+Average Recall          : 100.00%
+Average F1 Score        : 87.50%
+
+Exact Matches           : 8/9
+Count Matches           : 8/9
+
+Overall Retrieval Performance : 87.50%
+
+====================================================================================================
+METRIC DEFINITIONS
+====================================================================================================
+
+Precision : Percentage of retrieved sites that are correct.
+Recall    : Percentage of expected sites successfully retrieved.
+F1 Score  : Harmonic mean of Precision and Recall.
+Exact Match : Returned site set exactly matches Neo4j ground truth.
+Count Match : Returned the same number of sites as Neo4j.

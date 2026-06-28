@@ -1,6 +1,6 @@
-from model import generate_cypher, extract_location_llm
-from graph import run_query
-from rules import (
+from llm.model import generate_cypher, extract_location_llm
+from llm.graph import run_query
+from llm.rules import (
     detect_location,
     detect_structure_type,
     is_structure_query,
@@ -64,10 +64,11 @@ def get_all_locations():
 # MAIN QA FUNCTION
 # --------------------------------------------------
 
-def ask_question(question):
+def ask_question(question, verbose=True):
 
-    print("\n==============================")
-    print("Question:", question)
+    if verbose:
+        print("\n==============================")
+        print("Question:", question)
 
     # STEP 1
     locations = get_all_locations()
@@ -181,61 +182,166 @@ def ask_question(question):
     # --------------------------------------------------
 
     else:
-        cypher = generate_cypher(question)
 
-    print("\nGenerated Cypher:\n")
-    print(cypher)
+        cypher = generate_cypher(question)
+        print("RAW CYPHER:")
+        print(repr(cypher))
+
+    if verbose:
+        print("\nGenerated Cypher:\n")
+        print(cypher)
 
     try:
+
         result = run_query(cypher)
 
         # --------------------------------------------------
         # SAVE OUTPUT TO TEXT FILE
         # --------------------------------------------------
 
-        with open("query_output_log.txt", "a", encoding="utf-8") as log_file:
+           # --------------------------------------------------
+        # SAVE OUTPUT TO TEXT FILE (only in verbose mode)
+        # --------------------------------------------------
 
-            log_file.write("\n")
-            log_file.write("=" * 100)
-            log_file.write("\n")
-            log_file.write(f"QUESTION: {question}\n\n")
-            log_file.write("GENERATED CYPHER:\n\n")
-            log_file.write(cypher)
-            log_file.write("\n\n")
-            log_file.write("RESULT:\n\n")
-            log_file.write(
-                json.dumps(result, indent=4, ensure_ascii=False, default=str)
-            )
-            log_file.write("\n")
-            log_file.write("=" * 100)
-            log_file.write("\n")
+        if verbose:
 
-        print("\nResult:\n")
+            with open("query_output_log.txt", "a", encoding="utf-8") as log_file:
+
+                log_file.write("\n")
+                log_file.write("=" * 100)
+                log_file.write("\n")
+                log_file.write(f"QUESTION: {question}\n\n")
+                log_file.write("GENERATED CYPHER:\n\n")
+                log_file.write(cypher)
+                log_file.write("\n\n")
+                log_file.write("RESULT:\n\n")
+                log_file.write(
+                    json.dumps(
+                        result,
+                        indent=4,
+                        ensure_ascii=False,
+                        default=str
+                    )
+                )
+                log_file.write("\n")
+                log_file.write("=" * 100)
+                log_file.write("\n")
+
+        # --------------------------------------------------
+        # PRINT RESULT (only in verbose mode)
+        # --------------------------------------------------
+
+        if verbose:
+            print("\nResult:\n")
 
         if result:
-            print(json.dumps(result, indent=4, ensure_ascii=False, default=str))
+
+            if verbose:
+                print(
+                    json.dumps(
+                        result,
+                        indent=4,
+                        ensure_ascii=False,
+                        default=str
+                    )
+                )
+
             return result
+
         else:
-            print(f"⚠️ No data found for '{question}' in the database.")
+
+            if verbose:
+                print(
+                    f"⚠️ No data found for '{question}' in the database."
+                )
+
             return []
 
     except Exception as e:
 
-        print("\n❌ Query Failed:")
-        print(e)
+        print(f"ERROR while processing '{question}': {e}")
+        if verbose:
+            print("\n❌ Query Failed:")
+            print(e)
 
-        with open("query_output_log.txt", "a", encoding="utf-8") as log_file:
+            with open("query_output_log.txt", "a", encoding="utf-8") as log_file:
 
-            log_file.write("\n")
-            log_file.write("=" * 100)
-            log_file.write("\n")
-            log_file.write(f"QUESTION: {question}\n\n")
-            log_file.write("GENERATED CYPHER:\n\n")
-            log_file.write(cypher)
-            log_file.write("\n\n")
-            log_file.write(f"ERROR:\n{e}\n")
-            log_file.write("=" * 100)
-            log_file.write("\n")
+                log_file.write("\n")
+                log_file.write("=" * 100)
+                log_file.write("\n")
+                log_file.write(f"QUESTION: {question}\n\n")
+                log_file.write("GENERATED CYPHER:\n\n")
+                log_file.write(cypher)
+                log_file.write("\n\n")
+                log_file.write(f"ERROR:\n{e}\n")
+                log_file.write("=" * 100)
+                log_file.write("\n")
+
+        return []
+
+# --------------------------------------------------
+# LLM ONLY QA FUNCTION (No Rules)
+# --------------------------------------------------
+
+def ask_question_llm(question, verbose=True, return_cypher=False):
+
+    if verbose:
+        print("\n==============================")
+        print("Question:", question)
+
+    # Always generate Cypher using the LLM
+    cypher = generate_cypher(question)
+
+    if verbose:
+        print("\nGenerated Cypher:\n")
+        print(cypher)
+
+    try:
+
+        result = run_query(cypher)
+
+        if verbose:
+
+            print("\nResult:\n")
+
+            if result:
+                print(
+                    json.dumps(
+                        result,
+                        indent=4,
+                        ensure_ascii=False,
+                        default=str
+                    )
+                )
+            else:
+                print("⚠️ No data found.")
+
+        if return_cypher:
+            return result, cypher
+
+        return result
+
+    except Exception as e:
+
+        print(f"ERROR while processing '{question}': {e}")
+
+        if verbose:
+
+            with open("query_output_log.txt", "a", encoding="utf-8") as log_file:
+
+                log_file.write("\n")
+                log_file.write("=" * 100)
+                log_file.write("\n")
+                log_file.write(f"QUESTION: {question}\n\n")
+                log_file.write("GENERATED CYPHER:\n\n")
+                log_file.write(cypher)
+                log_file.write("\n\n")
+                log_file.write(f"ERROR:\n{e}\n")
+                log_file.write("=" * 100)
+                log_file.write("\n")
+
+        if return_cypher:
+            return [], cypher
 
         return []
 
@@ -260,8 +366,14 @@ if __name__ == "__main__":
 
 
     #ask_question("gates in Ahmedabad")
-    ask_question("temples in Junagadh")
+    #ask_question("temples in Junagadh")
     #ask_question("mosques in Ahmedabad")
     #ask_question("all memorial stones")
     #ask_question("stone inscription at masjid")
     #ask_question("structures in Kaji Masjid")
+    #ask_question("Show all sites")
+    #ask_question("Show all structures")
+    #ask_question("Show all artifacts")
+    #ask_question("List all structures")
+    ask_question("Display all structures")
+    
