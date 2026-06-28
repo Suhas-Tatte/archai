@@ -2,10 +2,16 @@ import csv
 import json
 import logging
 import math
+import os
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlparse, parse_qs 
+from urllib.parse import urlparse, parse_qs
+
+from dotenv import load_dotenv
+
 import llm.llm_main as llm_main
+
+load_dotenv()
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -20,10 +26,14 @@ logger = logging.getLogger(__name__)
 
 class MapDemoHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
+        if self.path.startswith("/api/nearby"):
+            self._handle_nearby_api()
+            return
+
         if self.path.startswith("/api/query"):
             self._handle_query_api()
             return
-        
+
         if self.path == "/api/sites":
             self._handle_sites_api()
             return
@@ -111,7 +121,158 @@ class MapDemoHandler(SimpleHTTPRequestHandler):
         except Exception:
             logger.exception("LLM/Neo4j query failed")
             self.send_error(500, "LLM/Neo4j query failed")
-            
+
+    def _handle_nearby_api(self):
+        """Return sites within a radius of a given lat/lng, sorted by distance."""
+        parsed = urlparse(self.path)
+        params = parse_qs(parsed.query)
+
+        try:
+            lat = float(params.get("lat", [None])[0])
+            lng = float(params.get("lng", [None])[0])
+        except (TypeError, ValueError):
+            self.send_error(400, "Missing or invalid 'lat' / 'lng' parameters")
+            return
+
+        try:
+            radius_km = float(params.get("radius_km", ["5"])[0])
+        except (TypeError, ValueError):
+            radius_km = 5.0
+
+        csv_path = _find_sites_csv()
+        if csv_path is None:
+            self.send_error(500, "No sites.csv found")
+            return
+
+        try:
+            all_sites = _load_sites(csv_path)
+            nearby = []
+            for site in all_sites:
+                dist = _haversine(lat, lng, site["latitude"], site["longitude"])
+                if dist <= radius_km:
+                    site_copy = dict(site)
+                    site_copy["distance_km"] = round(dist, 2)
+                    nearby.append(site_copy)
+
+            nearby.sort(key=lambda s: s["distance_km"])
+
+            # Enrich with structures and artifacts from Neo4j
+            nearby = _enrich_with_neo4j(nearby)
+
+            payload = json.dumps(nearby, ensure_ascii=False).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Length", str(len(payload)))
+            self.end_headers()
+            self.wfile.write(payload)
+
+        except Exception:
+            logger.exception("Nearby query failed")
+            self.send_error(500, "Nearby query failed")
+
+
+# --------------------------------------------------
+# HAVERSINE DISTANCE
+# --------------------------------------------------
+
+_EARTH_RADIUS_KM = 6371.0
+
+
+def _haversine(lat1, lon1, lat2, lon2):
+    """Great-circle distance in km between two lat/lon points."""
+    lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+    a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    return _EARTH_RADIUS_KM * 2 * math.asin(math.sqrt(a))
+
+
+# --------------------------------------------------
+# NEO4J ENRICHMENT (optional — degrades gracefully)
+# --------------------------------------------------
+
+def _enrich_with_neo4j(sites):
+    """For each site, fetch its structures and artifacts from Neo4j.
+    Falls back silently if Neo4j is unavailable."""
+    if not sites:
+        return sites
+
+    try:
+        from graph_layer import GraphService
+
+        uri = os.getenv("NEO4J_URI")
+        username = os.getenv("NEO4J_USERNAME")
+        password = os.getenv("NEO4J_PASSWORD")
+
+        if not all([uri, username, password]):
+            logger.info("Neo4j credentials not configured — skipping enrichment")
+            return sites
+
+        graph = GraphService(uri, username, password)
+
+        try:
+            site_ids = [s["site_id"] for s in sites if s.get("site_id")]
+            if not site_ids:
+                return sites
+
+            # Fetch structures
+            struct_query = """
+            MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure)
+            WHERE s.id IN $site_ids
+            RETURN s.id AS site_id, st.name AS name, st.type AS type, st.description AS description
+            """
+            struct_rows = graph.run_query(struct_query, {"site_ids": site_ids})
+
+            # Fetch artifacts
+            art_query = """
+            MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact)
+            WHERE s.id IN $site_ids
+            RETURN s.id AS site_id, a.name AS name, a.type AS type, a.description AS description
+            """
+            art_rows = graph.run_query(art_query, {"site_ids": site_ids})
+
+            # Group by site_id
+            structs_by_site = {}
+            for row in struct_rows:
+                sid = row.get("site_id")
+                if sid not in structs_by_site:
+                    structs_by_site[sid] = []
+                structs_by_site[sid].append({
+                    "name": row.get("name"),
+                    "type": row.get("type"),
+                    "description": row.get("description"),
+                })
+
+            arts_by_site = {}
+            for row in art_rows:
+                sid = row.get("site_id")
+                if sid not in arts_by_site:
+                    arts_by_site[sid] = []
+                arts_by_site[sid].append({
+                    "name": row.get("name"),
+                    "type": row.get("type"),
+                    "description": row.get("description"),
+                })
+
+            # Merge into site dicts
+            for site in sites:
+                sid = site.get("site_id")
+                site["structures"] = structs_by_site.get(sid, [])
+                site["artifacts"] = arts_by_site.get(sid, [])
+
+        finally:
+            graph.close()
+
+    except Exception:
+        logger.info("Neo4j enrichment unavailable — returning CSV-only results")
+
+    return sites
+
+
+# --------------------------------------------------
+# HELPERS
+# --------------------------------------------------
+
 def _find_sites_csv():
     for candidate in DATA_CANDIDATES:
         if candidate.exists():

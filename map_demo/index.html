@@ -10,35 +10,447 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""
   />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; }
-    header { padding: 10px 14px; border-bottom: 1px solid #ddd; }
-    #map { height: calc(100vh - 58px); width: 100%;}
-    #json-output { background-color: #221d1d25; overflow:auto; margin:0; padding:10px; border-left:1px solid #221d1d25; }
-    .hint { color: #555; font-size: 14px; }
+    :root {
+      --sidebar-width: 360px;
+      --header-height: 56px;
+      --bg-dark: #1a1a2e;
+      --bg-card: #16213e;
+      --bg-sidebar: #0f0f23;
+      --accent: #e94560;
+      --accent-glow: rgba(233, 69, 96, 0.3);
+      --text-primary: #eaeaea;
+      --text-secondary: #8892a4;
+      --text-muted: #5a6275;
+      --border: rgba(255, 255, 255, 0.06);
+      --tag-structure: #0f3460;
+      --tag-artifact: #533483;
+      --orange: #f5a623;
+      --radius: 10px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      overflow: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 20px;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      position: relative;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    #query-form {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      max-width: 620px;
+    }
+    #query-input {
+      flex: 1;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--text-primary);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #query-input:focus { border-color: var(--accent); }
+    #query-input::placeholder { color: var(--text-muted); }
+
+    .header-btn {
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    #query-btn {
+      background: var(--accent);
+      color: #fff;
+    }
+    #query-btn:hover { background: #d63851; transform: translateY(-1px); }
+    #nearby-btn {
+      background: rgba(245, 166, 35, 0.15);
+      color: var(--orange);
+      border: 1px solid rgba(245, 166, 35, 0.3);
+    }
+    #nearby-btn:hover { background: rgba(245, 166, 35, 0.25); transform: translateY(-1px); }
+
+    #view-mode {
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--text-primary);
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .hint {
+      color: var(--text-muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    .main-container {
+      display: flex;
+      height: calc(100vh - var(--header-height));
+      position: relative;
+    }
+    #map { flex: 1; height: 100%; z-index: 1; }
+    #json-output {
+      background: var(--bg-sidebar);
+      overflow: auto;
+      margin: 0;
+      padding: 14px;
+      border-left: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+    }
+
+    /* ===== SIDEBAR ===== */
+    #nearby-sidebar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: var(--sidebar-width);
+      height: 100%;
+      background: var(--bg-sidebar);
+      border-left: 1px solid var(--border);
+      z-index: 900;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    #nearby-sidebar.open { transform: translateX(0); }
+
+    .sidebar-header {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .sidebar-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .sidebar-title {
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sidebar-title .dot {
+      width: 8px; height: 8px;
+      background: var(--orange);
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .sidebar-close {
+      width: 28px; height: 28px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .sidebar-close:hover { background: rgba(233, 69, 96, 0.15); color: var(--accent); }
+
+    .sidebar-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .sidebar-meta span { color: var(--text-secondary); }
+
+    .radius-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .radius-control label {
+      font-size: 12px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    #radius-slider {
+      flex: 1;
+      accent-color: var(--orange);
+      cursor: pointer;
+    }
+    #radius-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--orange);
+      min-width: 50px;
+      text-align: right;
+    }
+
+    .sidebar-count {
+      padding: 8px 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.02);
+    }
+    .sidebar-count strong { color: var(--text-secondary); }
+
+    .sidebar-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+    }
+    .sidebar-body::-webkit-scrollbar { width: 5px; }
+    .sidebar-body::-webkit-scrollbar-track { background: transparent; }
+    .sidebar-body::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 4px; }
+
+    .sidebar-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .spinner {
+      width: 20px; height: 20px;
+      border: 2px solid var(--border);
+      border-top-color: var(--orange);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-right: 10px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .sidebar-empty {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+    }
+    .sidebar-empty .icon { font-size: 36px; margin-bottom: 10px; }
+
+    /* ===== SITE CARD ===== */
+    .site-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin-bottom: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .site-card:hover {
+      border-color: rgba(245, 166, 35, 0.3);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .site-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .site-card-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+    .site-card-distance {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--orange);
+      background: rgba(245, 166, 35, 0.1);
+      padding: 2px 8px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .site-card-location {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Tags for structures/artifacts */
+    .site-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 8px;
+    }
+    .tag {
+      font-size: 10px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .tag-structure {
+      background: var(--tag-structure);
+      color: #64b5f6;
+    }
+    .tag-artifact {
+      background: var(--tag-artifact);
+      color: #ce93d8;
+    }
+
+    /* Expandable details */
+    .site-card-details {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      display: none;
+    }
+    .site-card.expanded .site-card-details { display: block; }
+    .detail-section-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      margin-top: 6px;
+    }
+    .detail-item {
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 3px 0;
+      padding-left: 10px;
+      border-left: 2px solid var(--border);
+      margin-bottom: 3px;
+    }
+    .detail-item strong { color: var(--text-primary); }
+
+    .expand-hint {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* ===== MAP CLICK HINT ===== */
+    .click-hint {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 800;
+      background: rgba(15, 15, 35, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      pointer-events: none;
+      transition: opacity 0.5s;
+    }
+    .click-hint .key {
+      display: inline-block;
+      background: rgba(245, 166, 35, 0.15);
+      color: var(--orange);
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <strong>Archai Temporary Map Demo</strong>
-    <div class="hint">Showing site markers from CSV data (name, district, state, coordinates).</div>
-    <form id="query-form" style="display: inline-block; margin-left: 12px;">
-      <input id="query-input" type="text" placeholder="Enter search (e.g. 'temples in Ahmedabad')" style="width: 360px;"/>
-      <button id="query-btn" type="submit">Search</button>
-      <label style="margin-left: 8px; ">
-        <select id="view-mode">
-          <option value="map">Map Result</option>
-          <option value="both">Both</option>
-          <option value="json">LLM Result</option>
-        </select>
-      </label>
+    <div class="brand">⚱️ Archai</div>
+    <form id="query-form">
+      <input id="query-input" type="text" placeholder="Search (e.g. 'temples in Ahmedabad')" />
+      <button id="query-btn" class="header-btn" type="submit">Search</button>
+      <button id="nearby-btn" class="header-btn" type="button" title="Find nearby sites from last search result">📍 Nearby</button>
+      <select id="view-mode">
+        <option value="map">Map</option>
+        <option value="both">Both</option>
+        <option value="json">JSON</option>
+      </select>
     </form>
+    <div class="hint">Click map to explore nearby sites</div>
   </header>
-  <div id="result-container">
+
+  <div class="main-container">
     <div id="map"></div>
-    <pre id="json-output" style="height: 300px; overflow: auto; padding: 10px; border-top: 1px solid #ccc; display: none;"></pre>
+    <pre id="json-output" style="display: none;"></pre>
+
+    <!-- NEARBY SIDEBAR -->
+    <div id="nearby-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-title-row">
+          <div class="sidebar-title">
+            <span class="dot"></span>
+            Nearby Sites
+          </div>
+          <button class="sidebar-close" id="sidebar-close" title="Close">✕</button>
+        </div>
+        <div class="sidebar-meta" id="sidebar-meta">
+          Coordinates: <span id="sidebar-coords">—</span>
+        </div>
+        <div class="radius-control">
+          <label for="radius-slider">Radius</label>
+          <input type="range" id="radius-slider" min="1" max="100" value="5" />
+          <span id="radius-value">5 km</span>
+        </div>
+      </div>
+      <div class="sidebar-count" id="sidebar-count">
+        <strong>0</strong> sites found
+      </div>
+      <div class="sidebar-body" id="sidebar-body">
+        <div class="sidebar-empty">
+          <div class="icon">📍</div>
+          Click anywhere on the map to discover nearby archaeological sites.
+        </div>
+      </div>
+    </div>
+
+    <div class="click-hint" id="click-hint">
+      <span class="key">Click</span> anywhere on the map to find nearby sites
+    </div>
   </div>
-  
 
   <script
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -46,139 +458,131 @@
     crossorigin=""
   ></script>
   <script>
-    const map = L.map('map').setView([22.8, 78.9], 5);
+    // ===== MAP INIT =====
+    const map = L.map('map').setView([22.8, 72.5], 7);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 15,
-      attribution: '&copy; OpenStreetMap contributors'
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
     }).addTo(map);
 
-    const form = document.getElementById('query-form');
+    // ===== ELEMENTS =====
+    const form       = document.getElementById('query-form');
     const queryInput = document.getElementById('query-input');
-    const viewMode = document.getElementById('view-mode');
+    const viewMode   = document.getElementById('view-mode');
     const jsonOutput = document.getElementById('json-output');
+    const nearbyBtn  = document.getElementById('nearby-btn');
+    const sidebar    = document.getElementById('nearby-sidebar');
+    const sidebarClose  = document.getElementById('sidebar-close');
+    const sidebarBody   = document.getElementById('sidebar-body');
+    const sidebarCount  = document.getElementById('sidebar-count');
+    const sidebarCoords = document.getElementById('sidebar-coords');
+    const radiusSlider  = document.getElementById('radius-slider');
+    const radiusValue   = document.getElementById('radius-value');
+    const clickHint     = document.getElementById('click-hint');
 
-    let currentMarkers = [];
+    // ===== STATE =====
+    let searchMarkers = [];
+    let nearbyMarkers = [];
+    let radiusCircle  = null;
+    let nearbyLat     = null;
+    let nearbyLng     = null;
+    let clickMarker   = null;
+    let debounceTimer = null;
+    let hintVisible   = true;
 
-    function clearMarkers() {
-      currentMarkers.forEach((m) => map.removeLayer(m));
-      currentMarkers = [];
+    // ===== CUSTOM ICONS =====
+    const blueIcon = L.icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+      iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+    });
+    const orangeIcon = L.icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+      iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+    });
+    const redIcon = L.icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+      iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+    });
+
+    // ===== MARKER HELPERS =====
+    function clearSearchMarkers() {
+      searchMarkers.forEach(m => map.removeLayer(m));
+      searchMarkers = [];
     }
 
+    function clearNearbyMarkers() {
+      nearbyMarkers.forEach(m => map.removeLayer(m));
+      nearbyMarkers = [];
+      if (radiusCircle) { map.removeLayer(radiusCircle); radiusCircle = null; }
+      if (clickMarker) { map.removeLayer(clickMarker); clickMarker = null; }
+    }
+
+    // ===== EXISTING SEARCH (preserved) =====
     function runQuery(query) {
-      return fetch(
-        '/api/query?q=' +
-        encodeURIComponent(query)
-      )
-      .then(r => r.json());
+      return fetch('/api/query?q=' + encodeURIComponent(query)).then(r => r.json());
     }
 
-    function renderSites(sites) {
-      if(!Array.isArray(sites)) {
-        alert('Invalid site data response: expected an array.');
-        return;
-      }
-      clearMarkers();
-      if (sites.length === 0) {
-        clearMarkers();
-        alert('No sites found.');
-        return;
-      }
-      
+    function renderSearchResults(sites) {
+      if (!Array.isArray(sites)) { alert('Invalid response.'); return; }
+      clearSearchMarkers();
+      if (sites.length === 0) { alert('No sites found.'); return; }
+
       const bounds = [];
-      const groupedSites = {};
-
-      sites.forEach((site) => {
-        if (
-          site.latitude === null || site.latitude === undefined ||
-          site.longitude === null || site.longitude === undefined
-          ) return;
-
+      const grouped = {};
+      sites.forEach(site => {
+        if (site.latitude == null || site.longitude == null) return;
         const key = `${site.latitude},${site.longitude}`;
-        if (!groupedSites[key]) {
-          groupedSites[key] = [];
-        }
-        groupedSites[key].push(site);
+        if (!grouped[key]) grouped[key] = [];
+        grouped[key].push(site);
       });
-      
-      Object.values(groupedSites).forEach(group => {
-        const firstSite = group[0];
-        let popupHtml = `<h3>${group.length} Results</h3>`;
 
+      Object.values(grouped).forEach(group => {
+        const first = group[0];
+        let html = `<h3 style="margin:0 0 4px;font-size:14px;">${group.length} Result${group.length > 1 ? 's' : ''}</h3>`;
         group.forEach(site => {
-          popupHtml += `
-            <hr>
+          html += `<hr style="border-color:#333;margin:6px 0;">
             <b>Site:</b> ${site.site_name || 'N/A'}<br>
             <b>Structure:</b> ${site.structure_name || 'N/A'}<br>
             <b>Artifact:</b> ${site.artifact_name || 'N/A'}<br>
             <b>District:</b> ${site.district || 'N/A'}<br>
             <b>State:</b> ${site.state || 'N/A'}<br>
-            <b>Coordinates:</b> ${site.latitude}, ${site.longitude}
-          `;
+            <b>Coords:</b> ${site.latitude}, ${site.longitude}`;
         });
+        const marker = L.marker([first.latitude, first.longitude], { icon: blueIcon }).addTo(map);
+        marker.bindPopup(html);
+        searchMarkers.push(marker);
+        bounds.push([first.latitude, first.longitude]);
+      });
 
-        const marker = L.marker([firstSite.latitude, firstSite.longitude]).addTo(map);
-        marker.bindPopup(popupHtml);
-        currentMarkers.push(marker);
-        bounds.push([firstSite.latitude, firstSite.longitude]);
-
-      })
-
-      if (bounds.length > 0) {
-        map.fitBounds(bounds, { padding: [30, 30] });
-      } else {
-        alert('No sites with valid coordinates found.');
-      }
-      
+      if (bounds.length > 0) map.fitBounds(bounds, { padding: [30, 30] });
+      else alert('No sites with valid coordinates.');
     }
 
-    function fetchCsvSites() {
-      return fetch('/api/sites')
-        .then((r) => r.json())
-        .then(renderSites)
-        .catch((err) => {
-          console.error(err);
-          alert('Failed to load CSV site data.');
-        });
-    }
-
-    function fetchLlmSites(query) {
-      const url = '/api/query?q=' + encodeURIComponent(query);
-      return fetch(url)
-        .then((r) => r.json())
-        .then(renderSites)
-        .catch((err) => {
-          console.error(err);
-          alert('Failed to load LLM/Neo4j site data.');
-        });
-    }
-
-    form.addEventListener('submit', async(e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const q = queryInput.value.trim();
+      if (!q) { alert('Enter a query'); return; }
 
-      if(!q){
-        alert("Enter a query");
-        return;
-      }
-
-      try{
-        const data =await runQuery(q);
-
+      try {
+        const data = await runQuery(q);
         if (viewMode.value === 'json') {
-          clearMarkers();
+          clearSearchMarkers();
           document.getElementById('map').style.display = 'none';
           jsonOutput.style.display = 'block';
           jsonOutput.textContent = JSON.stringify(data, null, 2);
         } else if (viewMode.value === 'map') {
           document.getElementById('map').style.display = 'block';
           jsonOutput.style.display = 'none';
-          renderSites(data);
+          renderSearchResults(data);
         } else {
           document.getElementById('map').style.display = 'block';
           jsonOutput.style.display = 'block';
           jsonOutput.textContent = JSON.stringify(data, null, 2);
-          renderSites(data);
+          renderSearchResults(data);
         }
       } catch (err) {
         console.error(err);
@@ -186,7 +590,218 @@
       }
     });
 
-    // no default markers
+    // ===== NEARBY BUTTON (from search results) =====
+    nearbyBtn.addEventListener('click', () => {
+      // Use the centroid of current search markers
+      if (searchMarkers.length === 0) {
+        alert('Run a search first, then click Nearby to explore around those results.');
+        return;
+      }
+      let totalLat = 0, totalLng = 0;
+      searchMarkers.forEach(m => {
+        const ll = m.getLatLng();
+        totalLat += ll.lat;
+        totalLng += ll.lng;
+      });
+      const cLat = totalLat / searchMarkers.length;
+      const cLng = totalLng / searchMarkers.length;
+      triggerNearby(cLat, cLng);
+    });
+
+    // ===== MAP CLICK =====
+    map.on('click', (e) => {
+      hideHint();
+      triggerNearby(e.latlng.lat, e.latlng.lng);
+    });
+
+    function hideHint() {
+      if (hintVisible) {
+        clickHint.style.opacity = '0';
+        hintVisible = false;
+        setTimeout(() => { clickHint.style.display = 'none'; }, 500);
+      }
+    }
+
+    // ===== NEARBY CORE =====
+    function triggerNearby(lat, lng) {
+      nearbyLat = lat;
+      nearbyLng = lng;
+      sidebar.classList.add('open');
+      sidebarCoords.textContent = `${lat.toFixed(4)}, ${lng.toFixed(4)}`;
+      fetchNearby();
+    }
+
+    async function fetchNearby() {
+      if (nearbyLat === null) return;
+
+      const radius = parseInt(radiusSlider.value);
+      radiusValue.textContent = `${radius} km`;
+
+      // Show loading
+      sidebarBody.innerHTML = `<div class="sidebar-loading"><div class="spinner"></div>Searching…</div>`;
+      sidebarCount.innerHTML = `Searching within <strong>${radius} km</strong>…`;
+
+      // Draw circle + click marker
+      clearNearbyMarkers();
+      clickMarker = L.circleMarker([nearbyLat, nearbyLng], {
+        radius: 7, color: '#e94560', fillColor: '#e94560', fillOpacity: 0.9, weight: 2
+      }).addTo(map);
+      nearbyMarkers.push(clickMarker);
+
+      radiusCircle = L.circle([nearbyLat, nearbyLng], {
+        radius: radius * 1000,
+        color: 'rgba(245, 166, 35, 0.6)',
+        fillColor: 'rgba(245, 166, 35, 0.08)',
+        weight: 2,
+        dashArray: '6 4'
+      }).addTo(map);
+
+      try {
+        const url = `/api/nearby?lat=${nearbyLat}&lng=${nearbyLng}&radius_km=${radius}`;
+        const resp = await fetch(url);
+        const sites = await resp.json();
+
+        renderNearbySidebar(sites);
+        renderNearbyMarkers(sites);
+
+      } catch (err) {
+        console.error(err);
+        sidebarBody.innerHTML = `<div class="sidebar-empty"><div class="icon">⚠️</div>Failed to fetch nearby sites.</div>`;
+        sidebarCount.innerHTML = `<strong>Error</strong>`;
+      }
+    }
+
+    function renderNearbySidebar(sites) {
+      sidebarCount.innerHTML = `<strong>${sites.length}</strong> site${sites.length !== 1 ? 's' : ''} found`;
+
+      if (sites.length === 0) {
+        sidebarBody.innerHTML = `
+          <div class="sidebar-empty">
+            <div class="icon">🏜️</div>
+            No archaeological sites within this radius.<br>
+            <span style="font-size: 12px; margin-top: 6px; display: inline-block;">Try increasing the radius slider.</span>
+          </div>`;
+        return;
+      }
+
+      let html = '';
+      sites.forEach((site, idx) => {
+        const hasDetails = (site.structures && site.structures.length) || (site.artifacts && site.artifacts.length);
+
+        // Tags
+        let tagsHtml = '';
+        if (site.structures && site.structures.length) {
+          site.structures.forEach(st => {
+            tagsHtml += `<span class="tag tag-structure">${st.type || st.name}</span>`;
+          });
+        }
+        if (site.artifacts && site.artifacts.length) {
+          site.artifacts.slice(0, 3).forEach(ar => {
+            tagsHtml += `<span class="tag tag-artifact">${ar.type || ar.name}</span>`;
+          });
+          if (site.artifacts.length > 3) {
+            tagsHtml += `<span class="tag tag-artifact">+${site.artifacts.length - 3} more</span>`;
+          }
+        }
+
+        // Expandable details
+        let detailsHtml = '';
+        if (hasDetails) {
+          detailsHtml = '<div class="site-card-details">';
+          if (site.structures && site.structures.length) {
+            detailsHtml += '<div class="detail-section-title">🏛️ Structures</div>';
+            site.structures.forEach(st => {
+              detailsHtml += `<div class="detail-item"><strong>${st.name}</strong> — ${st.type || ''}${st.description ? '<br><span style="color:var(--text-muted)">' + st.description + '</span>' : ''}</div>`;
+            });
+          }
+          if (site.artifacts && site.artifacts.length) {
+            detailsHtml += '<div class="detail-section-title">🏺 Artifacts</div>';
+            site.artifacts.forEach(ar => {
+              detailsHtml += `<div class="detail-item"><strong>${ar.name}</strong> — ${ar.type || ''}${ar.description ? '<br><span style="color:var(--text-muted)">' + ar.description + '</span>' : ''}</div>`;
+            });
+          }
+          detailsHtml += '</div>';
+        }
+
+        html += `
+          <div class="site-card" data-lat="${site.latitude}" data-lng="${site.longitude}" data-idx="${idx}">
+            <div class="site-card-header">
+              <div class="site-card-name">${site.name || 'Unknown Site'}</div>
+              <div class="site-card-distance">${site.distance_km} km</div>
+            </div>
+            <div class="site-card-location">
+              ${site.district || ''}${site.district && site.state ? ', ' : ''}${site.state || ''}
+              ${site.address ? '&nbsp;·&nbsp;' + site.address : ''}
+            </div>
+            ${tagsHtml ? '<div class="site-card-tags">' + tagsHtml + '</div>' : ''}
+            ${detailsHtml}
+            ${hasDetails ? '<div class="expand-hint">click to expand</div>' : ''}
+          </div>`;
+      });
+
+      sidebarBody.innerHTML = html;
+
+      // Card click handlers
+      sidebarBody.querySelectorAll('.site-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const lat = parseFloat(card.dataset.lat);
+          const lng = parseFloat(card.dataset.lng);
+          map.flyTo([lat, lng], 14, { duration: 0.8 });
+
+          // Open the corresponding marker popup
+          nearbyMarkers.forEach(m => {
+            if (m.getLatLng && Math.abs(m.getLatLng().lat - lat) < 0.0001 && Math.abs(m.getLatLng().lng - lng) < 0.0001) {
+              m.openPopup();
+            }
+          });
+
+          // Toggle expanded
+          card.classList.toggle('expanded');
+          const hint = card.querySelector('.expand-hint');
+          if (hint) hint.textContent = card.classList.contains('expanded') ? 'click to collapse' : 'click to expand';
+        });
+      });
+    }
+
+    function renderNearbyMarkers(sites) {
+      sites.forEach(site => {
+        if (site.latitude == null || site.longitude == null) return;
+
+        let popupHtml = `<div style="font-family:Inter,sans-serif;">
+          <strong style="font-size:14px;">${site.name || 'Unknown'}</strong><br>
+          <span style="font-size:12px;color:#888;">
+            ${site.district || ''}${site.district && site.state ? ', ' : ''}${site.state || ''}
+          </span><br>
+          <span style="font-size:12px;color:#f5a623;font-weight:600;">${site.distance_km} km away</span>`;
+
+        if (site.structures && site.structures.length) {
+          popupHtml += `<br><span style="font-size:11px;color:#64b5f6;">Structures: ${site.structures.map(s => s.name).join(', ')}</span>`;
+        }
+        if (site.artifacts && site.artifacts.length) {
+          popupHtml += `<br><span style="font-size:11px;color:#ce93d8;">Artifacts: ${site.artifacts.map(a => a.name).join(', ')}</span>`;
+        }
+        popupHtml += '</div>';
+
+        const marker = L.marker([site.latitude, site.longitude], { icon: orangeIcon }).addTo(map);
+        marker.bindPopup(popupHtml);
+        nearbyMarkers.push(marker);
+      });
+    }
+
+    // ===== SIDEBAR CONTROLS =====
+    sidebarClose.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      clearNearbyMarkers();
+    });
+
+    radiusSlider.addEventListener('input', () => {
+      radiusValue.textContent = `${radiusSlider.value} km`;
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(fetchNearby, 300);
+    });
+
+    // ===== HIDE HINT AFTER TIMEOUT =====
+    setTimeout(hideHint, 8000);
   </script>
 </body>
 </html>
