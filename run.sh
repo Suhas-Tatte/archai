@@ -28,3 +28,11 @@ echo "📊 Loading data into Neo4j..."
 python -m graph_layer.ingestion_data
 
 echo "✅ Done! Open Neo4j Browser at http://localhost:7474"
+
+# 6. Run llm
+echo "🤖 Starting LLM..."
+python -m llm.main
+
+# 7. Run map
+echo "🗺️ Starting Map..."
+python -m scripts.map_demo
