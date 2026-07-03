@@ -1,0 +1,26 @@
+Benchmark,Question,Expected Count,Returned Count,Correct,Missing,Extra,Precision,Recall,F1,Exact Match,Count Match
+Temple Retrieval - Ahmedabad,temples in Ahmedabad,2,0,0,2,0,0.0,0.0,0.0,False,False
+Temple Retrieval - Junagadh,temples in Junagadh,7,7,6,1,1,85.71,85.71,85.71,False,True
+Mosques in Ahmedabad,mosques in Ahmedabad,26,26,26,0,0,100.0,100.0,100.0,True,True
+Stepwells in Gujarat,stepwells in Gujarat,43,43,43,0,0,100.0,100.0,100.0,True,True
+All Inscriptions,all inscriptions,27,27,27,0,0,100.0,100.0,100.0,True,True
+All Memorial Stones,all memorial stones,5,5,5,0,0,100.0,100.0,100.0,True,True
+Stone Inscription at Masjid,stone inscription at masjid,5,5,5,0,0,100.0,100.0,100.0,True,True
+Structures in Jumma Masjid,structures in Jumma Masjid,4,3,3,1,0,100.0,75.0,85.71,False,False
+Negative Query,temples in unknown place,0,137,0,0,137,0.0,0.0,0.0,False,False
+Gates in Ahmedabad,gates in Ahmedabad,11,11,11,0,0,100.0,100.0,100.0,True,True
+Structures in Adalaj Stepwell,structures in Adalaj Stepwell,0,0,0,0,0,0.0,100.0,0.0,True,True
+Structures in Kaji Masjid,structures in Kaji Masjid,1,1,1,0,0,100.0,100.0,100.0,True,True
+Artifacts in Ahmedabad,artifacts in Ahmedabad,0,0,0,0,0,0.0,100.0,0.0,True,True
+Artifacts in Junagadh,artifacts in Junagadh,14,14,14,0,0,100.0,100.0,100.0,True,True
+Inscriptions in Gujarat,inscriptions in Gujarat,27,27,27,0,0,100.0,100.0,100.0,True,True
+Memorial Stones in Gujarat,memorial stones in Gujarat,5,5,5,0,0,100.0,100.0,100.0,True,True
+Temples with Inscriptions,temples with inscriptions,6,6,6,0,0,100.0,100.0,100.0,True,True
+Mosques with Inscriptions,mosques with inscriptions,5,5,5,0,0,100.0,100.0,100.0,True,True
+Stepwells with Inscriptions,stepwells with inscriptions,0,0,0,0,0,0.0,100.0,0.0,True,True
+Structures Having Inscriptions,structures having inscriptions,13,13,13,0,0,100.0,100.0,100.0,True,True
+Sites in Ahmedabad,sites in Ahmedabad,56,56,56,0,0,100.0,100.0,100.0,True,True
+Sites in Junagadh,sites in Junagadh,48,49,48,0,1,97.96,100.0,98.97,False,False
+Sites in Gujarat,sites in Gujarat,445,445,445,0,0,100.0,100.0,100.0,True,True
+Fantasy Query,structures in Hogwarts,0,0,0,0,0,0.0,100.0,0.0,True,True
+Mars Query,inscriptions in Mars,0,0,0,0,0,0.0,100.0,0.0,True,True

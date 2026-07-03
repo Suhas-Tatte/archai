@@ -1,0 +1,10 @@
+Benchmark,Question,Expected Count,Returned Count,Correct,Missing,Extra,Precision,Recall,F1,Exact Match,Count Match
+Temple Retrieval - Ahmedabad,temples in Ahmedabad,2,2,2,0,0,100.0,100.0,100.0,True,True
+Temple Retrieval - Junagadh,temples in Junagadh,7,9,7,0,2,77.78,100.0,87.5,False,False
+Mosques in Ahmedabad,mosques in Ahmedabad,26,26,26,0,0,100.0,100.0,100.0,True,True
+Stepwells in Gujarat,stepwells in Gujarat,43,43,43,0,0,100.0,100.0,100.0,True,True
+All Inscriptions,all inscriptions,27,27,27,0,0,100.0,100.0,100.0,True,True
+All Memorial Stones,all memorial stones,5,5,5,0,0,100.0,100.0,100.0,True,True
+Stone Inscription at Masjid,stone inscription at masjid,5,5,5,0,0,100.0,100.0,100.0,True,True
+Structures in Jumma Masjid,structures in Jumma Masjid,4,4,4,0,0,100.0,100.0,100.0,True,True
+Negative Query,temples in unknown place,0,0,0,0,0,0.0,100.0,0.0,True,True

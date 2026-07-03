@@ -1,0 +1,68 @@
+ARCHAI BENCHMARK REPORT
+================================================================================
+
+Query: temples in Ahmedabad
+Expected Count : 2
+Actual Count   : 2
+Difference     : 0
+Status         : PASS
+------------------------------------------------------------
+Query: temples in Junagadh
+Expected Count : 6
+Actual Count   : 9
+Difference     : 3
+Status         : FAIL
+------------------------------------------------------------
+Query: mosques in Ahmedabad
+Expected Count : 28
+Actual Count   : 28
+Difference     : 0
+Status         : PASS
+------------------------------------------------------------
+Query: stepwells in Gujarat
+Expected Count : 52
+Actual Count   : 52
+Difference     : 0
+Status         : PASS
+------------------------------------------------------------
+Query: all inscriptions
+Expected Count : 27
+Actual Count   : 27
+Difference     : 0
+Status         : PASS
+------------------------------------------------------------
+Query: all memorial stones
+Expected Count : 5
+Actual Count   : 5
+Difference     : 0
+Status         : PASS
+------------------------------------------------------------
+Query: stone inscription at masjid
+Expected Count : 5
+Actual Count   : 5
+Difference     : 0
+Status         : PASS
+------------------------------------------------------------
+Query: structures in Jumma Masjid
+Expected Count : 4
+Actual Count   : 4
+Difference     : 0
+Status         : PASS
+------------------------------------------------------------
+Query: temples in unknown place
+Expected Count : 0
+Actual Count   : 0
+Difference     : 0
+Status         : PASS
+------------------------------------------------------------
+Query: gates in Ahmedabad
+Expected Count : 10
+Actual Count   : 11
+Difference     : 1
+Status         : PASS
+------------------------------------------------------------
+
+================================================================================
+Passed   : 9
+Total    : 10
+Accuracy : 90.00%

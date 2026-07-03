@@ -1,0 +1,55 @@
+[
+    {
+        "name": "Temple Retrieval - Ahmedabad",
+        "query": "temples in Ahmedabad",
+        "neo4j_query": "MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure) WHERE (toLower(s.district) CONTAINS 'ahmedabad' OR toLower(s.state) CONTAINS 'ahmedabad' OR toLower(s.address) CONTAINS 'ahmedabad') AND (toLower(st.type) CONTAINS 'temple' OR toLower(s.name) CONTAINS 'temple') RETURN DISTINCT s.name AS site_name"
+    },
+
+    {
+        "name": "Temple Retrieval - Junagadh",
+        "query": "temples in Junagadh",
+        "neo4j_query": "MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure) WHERE (toLower(s.district) CONTAINS 'junagadh' OR toLower(s.state) CONTAINS 'junagadh' OR toLower(s.address) CONTAINS 'junagadh') AND (toLower(st.type) CONTAINS 'temple' OR toLower(s.name) CONTAINS 'temple') RETURN DISTINCT s.name AS site_name"
+    },
+
+    {
+        "name": "Mosques in Ahmedabad",
+        "query": "mosques in Ahmedabad",
+        "neo4j_query": "MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure) WHERE (toLower(s.district) CONTAINS 'ahmedabad' OR toLower(s.state) CONTAINS 'ahmedabad' OR toLower(s.address) CONTAINS 'ahmedabad') AND (toLower(st.type) CONTAINS 'mosque' OR toLower(s.name) CONTAINS 'mosque') RETURN DISTINCT s.name AS site_name"
+    },
+
+    {
+        "name": "Stepwells in Gujarat",
+        "query": "stepwells in Gujarat",
+        "neo4j_query": "MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure) WHERE toLower(s.state) CONTAINS 'gujarat' AND (toLower(st.type) CONTAINS 'stepwell' OR toLower(s.name) CONTAINS 'stepwell') RETURN DISTINCT s.name AS site_name"
+    },
+
+    {
+        "name": "All Inscriptions",
+        "query": "all inscriptions",
+        "neo4j_query": "MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact) WHERE toLower(a.type) CONTAINS 'inscription' RETURN DISTINCT s.name AS site_name"
+    },
+
+    {
+        "name": "All Memorial Stones",
+        "query": "all memorial stones",
+        "neo4j_query": "MATCH (s:Site)-[:HAS_ARTIFACT]->(a:Artifact) WHERE toLower(a.type) CONTAINS 'memorial' RETURN DISTINCT s.name AS site_name"
+    },
+
+    {
+        "name": "Stone Inscription at Masjid",
+        "query": "stone inscription at masjid",
+        "neo4j_query": "MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure) MATCH (s)-[:HAS_ARTIFACT]->(a:Artifact) WHERE (toLower(st.type) CONTAINS 'mosque' OR toLower(st.name) CONTAINS 'masjid') AND toLower(a.type) CONTAINS 'inscription' RETURN DISTINCT s.name AS site_name"
+    },
+
+    {
+        "name": "Structures in Jumma Masjid",
+        "query": "structures in Jumma Masjid",
+        "neo4j_query": "MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure) WHERE toLower(s.name) CONTAINS 'jumma masjid' RETURN DISTINCT s.name AS site_name"
+    },
+
+    {
+        "name": "Negative Query",
+        "query": "temples in unknown place",
+        "neo4j_query": "MATCH (s:Site)-[:HAS_STRUCTURE]->(st:Structure) WHERE toLower(s.district) CONTAINS 'unknown place' RETURN DISTINCT s.name AS site_name"
+    }
+]
