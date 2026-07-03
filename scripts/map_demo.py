@@ -9,7 +9,7 @@ from urllib.parse import urlparse, parse_qs
 
 from dotenv import load_dotenv
 
-import llm.llm_main as llm_main
+import llm.main as llm_main
 
 load_dotenv()
 
